@@ -10,6 +10,11 @@ const Container = styled.div`
   }
 `;
 
+const LinkStyle = styled.div`
+  width: 655px;
+  height: 38px;
+`
+
 const Header = () => (
   <Container class="section">
     <div className="container">
@@ -34,7 +39,7 @@ const Header = () => (
             <span aria-hidden="true" />
           </a>
         </div>
-        <div className="navbar-menu">
+        <LinkStyle className="navbar-menu">
           <a className="navbar-item">Foreword</a>
           <a className="navbar-item">Blog</a>
           <a className="navbar-item">Teachers</a>
@@ -42,7 +47,7 @@ const Header = () => (
           <a className="navbar-item">Members club</a>
           <a className="navbar-item">Login</a>
           <a className="navbar-item">Sign up for free</a>
-        </div>
+        </LinkStyle>
       </nav>
     </div>
   </Container>
