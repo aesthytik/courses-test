@@ -8,13 +8,17 @@ export default class HTML extends React.Component {
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           {/* Add custom css or scripts here */}
-
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"
+          />
+          <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"
+          />
           {/* Add custom css or scripts here */}
 
           {this.props.headComponents}
