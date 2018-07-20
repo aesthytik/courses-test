@@ -13,7 +13,7 @@ const Container = styled.div`
 const LinkStyle = styled.div`
   width: 655px;
   height: 38px;
-`
+`;
 
 const Header = () => (
   <Container class="section">
