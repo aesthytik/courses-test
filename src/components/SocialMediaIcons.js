@@ -9,10 +9,18 @@ const Container = styled.div`
 const SocialMediaIcons = () => (
   <Container className="section">
     <div className="container has-text-centered">
-      <i className="fab fa-twitter" />
-      <i className="fab fa-facebook-f" />
-      <i className="fab fa-instagram" />
-      <i className="fab fa-linkedin-in" />
+      <a href="#">
+        <i className="fab fa-twitter" />
+      </a>
+      <a href="#">
+        <i className="fab fa-facebook-f" />
+      </a>
+      <a href="#">
+        <i className="fab fa-instagram" />
+      </a>
+      <a href="#">
+        <i className="fab fa-linkedin-in" />
+      </a>
     </div>
   </Container>
 );

@@ -2,7 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  height: auto;
+  background-image: url('images/hill-image.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 12%;
+  .container {
+    margin-top: -10%;
+  }
 `;
 
 const HeroBtn = styled.a`
@@ -18,14 +24,18 @@ const HomeHero = () => (
       <h2 className="subtitle is-size-2">
         Brilliant things happen in engaged minds
       </h2>
-      <HeroBtn className="button secondary-color is-large">
-        <span className="is-size-6 has-text-white">SIGN UP FOR FREE</span>
-      </HeroBtn>
-      <br />
-      <br />
-      <HeroBtn className="button primary-color is-large">
-        <span className="is-size-6 has-text-white">SUBSCRIBE FOR 40% OFF</span>
-      </HeroBtn>
+      <div>
+        <HeroBtn className="button secondary-color is-large">
+          <span className="is-size-6 has-text-white">SIGN UP FOR FREE</span>
+        </HeroBtn>
+        <br />
+        <br />
+        <HeroBtn className="button primary-color is-large">
+          <span className="is-size-6 has-text-white">
+            SUBSCRIBE FOR 40% OFF
+          </span>
+        </HeroBtn>
+      </div>
     </div>
   </Container>
 );

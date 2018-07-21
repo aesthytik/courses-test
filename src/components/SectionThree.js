@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   background-color: #69d1c5;
   height: auto;
+  padding: 8%;
 `;
 
 const Btn = styled.a`

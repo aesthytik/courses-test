@@ -30,3 +30,19 @@ svg:not(:root).svg-inline--fa {
 .secondary-color {
   background-color: #7ebce6;
 }
+
+.content ul {
+  list-style-position: outside;
+  list-style-image: url('/images/Oval.svg') !important;
+  margin-left: 2em;
+  margin-top: 1em;
+  line-height: 1.9rem;
+}
+
+.navbar-item {
+  margin-left: 9%;
+}
+
+.primary-font-color {
+  color: #5a6175;
+}

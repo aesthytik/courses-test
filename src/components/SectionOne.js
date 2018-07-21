@@ -4,18 +4,20 @@ import styled from 'styled-components';
 const Container = styled.div`
   background-color: #ededed;
   height: auto;
+  padding: 6%;
+  margin-top: -1px;
 `;
 
 const SectionOne = () => (
   <Container className="section">
-    <div className="container">
+    <div className="container" id="margin-top">
       <div className="columns">
         <div className="column is-half">
           <div className="content">
             <p className="is-size-3">
               Engaging resources to empower teaching and learning
             </p>
-            <ul>
+            <ul className="is-size-5">
               <li>
                 Themed sessions on core subjects & special industry programmes
               </li>
@@ -27,13 +29,12 @@ const SectionOne = () => (
             </ul>
           </div>
         </div>
-        <div className="column is-half">
+        <div className="column is-half has-text-right">
           <img src="images/illustration-1.svg" alt="illustration-1" />
         </div>
       </div>
       <div className="columns">
         <div className="column is-half">
-          {' '}
           <img src="images/illustration-2.svg" alt="illustration-2" />
         </div>
         <div className="column is-half">
@@ -41,7 +42,7 @@ const SectionOne = () => (
             <p className="is-size-3">
               Your own personal teaching kit at the tip of your fingers
             </p>
-            <ul>
+            <ul className="is-size-5">
               <li>
                 Themed sessions on core subjects & special industry programmes
               </li>

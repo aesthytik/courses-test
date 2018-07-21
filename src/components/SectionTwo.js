@@ -2,12 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  background-image: url('images/pattern.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
   background-color: #7ebce6;
   height: auto;
+  padding: 8%;
 `;
 
 const Btn = styled.a`
-  background-color: #fff0;
   border-width: 0.2rem;
 `;
 

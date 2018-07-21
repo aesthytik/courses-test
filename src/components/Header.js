@@ -15,10 +15,22 @@ const LinkStyle = styled.div`
   height: 38px;
 `;
 
+const Btn = styled.a`
+  border-width: 0.2rem;
+  color: #1dbe71;
+  border-color: #1dbe71;
+`;
+
+const LoginBtn = styled.a`
+  border-left: 1px solid #5a6175;
+  padding-left: 16%;
+  padding-right: 4%;
+`;
+
 const Header = () => (
   <Container class="section">
-    <div className="container">
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+    <div className="container is-fullhd">
+      <nav className="navbar " role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link to="/">
             <img
@@ -39,14 +51,24 @@ const Header = () => (
             <span aria-hidden="true" />
           </a>
         </div>
+
         <LinkStyle className="navbar-menu">
-          <a className="navbar-item">Foreword</a>
-          <a className="navbar-item">Blog</a>
-          <a className="navbar-item">Teachers</a>
-          <a className="navbar-item">Freebies</a>
-          <a className="navbar-item">Members club</a>
-          <a className="navbar-item">Login</a>
-          <a className="navbar-item">Sign up for free</a>
+          <div className="navbar-start">
+            <a className="navbar-item">Foreword</a>
+            <a className="navbar-item">Blog</a>
+            <a className="navbar-item">Teachers</a>
+            <a className="navbar-item">Freebies</a>
+            <a className="navbar-item">Member's club</a>
+          </div>
+
+          <div className="navbar-end">
+            <LoginBtn className="navbar-item is-uppercase">Login</LoginBtn>
+            <a className="navbar-item">
+              <Btn className="button is-rounded is-grey is-outlined is-large is-pulled-right">
+                <span className="is-size-6">SIGN UP FOR FREE</span>
+              </Btn>
+            </a>
+          </div>
         </LinkStyle>
       </nav>
     </div>

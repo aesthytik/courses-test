@@ -13,8 +13,8 @@ const Container = styled.div`
 
 const Footer = () => (
   <Container className="section">
-    <div className="container is-fullhd  has-text-grey">
-      <div className="columns is-desktop is-size-5">
+    <div className="container is-fullhd has-text-grey">
+      <div className="columns is-desktop is-size-5 ">
         <div className="column">
           <h3 className="is-uppercase has-text-weight-bold">
             Acces Learn Realm
