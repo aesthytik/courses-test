@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 const Container = styled.div`
   background-color: #fccc63;
@@ -10,7 +11,12 @@ const Container = styled.div`
 const Btn = styled.a`
   background-color: #fff0;
   border-width: 0.2rem;
-  border-color: grey;
+  border-color: #5a6175;
+  padding: 35px !important;
+  :hover {
+    border-color: ${darken(0.1, '#5a6175')} !important;
+    color: ${darken(0.1, '#5a6175')} !important;
+  }
 `;
 
 const SectionFour = () => (
@@ -26,7 +32,7 @@ const SectionFour = () => (
         teaching real world skills to equip students with industry knowledge.
       </h2>
       <Btn className="button is-rounded has-text-grey is-grey is-outlined is-large">
-        <span className="is-size-6">SIGN UP FOR FREE</span>
+        <span className="is-size-6 has-text-weight-bold">SIGN UP FOR FREE</span>
       </Btn>
     </div>
   </Container>

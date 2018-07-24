@@ -30,6 +30,7 @@
     "gatsby-plugin-sharp": "next",
     "gatsby-plugin-styled-components": "next",
     "gatsby-transformer-sharp": "next",
+    "polished": "^1.9.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",

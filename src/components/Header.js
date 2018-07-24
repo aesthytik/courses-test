@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 const Container = styled.div`
   padding: 60px 0;
@@ -19,18 +20,24 @@ const Btn = styled.a`
   border-width: 0.2rem;
   color: #1dbe71;
   border-color: #1dbe71;
+  transition: 0.3s;
+  padding: 35px !important;
+  :hover {
+    border-color: ${darken(0.2, '#1dbe71')} !important;
+    color: ${darken(0.2, '#1dbe71')} !important;
+  }
 `;
 
 const LoginBtn = styled.a`
   border-left: 1px solid #5a6175;
-  padding-left: 16%;
-  padding-right: 4%;
+  padding-left: 9%;
+  padding-right: 3%;
 `;
 
 const Header = () => (
   <Container class="section">
     <div className="container is-fullhd">
-      <nav className="navbar " role="navigation" aria-label="main navigation">
+      <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link to="/">
             <img
@@ -54,18 +61,23 @@ const Header = () => (
 
         <LinkStyle className="navbar-menu">
           <div className="navbar-start">
-            <a className="navbar-item">Foreword</a>
-            <a className="navbar-item">Blog</a>
-            <a className="navbar-item">Teachers</a>
-            <a className="navbar-item">Freebies</a>
-            <a className="navbar-item">Member's club</a>
+            <a className="navbar-item primary-font-color">Foreword</a>
+            <a className="navbar-item primary-font-color">Blog</a>
+            <a className="navbar-item primary-font-color">Teachers</a>
+            <a className="navbar-item primary-font-color">Freebies</a>
+            <a className="navbar-item primary-font-color">Member's club</a>
           </div>
 
           <div className="navbar-end">
-            <LoginBtn className="navbar-item is-uppercase">Login</LoginBtn>
+            <LoginBtn>
+              <a className="navbar-item is-uppercase">Login</a>
+            </LoginBtn>
+
             <a className="navbar-item">
-              <Btn className="button is-rounded is-grey is-outlined is-large is-pulled-right">
-                <span className="is-size-6">SIGN UP FOR FREE</span>
+              <Btn className="button is-rounded is-outlined is-large is-pulled-right is-hover">
+                <span className="is-size-6 has-text-weight-bold">
+                  SIGN UP FOR FREE
+                </span>
               </Btn>
             </a>
           </div>

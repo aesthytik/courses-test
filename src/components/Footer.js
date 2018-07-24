@@ -5,9 +5,17 @@ import Copyright from './Copyright';
 
 const Container = styled.div`
   background-color: #fffff;
-  height: auto;
+  h3 {
+    padding-bottom: 1rem;
+  }
+  .columns {
+    margin-left: 12%;
+  }
   li > a {
-    color: grey;
+    color: #5a6175 !important;
+  }
+  ul {
+    line-height: 2rem;
   }
 `;
 
@@ -17,7 +25,7 @@ const Footer = () => (
       <div className="columns is-desktop is-size-5 ">
         <div className="column">
           <h3 className="is-uppercase has-text-weight-bold">
-            Acces Learn Realm
+            Access Learn Realm
           </h3>
           <ul className="is-size-6 has-text-grey is-uppercase">
             <li>

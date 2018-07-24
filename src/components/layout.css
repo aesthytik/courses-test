@@ -11,6 +11,7 @@
 html,
 body {
   font-family: 'Apercu Pro', sans-serif !important;
+  color: #5a6175 !important;
 }
 
 .title {
@@ -45,4 +46,19 @@ svg:not(:root).svg-inline--fa {
 
 .primary-font-color {
   color: #5a6175;
+}
+
+.navbar-item,
+.navbar-link {
+  color: #5a6175 !important;
+}
+
+.has-text-grey {
+  color: #5a6175 !important;
+}
+.navbar-link.is-active,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:hover {
+  background-color: #ffffff !important;
 }

@@ -10,6 +10,9 @@ const SocialMediaIcons = () => (
   <Container className="section">
     <div className="container has-text-centered">
       <a href="#">
+        <i className="fab fa-youtube" />
+      </a>
+      <a href="#">
         <i className="fab fa-twitter" />
       </a>
       <a href="#">
