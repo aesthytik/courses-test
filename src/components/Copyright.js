@@ -9,7 +9,7 @@ const Container = styled.div`
 const Copyright = () => (
   <Container className="section">
     <div className="container is-fullhd has-text-grey">
-      <div className="columns is-desktop is-size-5">
+      <div className="columns is-desktop is-size-6">
         <div className="column">
           <h3 className="is-uppercase">© 2018 LEARN REALM INC.</h3>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 const Container = styled.div`
   background-image: url('images/hill-image.svg');
@@ -16,6 +17,22 @@ const Container = styled.div`
 
   h2 + div {
     padding-top: 3%;
+  }
+
+  .sign-btn {
+    :hover {
+      background-color: ${darken(0.2, '#7ebce6')} !important;
+    }
+  }
+
+  .subscribe-btn {
+    :hover {
+      background-color: ${darken(0.2, '#1dbe71')} !important;
+    }
+  }
+
+  .subtitle {
+    margin-top: -0.75rem !important;
   }
 `;
 
@@ -58,20 +75,20 @@ const HomeHero = () => (
       <SunImage src="images/sun-cloud.svg" alt="sun-cloud" />
       <CloudImageOne src="images/cloud.svg" alt="cloud" />
 
-      <h1 className="title primary-font-color">
+      <h1 className="title primary-font-color has-text-weight-light">
         Changing the landscape of education
       </h1>
-      <h2 className="subtitle is-size-2  primary-font-color">
+      <h2 className="subtitle is-size-3 has-text-weight-light primary-font-color">
         Brilliant things happen in engaged minds
       </h2>
       <div>
-        <HeroBtn className="button secondary-color is-large">
+        <HeroBtn className="button secondary-color is-large sign-btn">
           <span className="is-size-6 has-text-white">SIGN UP FOR FREE</span>
         </HeroBtn>
         <br />
         <br />
-        <HeroBtn className="button primary-color is-large">
-          <span className="is-size-6 has-text-white">
+        <HeroBtn className="button primary-color is-large subscribe-btn">
+          <span className="is-size-6 has-text-white ">
             SUBSCRIBE FOR 40% OFF
           </span>
         </HeroBtn>

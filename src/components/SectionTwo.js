@@ -9,11 +9,16 @@ const Container = styled.div`
   background-color: #7ebce6;
   height: auto;
   padding: 8%;
+
+  h1 {
+    line-height: 7rem;
+  }
 `;
 
 const Btn = styled.a`
   border-width: 0.2rem;
-  padding: 35px !important;
+  padding: 2.5rem 3.5rem !important;
+  margin-top: 2rem;
   :hover {
     background-color: #7dbce7 !important;
     border-color: ${darken(0.1, '#fff')} !important;
@@ -30,8 +35,8 @@ const SectionTwo = () => (
       <h1 className="title has-text-white">Not enough time to plan?</h1>
       <h2 className="subtitle is-size-3 has-text-white has-text-weight-bold">
         Our resources are packed full of differentiating activities & explainer
-        videos. Download project worksheets & powerpoints instantly to your
-        account.
+        videos. <br />Download project worksheets & powerpoints instantly to
+        your account.
       </h2>
 
       <Btn className="button is-rounded has-text-white is-white is-outlined is-large">

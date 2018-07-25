@@ -6,6 +6,15 @@ const Container = styled.div`
   height: auto;
   padding: 6%;
   margin-top: -1px;
+  .column {
+    padding-left: 14%;
+  }
+  .last-content {
+    padding-left: 1% !important;
+  }
+  .second-column {
+    margin-top: 8%;
+  }
 `;
 
 const SectionOne = () => (
@@ -14,15 +23,16 @@ const SectionOne = () => (
       <div className="columns">
         <div className="column is-half">
           <div className="content">
-            <p className="is-size-3">
-              Engaging resources to empower teaching and learning
+            <p className="is-size-3 has-text-weight-light">
+              Engaging resources to empower<br />teaching and learning
             </p>
             <ul className="is-size-5">
               <li>
-                Themed sessions on core subjects & special industry programmes
+                Themed sessions on core subjects & special<br />industry
+                programmes
               </li>
               <li>
-                Bite-sized activities for starters, plenaries, mid lesson
+                Bite-sized activities for starters, plenaries, mid<br /> lesson
                 reviews
               </li>
               <li>SOS activities to get your students back on task</li>
@@ -30,27 +40,34 @@ const SectionOne = () => (
           </div>
         </div>
         <div className="column is-half has-text-right">
-          <img src="images/illustration-1.svg" alt="illustration-1" />
+          <img
+            className="is-pulled-left"
+            src="images/illustration-1.svg"
+            alt="illustration-1"
+          />
         </div>
       </div>
-      <div className="columns">
+      <div className="columns second-column">
         <div className="column is-half">
           <img src="images/illustration-2.svg" alt="illustration-2" />
         </div>
-        <div className="column is-half">
+        <div className="column last-content is-half">
           <div className="content">
-            <p className="is-size-3">
-              Your own personal teaching kit at the tip of your fingers
+            <p className="is-size-3 has-text-weight-semibold">
+              Your own personal teaching kit<br />at the tip of your fingers
             </p>
             <ul className="is-size-5">
               <li>
-                Themed sessions on core subjects & special industry programmes
+                Themed sessions on core subjects & special<br />industry
+                programmes
               </li>
               <li>
-                Bite-sized activities for starters, plenaries, mid lesson
+                Bite-sized activities for starters, plenaries, mid<br />lesson
                 reviews
               </li>
-              <li>SOS activities to get your students back on task</li>
+              <li className="has-text-weight-light">
+                SOS activities to get your students back on task
+              </li>
             </ul>
           </div>
         </div>

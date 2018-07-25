@@ -31,7 +31,10 @@ const Btn = styled.a`
 const LoginBtn = styled.a`
   border-left: 1px solid #5a6175;
   padding-left: 9%;
-  padding-right: 3%;
+  a {
+    width: 5rem;
+    font-size: 17px;
+  }
 `;
 
 const Header = () => (
@@ -60,7 +63,7 @@ const Header = () => (
         </div>
 
         <LinkStyle className="navbar-menu">
-          <div className="navbar-start">
+          <div className="navbar-start is-size-6">
             <a className="navbar-item primary-font-color">Foreword</a>
             <a className="navbar-item primary-font-color">Blog</a>
             <a className="navbar-item primary-font-color">Teachers</a>
@@ -70,7 +73,7 @@ const Header = () => (
 
           <div className="navbar-end">
             <LoginBtn>
-              <a className="navbar-item is-uppercase">Login</a>
+              <a className="navbar-item is-uppercase">Log in</a>
             </LoginBtn>
 
             <a className="navbar-item">
