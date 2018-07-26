@@ -15,6 +15,9 @@ const Container = styled.div`
   .second-column {
     margin-top: 8%;
   }
+  .content li {
+    margin-bottom: 1rem;
+  }
 `;
 
 const SectionOne = () => (

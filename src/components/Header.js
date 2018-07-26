@@ -21,7 +21,7 @@ const Btn = styled.a`
   color: #1dbe71;
   border-color: #1dbe71;
   transition: 0.3s;
-  padding: 35px !important;
+  padding: 2.5rem 3.5rem !important;
   :hover {
     border-color: ${darken(0.2, '#1dbe71')} !important;
     color: ${darken(0.2, '#1dbe71')} !important;
@@ -30,10 +30,11 @@ const Btn = styled.a`
 
 const LoginBtn = styled.a`
   border-left: 1px solid #5a6175;
-  padding-left: 9%;
+  padding-left: 1%;
   a {
     width: 5rem;
     font-size: 17px;
+    margin-left: 25%;
   }
 `;
 
