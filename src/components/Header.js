@@ -74,18 +74,16 @@ const Header = () => (
 
           <div className="navbar-end">
             <LoginBtn>
-              <Link to="/sign-up" className="navbar-item is-uppercase">
-                Log in
-              </Link>
+              <a className="navbar-item is-uppercase">Log in</a>
             </LoginBtn>
 
-            <a className="navbar-item">
+            <Link to="/sign-up" className="navbar-item">
               <Btn className="button is-rounded is-outlined is-large is-pulled-right is-hover">
                 <span className="is-size-6 has-text-weight-bold">
                   SIGN UP FOR FREE
                 </span>
               </Btn>
-            </a>
+            </Link>
           </div>
         </LinkStyle>
       </nav>
