@@ -11,47 +11,37 @@ const Container = styled.div`
   }
 `;
 
-const SocialMediaIcon = styled.div`
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-  background-color: #1dbe71;
-  margin-right: 1.5rem;
-
-  .icons {
-    font-size: 25px;
-    margin-top: 0.7rem;
-  }
+const SocialMediaIcon = styled.img`
+  padding-right: 30%;
 `;
 
 const SocialMediaIcons = () => (
   <Container className="section">
-    <div className="has-text-centered">
-      <SocialMediaIcon>
-        <a href="#">
-          <i className="fab fa-youtube has-text-white icons" />
-        </a>
-      </SocialMediaIcon>
-      <SocialMediaIcon>
-        <a href="#">
-          <i className="fab fa-twitter has-text-white icons" />
-        </a>
-      </SocialMediaIcon>
-      <SocialMediaIcon>
-        <a href="#">
-          <i className="fab fa-facebook-f has-text-white icons" />
-        </a>
-      </SocialMediaIcon>
-      <SocialMediaIcon>
-        <a href="#">
-          <i className="fab fa-instagram has-text-white icons" />
-        </a>
-      </SocialMediaIcon>
-      <SocialMediaIcon>
-        <a href="#">
-          <i className="fab fa-linkedin-in has-text-white icons" />
-        </a>
-      </SocialMediaIcon>
+    <div className="container has-text-centered">
+      <a href="#">
+        <SocialMediaIcon src="images/social-icons/youtube.svg" alt="youtube" />
+      </a>
+      <a href="#">
+        <SocialMediaIcon src="images/social-icons/twitter.svg" alt="twitter" />
+      </a>
+      <a href="#">
+        <SocialMediaIcon
+          src="images/social-icons/facebook.svg"
+          alt="facebook"
+        />
+      </a>
+      <a href="#">
+        <SocialMediaIcon
+          src="images/social-icons/instagram.svg"
+          alt="instagram"
+        />
+      </a>
+      <a href="#">
+        <SocialMediaIcon
+          src="images/social-icons/linkedin.svg"
+          alt="linkedin"
+        />
+      </a>
     </div>
   </Container>
 );

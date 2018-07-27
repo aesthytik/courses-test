@@ -56,3 +56,9 @@ a.navbar-item.is-active,
 a.navbar-item:hover {
   background-color: #ffffff !important;
 }
+
+svg:not(:root).svg-inline--fa {
+  overflow: visible;
+  margin: 1%;
+  color: #1dbe71;
+}
