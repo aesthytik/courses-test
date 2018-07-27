@@ -69,8 +69,8 @@ const SignUpForm = () => (
         <div className="column is-half">
           <div className="columns">
             <div className="column is-half">
-              <BallonImage src="images/air-baloon.svg" alt="air-balloon" />
-              <SunImage src="images/sun-cloud.svg" alt="air-balloon" />
+              <BallonImage src="/images/air-baloon.svg" alt="air-balloon" />
+              <SunImage src="/images/sun-cloud.svg" alt="air-balloon" />
             </div>
             <div className="column is-half">
               <div className="content">
@@ -87,7 +87,7 @@ const SignUpForm = () => (
           </div>
           <div className="columns">
             <SignupImage className="column">
-              <img src="images/signup-illustration.svg" alt="signup" />
+              <img src="/images/signup-illustration.svg" alt="signup" />
             </SignupImage>
           </div>
         </div>

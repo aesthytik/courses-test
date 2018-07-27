@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 const Container = styled.div`
-  background-image: url('images/hill-image.svg');
+  background-image: url('/images/hill-image.svg');
   background-repeat: no-repeat;
   background-position: bottom;
   padding: 12%;
@@ -70,10 +70,10 @@ const HeroBtn = styled.a`
 const HomeHero = () => (
   <Container className="section">
     <div className="container has-text-centered">
-      <CloudImageTwo src="images/cloud.svg" alt="cloud" />
-      <BallonImage src="images/air-baloon.svg" alt="air-balloon" />
-      <SunImage src="images/sun-cloud.svg" alt="sun-cloud" />
-      <CloudImageOne src="images/cloud.svg" alt="cloud" />
+      <CloudImageTwo src="/images/cloud.svg" alt="cloud" />
+      <BallonImage src="/images/air-baloon.svg" alt="air-balloon" />
+      <SunImage src="/images/sun-cloud.svg" alt="sun-cloud" />
+      <CloudImageOne src="/images/cloud.svg" alt="cloud" />
 
       <h1 className="title primary-font-color has-text-weight-light">
         Changing the landscape of education
