@@ -9,7 +9,6 @@ import SectionTwo from '../components/SectionTwo';
 import SectionThree from '../components/SectionThree';
 import SectionFour from '../components/SectionFour';
 import Testimonial from '../components/Testimonial';
-import Footer from '../components/Footer';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -26,7 +25,6 @@ export default class IndexPage extends React.Component {
         <SectionThree />
         <SectionFour />
         <Testimonial />
-        <Footer />
       </Layout>
     );
   }

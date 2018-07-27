@@ -27,7 +27,7 @@ const Footer = () => (
           <h3 className="is-uppercase has-text-weight-bold">
             Access Learn Realm
           </h3>
-          <ul className="is-size-6 has-text-grey is-uppercase">
+          <ul className="is-size-6 is-uppercase">
             <li>
               <a href="#">Subscribe</a>
             </li>

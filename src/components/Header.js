@@ -74,7 +74,9 @@ const Header = () => (
 
           <div className="navbar-end">
             <LoginBtn>
-              <a className="navbar-item is-uppercase">Log in</a>
+              <Link to="/sign-up" className="navbar-item is-uppercase">
+                Log in
+              </Link>
             </LoginBtn>
 
             <a className="navbar-item">

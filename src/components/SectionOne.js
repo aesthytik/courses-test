@@ -18,6 +18,13 @@ const Container = styled.div`
   .content li {
     margin-bottom: 1rem;
   }
+  .content ul {
+    list-style-position: outside;
+    list-style-image: url('/images/Oval.svg') !important;
+    margin-left: 2em;
+    margin-top: 1em;
+    line-height: 1.9rem;
+  }
 `;
 
 const SectionOne = () => (
