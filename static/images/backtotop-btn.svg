@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>back to top button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Log-in" transform="translate(-1299.000000, -1578.000000)">
+            <g id="back-to-top-button" transform="translate(1299.000000, 1578.000000)">
+                <path d="M0,33 C0,14.7753913 14.7753913,0 33,0 C51.2274783,0 66,14.7753913 66,33 C66,51.2274783 51.2274783,66 33,66 C14.7753913,66 0,51.2274783 0,33" id="Fill-1" fill="#5A6175"></path>
+                <polygon id="Fill-3" fill="#FFFFFF" points="49.2337043 39.0866348 45.1732696 43.1442 33.0005739 30.9715043 20.8250087 43.1442 16.7674435 39.0866348 33.0005739 22.8535043"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

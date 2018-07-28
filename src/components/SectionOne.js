@@ -29,7 +29,7 @@ const Container = styled.div`
 
 const SectionOne = () => (
   <Container className="section">
-    <div className="container" id="margin-top">
+    <div className="container is-fullhd" id="margin-top">
       <div className="columns">
         <div className="column is-half">
           <div className="content">

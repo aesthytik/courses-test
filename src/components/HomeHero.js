@@ -6,7 +6,8 @@ const Container = styled.div`
   background-image: url('/images/hill-image.svg');
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 12%;
+  padding-top: 14%;
+  padding-bottom: 12%;
   .container {
     margin-top: -10%;
   }
@@ -69,7 +70,7 @@ const HeroBtn = styled.a`
 
 const HomeHero = () => (
   <Container className="section">
-    <div className="container has-text-centered">
+    <div className="container has-text-centered is-fullhd">
       <CloudImageTwo src="/images/cloud.svg" alt="cloud" />
       <BallonImage src="/images/air-baloon.svg" alt="air-balloon" />
       <SunImage src="/images/sun-cloud.svg" alt="sun-cloud" />

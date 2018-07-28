@@ -40,7 +40,7 @@ const LoginBtn = styled.a`
 
 const Header = () => (
   <Container class="section">
-    <div className="container is-fullhd">
+    <div className="container">
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link to="/">
@@ -74,7 +74,9 @@ const Header = () => (
 
           <div className="navbar-end">
             <LoginBtn>
-              <a className="navbar-item is-uppercase">Log in</a>
+              <Link to="/login" className="navbar-item is-uppercase">
+                Log in
+              </Link>
             </LoginBtn>
 
             <Link to="/sign-up" className="navbar-item">

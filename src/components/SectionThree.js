@@ -26,7 +26,7 @@ const Btn = styled.a`
 
 const SectionThree = () => (
   <Container className="section">
-    <div className="container has-text-centered">
+    <div className="container has-text-centered is-fullhd">
       <p>
         <div className="has-text-grey">
           Find starter & plenary activites to get your students instantly

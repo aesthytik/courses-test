@@ -26,7 +26,7 @@ const Btn = styled.a`
 
 const SectionFour = () => (
   <Container className="section">
-    <div className="container has-text-centered">
+    <div className="container has-text-centered is-fullhd">
       <div className="has-text-grey">
         Teach students in demand skills will the help and support of leading
         businesses

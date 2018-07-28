@@ -28,7 +28,7 @@ const Btn = styled.a`
 
 const SectionTwo = () => (
   <Container className="section">
-    <div className="container has-text-centered">
+    <div className="container has-text-centered is-fullhd">
       <div className="has-text-white">
         Find engaging resources that will save you hours of time
       </div>

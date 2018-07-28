@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const Copyright = () => (
   <Container className="section">
-    <div className="container is-fullhd has-text-grey">
+    <div className="container is-fullhd has-text-grey has-text-centered">
       <div className="columns is-desktop is-size-6">
         <div className="column">
           <h3 className="is-uppercase">© 2018 LEARN REALM INC.</h3>
@@ -42,6 +42,9 @@ const Copyright = () => (
           </h3>
         </div>
       </div>
+      {/* <div className="is-pulled-right">
+        <img src="/images/backtotop-btn.svg" alt="back-to-top" />
+      </div> */}
     </div>
   </Container>
 );

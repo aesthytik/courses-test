@@ -20,6 +20,17 @@ const Container = styled.div`
     padding-left: 0rem;
     border-bottom-width: 2px;
   }
+  .box {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px rgba(10, 10, 10, 0.1), 0 0 0 rgba(10, 10, 10, 0.1);
+    color: #5a6175 !important;
+    display: block;
+    padding-top: 2.7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2.7rem;
+  }
 `;
 
 const HeroBtn = styled.a`
@@ -143,7 +154,7 @@ const SignUpForm = () => (
                   SIGN UP WITH FACEBOOK
                 </span>
               </HeroBtn>
-              <TextAlign className="content has-text-centered">
+              <TextAlign className="content has-text-centered has-text-lightgrey">
                 BY CONTINUING, YOU AGREE TO LEARN REALM’S
                 <a href="#">
                   <span> TERMS & CONDITIONS </span>
