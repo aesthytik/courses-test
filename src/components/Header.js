@@ -39,58 +39,60 @@ const LoginBtn = styled.a`
 `;
 
 const Header = () => (
-  <Container class="section">
-    <div className="container">
-      <nav className="navbar" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
-          <Link to="/">
-            <img
-              src="/images/logo.png"
-              className="logo"
-              alt="learn realm logo"
-            />
-          </Link>
-
-          <a
-            role="button"
-            className="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-          >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </a>
-        </div>
-
-        <LinkStyle className="navbar-menu">
-          <div className="navbar-start is-size-6">
-            <a className="navbar-item primary-font-color">Foreword</a>
-            <a className="navbar-item primary-font-color">Blog</a>
-            <a className="navbar-item primary-font-color">Teachers</a>
-            <a className="navbar-item primary-font-color">Freebies</a>
-            <a className="navbar-item primary-font-color">Member's club</a>
-          </div>
-
-          <div className="navbar-end">
-            <LoginBtn>
-              <Link to="/login" className="navbar-item is-uppercase">
-                Log in
-              </Link>
-            </LoginBtn>
-
-            <Link to="/sign-up" className="navbar-item">
-              <Btn className="button is-rounded is-outlined is-large is-pulled-right is-hover">
-                <span className="is-size-6 has-text-weight-bold">
-                  SIGN UP FOR FREE
-                </span>
-              </Btn>
+  <React.Fragment>
+    <Container class="section">
+      <div className="container">
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+            <Link to="/">
+              <img
+                src="/images/logo.png"
+                className="logo"
+                alt="learn realm logo"
+              />
             </Link>
+
+            <a
+              role="button"
+              className="navbar-burger"
+              aria-label="menu"
+              aria-expanded="false"
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </a>
           </div>
-        </LinkStyle>
-      </nav>
-    </div>
-  </Container>
+
+          <LinkStyle className="navbar-menu">
+            <div className="navbar-start is-size-6">
+              <a className="navbar-item primary-font-color">Foreword</a>
+              <a className="navbar-item primary-font-color">Blog</a>
+              <a className="navbar-item primary-font-color">Teachers</a>
+              <a className="navbar-item primary-font-color">Freebies</a>
+              <a className="navbar-item primary-font-color">Member's club</a>
+            </div>
+
+            <div className="navbar-end">
+              <LoginBtn>
+                <Link to="/login" className="navbar-item is-uppercase">
+                  Log in
+                </Link>
+              </LoginBtn>
+
+              <Link to="/sign-up" className="navbar-item">
+                <Btn className="button is-rounded is-outlined is-large is-pulled-right is-hover">
+                  <span className="is-size-6 has-text-weight-bold">
+                    SIGN UP FOR FREE
+                  </span>
+                </Btn>
+              </Link>
+            </div>
+          </LinkStyle>
+        </nav>
+      </div>
+    </Container>
+  </React.Fragment>
 );
 
 export default Header;

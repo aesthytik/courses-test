@@ -3,9 +3,11 @@ import React from 'react';
 import config from '../utils/config';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-import SignUpForm from '../components/SignUpForm';
+import SavedPacks from '../components/SavedPacks';
+import RecentPacks from '../components/RecentPacks';
+import IndustryPacks from '../components/IndustryPacks';
 
-export default class SignUpPage extends React.Component {
+export default class TeacherDashboard extends React.Component {
   render() {
     return (
       <Layout>
@@ -14,7 +16,9 @@ export default class SignUpPage extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
-        <SignUpForm />
+        <SavedPacks />
+        <RecentPacks />
+        <IndustryPacks />
       </Layout>
     );
   }

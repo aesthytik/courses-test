@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { darken } from 'polished';
 
 const Container = styled.div`
   background-color: #ededed;
@@ -31,9 +33,19 @@ const Container = styled.div`
     padding-right: 2rem;
     padding-bottom: 4rem;
   }
+  .login-btn {
+    :hover {
+      background-color: ${darken(0.2, '#1dbe71')} !important;
+    }
+  }
+  .fb-login-btn {
+    :hover {
+      background-color: ${darken(0.2, '#7ebce6')} !important;
+    }
+  }
 `;
 
-const HeroBtn = styled.a`
+const LoginBtn = styled.a`
   width: 100%;
   height: 4.9375rem;
   border-radius: 1.25rem;
@@ -102,7 +114,10 @@ const LoginForm = () => (
             </div>
             <br />
             <div className="has-text-centered has-text-weight-light is-size-6">
-              NEW TO LEARN REALM? <span>&nbsp; SIGN UP FOR FREE</span>
+              NEW TO LEARN REALM?{' '}
+              <Link to="/sign-up">
+                <span>&nbsp; SIGN UP FOR FREE</span>
+              </Link>
             </div>
             <br />
             <br />
@@ -135,15 +150,15 @@ const LoginForm = () => (
               </label>
               <br />
               <br />
-              <HeroBtn className="button primary-color is-large has-text-centered">
+              <LoginBtn className="button primary-color is-large has-text-centered login-btn">
                 <span className="is-size-6 has-text-white">LOG IN</span>
-              </HeroBtn>
+              </LoginBtn>
               <Text className="has-text-centered">OR</Text>
-              <HeroBtn className="button secondary-color is-large has-text-centered">
+              <LoginBtn className="button secondary-color is-large has-text-centered fb-login-btn">
                 <span className="is-size-6 has-text-white">
                   LOG IN WITH FACEBOOK
                 </span>
-              </HeroBtn>
+              </LoginBtn>
             </form>
           </div>
         </div>
@@ -191,15 +206,15 @@ const LoginForm = () => (
               </label>
               <br />
               <br />
-              <HeroBtn className="button primary-color is-large has-text-centered">
+              <LoginBtn className="button primary-color is-large has-text-centered login-btn">
                 <span className="is-size-6 has-text-white">LOG IN</span>
-              </HeroBtn>
+              </LoginBtn>
               <Text className="has-text-centered">OR</Text>
-              <HeroBtn className="button secondary-color is-large has-text-centered">
+              <LoginBtn className="button secondary-color is-large has-text-centered fb-login-btn">
                 <span className="is-size-6 has-text-white">
                   LOG IN WITH FACEBOOK
                 </span>
-              </HeroBtn>
+              </LoginBtn>
             </form>
           </div>
         </div>
