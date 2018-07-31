@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import SavedPacks from '../components/SavedPacks';
 import RecentPacks from '../components/RecentPacks';
 import IndustryPacks from '../components/IndustryPacks';
+import MultipleSlider from '../components/MultipleSlider';
 
 export default class TeacherDashboard extends React.Component {
   render() {
@@ -19,6 +20,7 @@ export default class TeacherDashboard extends React.Component {
         <SavedPacks />
         <RecentPacks />
         <IndustryPacks />
+        {/* <MultipleSlider /> */}
       </Layout>
     );
   }

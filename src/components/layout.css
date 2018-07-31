@@ -79,3 +79,21 @@ svg:not(:root).svg-inline--fa {
   border-right-color: #ffffff;
   border-left-color: #ffffff;
 }
+
+.slick-next {
+  top: -38.6rem;
+  right: -80rem;
+  position: relative;
+}
+
+.slick-prev {
+  top: -1.54rem;
+  left: 74rem;
+  position: relative;
+}
+
+.slick-next,
+.slick-prev {
+  width: 21px;
+  height: 41px;
+}

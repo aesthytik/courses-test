@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Slider from 'react-slick';
 
 const Container = styled.div`
   background-color: #ededed;
@@ -60,107 +61,117 @@ const Container = styled.div`
   }
 `;
 
-const IndustryPacks = () => (
-  <Container className="section">
-    <div className="container">
-      <h1 className="title has-text-grey">Industrial Packs</h1>
-      <div className="columns">
-        <div className="column">
-          <div className="box is-paddingless has-text-centered is-radiusless">
-            <img
-              src="/images/saved-packs/steve-jobs.svg"
-              className="image"
-              alt="steve-jobs"
-            />
-            <div className="overlay">
-              <div className="text">VIEW PACK</div>
+export default class IndustryPacks extends React.Component {
+  render() {
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      nextArrow: <img src="/images/next.svg" />,
+      prevArrow: <img src="/images/prev.svg" />,
+    };
+    return (
+      <Container className="section">
+        <div className="container">
+          <h1 className="title has-text-grey">Industrial Packs</h1>
+          <Slider {...settings}>
+            <div className="column">
+              <div className="box is-paddingless has-text-centered is-radiusless">
+                <img
+                  src="/images/saved-packs/steve-jobs.svg"
+                  className="image"
+                  alt="steve-jobs"
+                />
+                <div className="overlay">
+                  <div className="text">VIEW PACK</div>
+                </div>
+              </div>
+              <ul>
+                <li className="has-text-weight-bold">
+                  <a href="#">Design Technology</a>
+                </li>
+                <li>
+                  <a href="#">Famous Designer</a>
+                </li>
+                <li>
+                  <a href="#">Steve Jobs</a>
+                </li>
+              </ul>
             </div>
-          </div>
-          <ul>
-            <li className="has-text-weight-bold">
-              <a href="#">Design Technology</a>
-            </li>
-            <li>
-              <a href="#">Famous Designer</a>
-            </li>
-            <li>
-              <a href="#">Steve Jobs</a>
-            </li>
-          </ul>
-        </div>
-        <div className="column">
-          <div className="box is-paddingless has-text-centered is-radiusless">
-            <img
-              src="/images/saved-packs/martin.svg"
-              className="image"
-              alt="martin"
-            />
-            <div className="overlay">
-              <div className="text">VIEW PACK</div>
+            <div className="column">
+              <div className="box is-paddingless has-text-centered is-radiusless">
+                <img
+                  src="/images/saved-packs/martin.svg"
+                  className="image"
+                  alt="martin"
+                />
+                <div className="overlay">
+                  <div className="text">VIEW PACK</div>
+                </div>
+              </div>
+              <ul>
+                <li className="has-text-weight-bold">
+                  <a href="#">Social Studies</a>
+                </li>
+                <li>
+                  <a href="#">Influencial figures</a>
+                </li>
+                <li>
+                  <a href="#">Martin Luther King</a>
+                </li>
+              </ul>
             </div>
-          </div>
-
-          <ul>
-            <li className="has-text-weight-bold">
-              <a href="#">Social Studies</a>
-            </li>
-            <li>
-              <a href="#">Influencial figures</a>
-            </li>
-            <li>
-              <a href="#">Martin Luther King</a>
-            </li>
-          </ul>
-        </div>
-        <div className="column">
-          <div className="box is-paddingless has-text-centered is-radiusless">
-            <img
-              src="/images/saved-packs/neil.svg"
-              className="image"
-              alt="neil"
-            />
-            <div className="overlay">
-              <div className="text">VIEW PACK</div>
+            <div className="column">
+              <div className="box is-paddingless has-text-centered is-radiusless">
+                <img
+                  src="/images/saved-packs/neil.svg"
+                  className="image"
+                  alt="neil"
+                />
+                <div className="overlay">
+                  <div className="text">VIEW PACK</div>
+                </div>
+              </div>
+              <ul>
+                <li className="has-text-weight-bold">
+                  <a href="#">Science</a>
+                </li>
+                <li>
+                  <a href="#">Famous Scientists</a>
+                </li>
+                <li>
+                  <a href="#">Neil Armstrong</a>
+                </li>
+              </ul>
             </div>
-          </div>
-          <ul>
-            <li className="has-text-weight-bold">
-              <a href="#">Science</a>
-            </li>
-            <li>
-              <a href="#">Famous Scientists</a>
-            </li>
-            <li>
-              <a href="#">Neil Armstrong</a>
-            </li>
-          </ul>
-        </div>
-        <div className="column">
-          <div className="box is-paddingless has-text-centered is-radiusless">
-            <img
-              src="/images/saved-packs/albert.svg"
-              className="image"
-              alt="albert"
-            />
-            <div className="overlay">
-              <div className="text">VIEW PACK</div>
+            <div className="column">
+              <div className="box is-paddingless has-text-centered is-radiusless">
+                <img
+                  src="/images/saved-packs/albert.svg"
+                  className="image"
+                  alt="albert"
+                />
+                <div className="overlay">
+                  <div className="text">VIEW PACK</div>
+                </div>
+              </div>
+              <ul>
+                <li className="has-text-weight-bold">
+                  <a href="#">Science > Physics</a>
+                </li>
+                <li>
+                  <a href="#">Famous Scientists</a>
+                </li>
+                <li>
+                  <a href="#">Albert Einstein</a>
+                </li>
+              </ul>
             </div>
-          </div>
-          <ul>
-            <li className="has-text-weight-bold">
-              <a href="#">Science > Physics</a>
-            </li>
-            <li>
-              <a href="#">Famous Scientists</a>
-            </li>
-            <li>
-              <a href="#">Albert Einstein</a>
-            </li>
-          </ul>
+          </Slider>
         </div>
-      </div>
-    </div>
-  </Container>
-);
-
-export default IndustryPacks;
+      </Container>
+    );
+  }
+}
