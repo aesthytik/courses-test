@@ -13,7 +13,7 @@ module.exports = {
   googleAnalytics: '',
 
   backgroundColor: '#e0e0e0',
-  themeColor: '#c62828',
+  themeColor: '#1dbe71',
 
   primaryColor: '#1DBE71',
 };

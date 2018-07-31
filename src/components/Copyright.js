@@ -3,13 +3,19 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   background-color: #ffffff;
+    position: relative;
   > div {
     width: 76%;
   }
 
   #alignment {
     margin-right: -5%;
+  
   }
+  .arrow{
+    position: absolute;
+    top: 25%;
+    right: 0;
   }
 `;
 
@@ -42,10 +48,14 @@ const Copyright = () => (
           </h3>
         </div>
       </div>
-      {/* <div className="is-pulled-right">
-        <img src="/images/backtotop-btn.svg" alt="back-to-top" />
-      </div> */}
     </div>
+    <a href="">
+      <img
+        src="/images/backtotop-btn.svg"
+        className="arrow"
+        alt="back-to-top"
+      />
+    </a>
   </Container>
 );
 

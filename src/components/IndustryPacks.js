@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 
 const Container = styled.div`
-  background-color: #ededed;
+  background-color: #d5f3e5;
   height: auto;
   padding: 3%;
-  .columns {
-    font-size: 1.5625rem;
-  }
+
   .title {
     font-size: 2.8125rem !important;
+    margin-bottom: 0rem;
   }
   li > a {
     color: #5a6175 !important;
@@ -18,15 +17,10 @@ const Container = styled.div`
   }
   ul {
     line-height: 2.5rem;
+    padding-top: 4.8%;
   }
   .box {
-    position: relative;
     margin-top: 6%;
-  }
-  .image {
-    display: block;
-    width: 100%;
-    height: auto;
   }
   .text {
     color: white;
@@ -44,25 +38,29 @@ const Container = styled.div`
     border-width: 2px;
     padding: 6%;
   }
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: black;
+
+  #box{
+    width: 88%;
+    position: relative;
   }
-  .overlay:hover {
-    opacity: 0.7;
+  #overlay {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;  
+    background:rgba(0,0,0,.75);
+    text-align:center;
+    padding:45px 0 66px 0;
+    opacity:0;
+    -webkit-transition: opacity .25s ease;
+  }
+  #box:hover #overlay {
+    opacity:1;
   }
 `;
 
 export default class IndustryPacks extends React.Component {
-  render() {
+  render () {
     const settings = {
       dots: false,
       infinite: true,
@@ -75,18 +73,18 @@ export default class IndustryPacks extends React.Component {
     return (
       <Container className="section">
         <div className="container">
-          <h1 className="title has-text-grey">Industrial Packs</h1>
+          <h1 className="title has-text-grey">Industry Packs</h1>
           <Slider {...settings}>
-            <div className="column">
-              <div className="box is-paddingless has-text-centered is-radiusless">
+            <div>
+              <div id="box">
                 <img
                   src="/images/saved-packs/steve-jobs.svg"
-                  className="image"
                   alt="steve-jobs"
                 />
-                <div className="overlay">
-                  <div className="text">VIEW PACK</div>
+                <div id="overlay">
+                  <div className="text has-text-weight-bold">VIEW PACK</div>
                 </div>
+
               </div>
               <ul>
                 <li className="has-text-weight-bold">
@@ -100,72 +98,95 @@ export default class IndustryPacks extends React.Component {
                 </li>
               </ul>
             </div>
-            <div className="column">
-              <div className="box is-paddingless has-text-centered is-radiusless">
+            <div>
+              <div id="box">
                 <img
-                  src="/images/saved-packs/martin.svg"
-                  className="image"
-                  alt="martin"
+                  src="/images/saved-packs/steve-jobs.svg"
+                  alt="steve-jobs"
                 />
-                <div className="overlay">
-                  <div className="text">VIEW PACK</div>
+                <div id="overlay">
+                  <div className="text has-text-weight-bold">VIEW PACK</div>
                 </div>
+
               </div>
               <ul>
                 <li className="has-text-weight-bold">
-                  <a href="#">Social Studies</a>
+                  <a href="#">Design Technology</a>
                 </li>
                 <li>
-                  <a href="#">Influencial figures</a>
+                  <a href="#">Famous Designer</a>
                 </li>
                 <li>
-                  <a href="#">Martin Luther King</a>
+                  <a href="#">Steve Jobs</a>
                 </li>
               </ul>
             </div>
-            <div className="column">
-              <div className="box is-paddingless has-text-centered is-radiusless">
+            <div>
+              <div id="box">
                 <img
-                  src="/images/saved-packs/neil.svg"
-                  className="image"
-                  alt="neil"
+                  src="/images/saved-packs/steve-jobs.svg"
+                  alt="steve-jobs"
                 />
-                <div className="overlay">
-                  <div className="text">VIEW PACK</div>
+                <div id="overlay">
+                  <div className="text has-text-weight-bold">VIEW PACK</div>
                 </div>
+
               </div>
               <ul>
                 <li className="has-text-weight-bold">
-                  <a href="#">Science</a>
+                  <a href="#">Design Technology</a>
                 </li>
                 <li>
-                  <a href="#">Famous Scientists</a>
+                  <a href="#">Famous Designer</a>
                 </li>
                 <li>
-                  <a href="#">Neil Armstrong</a>
+                  <a href="#">Steve Jobs</a>
                 </li>
               </ul>
             </div>
-            <div className="column">
-              <div className="box is-paddingless has-text-centered is-radiusless">
+            <div>
+              <div id="box">
                 <img
-                  src="/images/saved-packs/albert.svg"
-                  className="image"
-                  alt="albert"
+                  src="/images/saved-packs/steve-jobs.svg"
+                  alt="steve-jobs"
                 />
-                <div className="overlay">
-                  <div className="text">VIEW PACK</div>
+                <div id="overlay">
+                  <div className="text has-text-weight-bold">VIEW PACK</div>
                 </div>
+
               </div>
               <ul>
                 <li className="has-text-weight-bold">
-                  <a href="#">Science > Physics</a>
+                  <a href="#">Design Technology</a>
                 </li>
                 <li>
-                  <a href="#">Famous Scientists</a>
+                  <a href="#">Famous Designer</a>
                 </li>
                 <li>
-                  <a href="#">Albert Einstein</a>
+                  <a href="#">Steve Jobs</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div id="box">
+                <img
+                  src="/images/saved-packs/steve-jobs.svg"
+                  alt="steve-jobs"
+                />
+                <div id="overlay">
+                  <div className="text has-text-weight-bold">VIEW PACK</div>
+                </div>
+
+              </div>
+              <ul>
+                <li className="has-text-weight-bold">
+                  <a href="#">Design Technology</a>
+                </li>
+                <li>
+                  <a href="#">Famous Designer</a>
+                </li>
+                <li>
+                  <a href="#">Steve Jobs</a>
                 </li>
               </ul>
             </div>

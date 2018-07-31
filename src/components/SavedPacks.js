@@ -25,7 +25,7 @@ const Container = styled.div`
 `;
 
 export default class SavedPacks extends React.Component {
-  render() {
+  render () {
     const settings = {
       dots: false,
       infinite: true,
