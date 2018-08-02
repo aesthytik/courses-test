@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Teacher-dashboard" transform="translate(-1299.000000, -41.000000)">
+            <g id="Group-4" transform="translate(1299.000000, 41.000000)">
+                <circle id="Oval-3" stroke-opacity="0" stroke="#979797" fill="#3FAF6E" cx="36" cy="36" r="36"></circle>
+                <g id="Group-5" transform="translate(22.000000, 19.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2">
+                    <path d="M28.9,27.1802 L28.9,33.0902 C28.9,33.5882 28.499,33.9942 28,34.0002 L0.9,34.0002 C0.401,33.9942 0,33.5882 0,33.0902 L0,27.1802 C0,22.4092 6.47,18.5392 14.45,18.5392 C22.43,18.5392 28.9,22.4092 28.9,27.1802 Z" id="Stroke-1"></path>
+                    <path d="M14.4498,0 C17.9958,0 20.8698,2.767 20.8698,6.18 C20.8698,9.593 17.9958,12.36 14.4498,12.36 C10.9048,12.36 8.0298,9.593 8.0298,6.18 C8.0298,2.767 10.9048,0 14.4498,0 Z" id="Stroke-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

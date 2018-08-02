@@ -27,7 +27,7 @@ body {
 }
 
 .navbar-item {
-  margin-left: 9%;
+  margin-left: 4%;
 }
 
 .primary-font-color {
@@ -82,13 +82,13 @@ svg:not(:root).svg-inline--fa {
 
 .slick-next {
   top: -38.6rem;
-  right: -80rem;
+  left: 82.5rem;
   position: relative;
 }
 
 .slick-prev {
   top: -1.54rem;
-  left: 74rem;
+  left: 77rem;
   position: relative;
 }
 
@@ -98,3 +98,10 @@ svg:not(:root).svg-inline--fa {
   height: 41px;
 }
 
+.navbar-item img {
+  max-height: 72px !important;
+}
+
+.slick-list {
+  width: 104%;
+}
