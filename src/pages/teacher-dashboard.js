@@ -122,7 +122,7 @@ const industryPacks = [
 export default class TeacherDashboard extends React.Component {
   render() {
     return (
-      <Layout pathName={location.pathname}>
+      <Layout>
         <Seo
           title="Learn Realm"
           description="Welcome to Learn Realm"
