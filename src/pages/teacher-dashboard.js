@@ -120,7 +120,7 @@ const industryPacks = [
 ];
 
 export default class TeacherDashboard extends React.Component {
-  render() {
+  render () {
     // const pathName = global.location.pathname;
     return (
       <Layout>

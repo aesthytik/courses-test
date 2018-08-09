@@ -10,7 +10,7 @@ import './layout.css';
 
 const Container = styled.div``;
 
-const IndexLayout = ({ children, pathName }) => (
+const IndexLayout = ({children, pathName}) => (
   <div>
     <Helmet>
       <title>{config.siteName}</title>
