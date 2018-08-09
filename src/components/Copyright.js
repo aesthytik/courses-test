@@ -3,19 +3,23 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   background-color: #ffffff;
-    position: relative;
+  position: relative;
   > div {
     width: 76%;
   }
-
-  #alignment {
-    margin-right: -5%;
-  
-  }
-  .arrow{
+  .arrow {
     position: absolute;
     top: 25%;
     right: 0;
+    @media only screen and (max-width: 768px) {
+      top: 90%;
+      right: 133px;
+    }
+    @media only screen and (max-width: 768px) and (min-width: 1024px) {
+      position: absolute;
+      top: 90%;
+      right: 25rem;
+    }
   }
 `;
 
@@ -33,7 +37,7 @@ const Copyright = () => (
             </a>
           </h3>
         </div>
-        <div className="column" id="alignment">
+        <div className="column">
           <h3 className="is-uppercase">
             <a href="#" className="has-text-grey">
               PRIVACY POLICY

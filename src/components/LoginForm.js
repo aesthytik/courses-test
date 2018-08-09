@@ -90,7 +90,7 @@ const GreenOrangeBalloon = styled.img`
 const LoginForm = () => (
   <Container className="section">
     <AlignContainer className="container is-fullhd has-text-grey is-hidden-mobile">
-      <div className="columns is-desktop is-size-6">
+      <div className="columns is-tablet is-size-6">
         <GreenBalloonBig
           src="/images/green-balloon-big.svg"
           alt="green-balloon-big"

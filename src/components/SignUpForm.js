@@ -87,7 +87,7 @@ const Or = styled.div`
 const SignUpForm = () => (
   <Container className="section">
     <div className="container is-fullhd has-text-grey">
-      <div className="columns is-desktop is-size-6">
+      <div className="columns is-tablet is-size-6">
         <div className="column is-half">
           <div className="columns">
             <div className="column is-half">
