@@ -121,9 +121,9 @@ const industryPacks = [
 
 export default class TeacherDashboard extends React.Component {
   render() {
-    const pathName = global.location.pathname;
+    // const pathName = global.location.pathname;
     return (
-      <Layout pathName={pathName}>
+      <Layout>
         <Seo
           title="Learn Realm"
           description="Welcome to Learn Realm"
