@@ -11,15 +11,6 @@ const Container = styled.div`
     position: absolute;
     top: 25%;
     right: 0;
-    @media only screen and (max-width: 768px) {
-      top: 90%;
-      right: 133px;
-    }
-    @media only screen and (max-width: 768px) and (min-width: 1024px) {
-      position: absolute;
-      top: 90%;
-      right: 25rem;
-    }
   }
 `;
 

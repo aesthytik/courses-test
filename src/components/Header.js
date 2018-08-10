@@ -10,6 +10,14 @@ const Container = styled.div`
   .logo {
     height: 36px;
     width: auto;
+    @media only screen and (max-width: 1088px) {
+      padding-left: 4%;
+    }
+    @media only screen and (max-width: 400px) {
+      height: 28px;
+      margin-left: 25%;
+      margin-top: 4%;
+    }
   }
   .menu-list {
     line-height: 4;
