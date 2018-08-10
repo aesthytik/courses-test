@@ -115,7 +115,7 @@ const LoginForm = () => (
             <br />
             <div className="has-text-centered has-text-weight-light is-size-6">
               NEW TO LEARN REALM?{' '}
-              <Link to="/sign-up">
+              <Link to="/sign-up/">
                 <span>&nbsp; SIGN UP FOR FREE</span>
               </Link>
             </div>
