@@ -111,9 +111,7 @@ export default class Header extends React.Component {
                 <a
                   role="button"
                   className={
-                    this.state.isActive
-                      ? 'is-active navbar-burger'
-                      : 'navbar-burger'
+                    isActive ? 'is-active navbar-burger' : 'navbar-burger'
                   }
                   aria-label="menu"
                   aria-expanded="false"
