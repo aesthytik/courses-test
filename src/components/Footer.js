@@ -10,6 +10,10 @@ const Container = styled.div`
   }
   .columns {
     margin-left: 12%;
+    @media screen and (max-width: 600px) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
   }
   li > a {
     color: #5a6175 !important;
@@ -24,10 +28,10 @@ const Footer = () => (
     <div className="container is-fullhd has-text-grey">
       <div className="columns is-desktop is-size-5 ">
         <div className="column">
-          <h3 className="is-uppercase has-text-weight-bold">
+          <h3 className="is-uppercase has-text-weight-bold has-text-centered-mobile is-size-6-mobile">
             Access Learn Realm
           </h3>
-          <ul className="is-size-6 is-uppercase">
+          <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
             <li>
               <a href="#">Subscribe</a>
             </li>
@@ -46,8 +50,10 @@ const Footer = () => (
           </ul>
         </div>
         <div className="column">
-          <h3 className="is-uppercase has-text-weight-bold">Partnerships</h3>
-          <ul className="is-size-6 is-uppercase">
+          <h3 className="is-uppercase has-text-weight-bold has-text-centered-mobile is-size-6-mobile">
+            Partnerships
+          </h3>
+          <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
             <li>
               <a href="#">Reasearch Partners</a>
             </li>
@@ -57,8 +63,10 @@ const Footer = () => (
           </ul>
         </div>
         <div className="column">
-          <h3 className="is-uppercase has-text-weight-bold">About us</h3>
-          <ul className="is-size-6 is-uppercase">
+          <h3 className="is-uppercase has-text-weight-bold has-text-centered-mobile is-size-6-mobile">
+            About us
+          </h3>
+          <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
             <li>
               <a href="#">Twitter</a>
             </li>
@@ -70,9 +78,11 @@ const Footer = () => (
             </li>
           </ul>
         </div>
-        <div className="column is-lowercase">
-          <h3 className="has-text-weight-bold is-uppercase">Support</h3>
-          <ul className="is-size-6 is-uppercase">
+        <div className="column is-lowercase has-text-centered-mobile">
+          <h3 className="has-text-weight-bold is-uppercase has-text-centered-mobile is-size-6-mobile">
+            Support
+          </h3>
+          <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
             <li>
               <a href="#">Help center</a>
             </li>

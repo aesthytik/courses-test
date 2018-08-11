@@ -5,16 +5,20 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 const Container = styled.div`
-  padding: 60px 0;
+  padding: 3.75rem 0;
   .logo {
-    height: 36px;
+    height: 2.25rem;
     width: auto;
+    @media screen and (max-width: 600px) {
+      height: 1.5rem;
+      margin-left: 86px;
+    }
   }
 `;
 
 const LinkStyle = styled.div`
   width: 655px;
-  height: 38px;
+  height: 2.375rem;
 `;
 
 const SignupBtn = styled.a`
@@ -50,6 +54,19 @@ const MobilMenu = styled.div`
   padding: 2rem;
   overflow: hidden;
 `;
+
+const NavbarBurger = styled.a`
+  color: #3273dc;
+  cursor: pointer;
+  text-decoration: none;
+  @media screen and (max-width: 600px) {
+      margin-top: 0.875rem;
+      width: 26%;
+      height: 50%;
+    }
+  }
+`;
+
 export default class Header extends React.Component {
   render() {
     const { path } = this.props;
@@ -71,7 +88,7 @@ export default class Header extends React.Component {
                   />
                 </Link>
 
-                <a
+                <NavbarBurger
                   role="button"
                   className="navbar-burger"
                   aria-label="menu"
@@ -80,9 +97,9 @@ export default class Header extends React.Component {
                   <span aria-hidden="true" />
                   <span aria-hidden="true" />
                   <span aria-hidden="true" />
-                </a>
+                </NavbarBurger>
               </div>
-              <MobilMenu className="is-hidden-tablet">
+              {/* <MobilMenu className="is-hidden-tablet">
                 <aside className="menu">
                   <ul className="menu-list is-uppercase has-text-weight-bold is-size-4">
                     <li>adssf</li>
@@ -93,7 +110,7 @@ export default class Header extends React.Component {
                     <li>adssf</li>
                   </ul>
                 </aside>
-              </MobilMenu>
+              </MobilMenu> */}
 
               <LinkStyle className="navbar-menu">
                 <div className="navbar-end">

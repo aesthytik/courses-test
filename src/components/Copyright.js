@@ -3,19 +3,23 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   background-color: #ffffff;
-    position: relative;
+  position: relative;
   > div {
     width: 76%;
   }
 
   #alignment {
     margin-right: -5%;
-  
   }
-  .arrow{
+  .arrow {
     position: absolute;
     top: 25%;
     right: 0;
+    @media screen and (max-width: 600px) {
+      margin-top: 203px;
+      margin-right: 133px;
+      width: 15%;
+    }
   }
 `;
 

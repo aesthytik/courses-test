@@ -8,16 +8,39 @@ const Container = styled.div`
   background-position: bottom;
   padding-top: 14%;
   padding-bottom: 12%;
+  @media screen and (max-width: 600px) {
+    padding-top:6%!important;
+   }
+  }
   .container {
     margin-top: -10%;
+    @media screen and (max-width: 600px) {
+      padding-bottom: 60%;
+      margin-top: -10%;
+    }
+  }
+
+  h1 {
+    padding: 0%;
+    @media screen and (max-width: 600px) {
+      font-size: 2.0625rem !important;
+      line-height: 2.6875rem;
+      font-weight: 600 !important;
+    }
   }
 
   h2 {
     padding: 1%;
+    @media screen and (max-width: 600px) {
+      font-size: 20px !important;
+    }
   }
 
   h2 + div {
     padding-top: 3%;
+    @media screen and (max-width: 600px) {
+      padding-top: 12%;
+    }
   }
 
   .sign-btn {
@@ -41,24 +64,52 @@ const BallonImage = styled.img`
   position: absolute;
   top: 20%;
   right: 7%;
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    top: 28%;
+    right: 1%;
+    height: 85px;
+  }
+}
 `;
 
 const SunImage = styled.img`
   position: absolute;
   top: -29%;
   right: 39%;
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    top: -8%;
+    right: 6%;
+    height: 3.125rem;
+  }
+}
 `;
 
 const CloudImageOne = styled.img`
   position: absolute;
   top: 22%;
   right: 83%;
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    top: 14%;
+    right: 76%;
+    height: 17px;
+  }
+}
 `;
 
 const CloudImageTwo = styled.img`
-position: absolute;
-top: 27%;
-right: 0%;
+  position: absolute;
+  top: 27%;
+  right: 0%;
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    top: 30%;
+    height: 1.3125rem;
+    right: 72%;
+
+  }
 }
 `;
 
@@ -66,6 +117,11 @@ const HeroBtn = styled.a`
   width: 17.75rem;
   height: 4.9375rem;
   border-radius: 1.25rem;
+  @media screen and (max-width: 600px) {
+    width: 67%;
+    height: 3.9375rem;
+  }
+}
 `;
 
 const HomeHero = () => (

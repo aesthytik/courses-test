@@ -6,6 +6,8 @@ const Container = styled.div`
   height: auto;
   padding: 6%;
   margin-top: -1px;
+  @media screen and (max-width: 600px) {
+  }
   .column {
     padding-left: 14%;
   }
@@ -24,7 +26,18 @@ const Container = styled.div`
     margin-left: 2em;
     margin-top: 1em;
     line-height: 1.9rem;
+    @media screen and (max-width: 600px) {
+    }
   }
+`;
+
+const Engaging = styled.p`
+  font-size: 2rem!important;
+  @media screen and (max-width: 600px) {
+    font-size: 1.125rem !important;
+    font-weight: 600!important;
+  }
+}
 `;
 
 const SectionOne = () => (
@@ -33,9 +46,9 @@ const SectionOne = () => (
       <div className="columns">
         <div className="column is-half">
           <div className="content">
-            <p className="is-size-3 has-text-weight-light">
+            <Engaging className="is-size-3 has-text-weight-light">
               Engaging resources to empower<br />teaching and learning
-            </p>
+            </Engaging>
             <ul className="is-size-5">
               <li>
                 Themed sessions on core subjects & special<br />industry
