@@ -7,10 +7,6 @@ const Container = styled.div`
   > div {
     width: 76%;
   }
-
-  #alignment {
-    margin-right: -5%;
-  }
   .arrow {
     position: absolute;
     top: 25%;
@@ -37,7 +33,7 @@ const Copyright = () => (
             </a>
           </h3>
         </div>
-        <div className="column" id="alignment">
+        <div className="column">
           <h3 className="is-uppercase">
             <a href="#" className="has-text-grey">
               PRIVACY POLICY

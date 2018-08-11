@@ -8,7 +8,7 @@ const Container = styled.div`
   h3 {
     padding-bottom: 1rem;
   }
-  .columns {
+  .footer-alignment {
     margin-left: 12%;
     @media screen and (max-width: 600px) {
       margin-left: 0px;
@@ -19,33 +19,37 @@ const Container = styled.div`
     color: #5a6175 !important;
   }
   ul {
-    line-height: 2rem;
+    line-height: 2.5rem;
+  }
+  .columns {
+    @media only screen and (max-width: 400px) {
+      text-align: center !important;
+      margin-left: 0%;
+    }
   }
 `;
 
 const Footer = () => (
   <Container className="section">
     <div className="container is-fullhd has-text-grey">
-      <div className="columns is-desktop is-size-5 ">
+      <div className="columns is-desktop is-size-5 footer-alignment">
         <div className="column">
-          <h3 className="is-uppercase has-text-weight-bold has-text-centered-mobile is-size-6-mobile">
-            Access Learn Realm
-          </h3>
-          <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
+          <h3 className="has-text-weight-bold">Access Learn Realm</h3>
+          <ul className="is-size-6 is-uppercase">
             <li>
-              <a href="#">Subscribe</a>
+              <a href="#">SUBSCRIBE</a>
             </li>
             <li>
-              <a href="#">Access for teachers</a>
+              <a href="#">ACCESS FOR TEACHERS</a>
             </li>
             <li>
-              <a href="#">Access for students</a>
+              <a href="#">ACCESS FOR STUDENTS</a>
             </li>
             <li>
-              <a href="#">Access for Parents</a>
+              <a href="#">ACCESS FOR PARENTS</a>
             </li>
             <li>
-              <a href="#">Access for Schools</a>
+              <a href="#">ACCESS FOR SCHOOLS</a>
             </li>
           </ul>
         </div>
@@ -55,26 +59,27 @@ const Footer = () => (
           </h3>
           <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
             <li>
-              <a href="#">Reasearch Partners</a>
+              <a href="#">RESEARCH PARTNERS</a>
             </li>
             <li>
-              <a href="#">Brand partners</a>
+              <a href="#">BRAND PARTNERS</a>
             </li>
           </ul>
         </div>
         <div className="column">
-          <h3 className="is-uppercase has-text-weight-bold has-text-centered-mobile is-size-6-mobile">
-            About us
-          </h3>
-          <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
+          <h3 className="is-uppercase has-text-weight-bold">About us</h3>
+          <ul className="is-size-6">
             <li>
-              <a href="#">Twitter</a>
+              <a href="#">ABOUT LEARN REALM</a>
             </li>
             <li>
-              <a href="#">Facebook</a>
+              <a href="#">PRESS</a>
             </li>
             <li>
-              <a href="#">Instagram</a>
+              <a href="#">CAREERS</a>
+            </li>
+            <li>
+              <a href="#">BLOG</a>
             </li>
           </ul>
         </div>

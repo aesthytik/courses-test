@@ -9,6 +9,10 @@ const Container = styled.div`
     justify-content: center;
     display: flex;
   }
+  @media only screen and (max-width: 400px) {
+    padding-left: 15%;
+    padding-bottom: 10%;
+  }
 `;
 
 const SocialMediaIcon = styled.img`
@@ -16,8 +20,8 @@ const SocialMediaIcon = styled.img`
 `;
 
 const SocialMediaIcons = () => (
-  <Container className="section">
-    <div className="container has-text-centered">
+  <Container className="section  has-text-centered">
+    <div className="container">
       <a href="#">
         <SocialMediaIcon src="/images/social-icons/youtube.svg" alt="youtube" />
       </a>
