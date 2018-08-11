@@ -23,6 +23,10 @@ export default class PacksList extends React.Component {
       .title {
         font-size: 2.8125rem !important;
         margin-bottom: 0rem;
+        @media screen and (max-width: 600px) {
+          margin-top: 0.875rem;
+          font-size: 2rem !important;
+        }
       }
       li > a {
         color: #5a6175 !important;

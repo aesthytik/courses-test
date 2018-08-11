@@ -20,6 +20,9 @@ const Container = styled.div`
     border-radius: 0px;
     padding-left: 0rem;
     border-bottom-width: 2px;
+    @media screen and (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
   .box {
     background-color: #fff;
@@ -48,6 +51,7 @@ const SignUpButton = styled.a`
   width: 100%;
   height: 4.9375rem;
   border-radius: 1.25rem;
+}
   + div {
     color: #5a6175;
   }
@@ -58,10 +62,29 @@ const TextAlign = styled.div`
   margin-left: 15%;
   color: #5a6175;
   padding-top: 6%;
+  @media screen and (max-width: 600px) {
+    font-size: 10px;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 5px;
+    font-weight:800;
+  }
+}
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 19px;
+   }
+}
 `;
 
 const SignupForm = styled.div`
   padding-left: 8%;
+  @media screen and (max-width: 600px) {
+    padding-left: 0px !important;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding-left: 0px !important;
+  }
+}
 `;
 
 const SignupImage = styled.div`
@@ -72,12 +95,26 @@ const BallonImage = styled.img`
   position: absolute;
   top: 9%;
   right: 86%;
+  @media screen and (max-width: 600px) {
+    visibility: hidden;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    visibility: hidden;
+  }
+}
 `;
 
 const SunImage = styled.img`
   position: absolute;
   top: 0%;
   right: 76%;
+  @media screen and (max-width: 600px) {
+    visibility: hidden;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    visibility: hidden;
+  }
+}
 `;
 
 const Or = styled.div`
@@ -91,12 +128,12 @@ const SignUpForm = () => (
         <div className="column is-half">
           <div className="columns">
             <div className="column is-half">
-              <BallonImage src="/images/air-baloon.svg" alt="air-balloon" />
+              <BallonImage src="/images/air-baloon.svg" alt="air-balloon " />
               <SunImage src="/images/sun-cloud.svg" alt="air-balloon" />
             </div>
             <div className="column is-half">
               <div className="content">
-                <h1 className="has-text-weight-bold">
+                <h1 className="has-text-weight-bold is-size-3-mobile is-size-1-touch">
                   Support the change in our education system
                 </h1>
                 <ul className="is-size-4">

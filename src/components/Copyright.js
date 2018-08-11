@@ -13,8 +13,14 @@ const Container = styled.div`
     right: 0;
     @media screen and (max-width: 600px) {
       margin-top: 203px;
-      margin-right: 133px;
+      margin-right: 126px;
       width: 15%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      position: absolute;
+      top: 88%;
+      right: 45%;
+      width: 9%;
     }
   }
 `;
