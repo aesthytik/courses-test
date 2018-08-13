@@ -21,6 +21,9 @@ const Container = styled.div`
     border-radius: 0px;
     padding-left: 0rem;
     border-bottom-width: 2px;
+    @media screen and (max-width: 600px) {
+      font-size: 1.25rem;
+    }
   }
   .box {
     background-color: #fff;
@@ -113,7 +116,7 @@ const LoginForm = () => (
               Login
             </div>
             <br />
-            <div className="has-text-centered has-text-weight-light is-size-6">
+            <div className="is-size-5-mobile has-text-centered has-text-weight-light is-size-6">
               NEW TO LEARN REALM?{' '}
               <Link to="/sign-up/">
                 <span>&nbsp; SIGN UP FOR FREE</span>
