@@ -10,13 +10,18 @@ const Container = styled.div`
   padding-bottom: 12%;
   @media screen and (max-width: 600px) {
     padding-top:6%!important;
+    margin-top: 5%;
    }
+   @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding-bottom: 25%;
+    padding-top: 25%;
+  }
+  
   }
   .container {
     margin-top: -10%;
     @media screen and (max-width: 600px) {
       padding-bottom: 60%;
-      margin-top: -10%;
     }
   }
 
@@ -70,6 +75,11 @@ const BallonImage = styled.img`
     right: 1%;
     height: 85px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    top: 48%;
+    right: 2%;
+    height: 50%;
+  }
 }
 `;
 
@@ -82,6 +92,10 @@ const SunImage = styled.img`
     top: -8%;
     right: 6%;
     height: 3.125rem;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    top: -21%;
+    right: 42%;
   }
 }
 `;
@@ -120,6 +134,7 @@ const HeroBtn = styled.a`
   @media screen and (max-width: 600px) {
     width: 67%;
     height: 3.9375rem;
+    border-radius: 1rem;
   }
 }
 `;

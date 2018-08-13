@@ -10,10 +10,6 @@ const Container = styled.div`
   }
   .footer-alignment {
     margin-left: 12%;
-    @media screen and (max-width: 600px) {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
   }
   li > a {
     color: #5a6175 !important;
@@ -23,6 +19,10 @@ const Container = styled.div`
   }
   .columns {
     @media only screen and (max-width: 400px) {
+      text-align: center !important;
+      margin-left: 0%;
+    }
+    @media only screen and (max-width: 768px) {
       text-align: center !important;
       margin-left: 0%;
     }
@@ -54,10 +54,8 @@ const Footer = () => (
           </ul>
         </div>
         <div className="column">
-          <h3 className="is-uppercase has-text-weight-bold has-text-centered-mobile is-size-6-mobile">
-            Partnerships
-          </h3>
-          <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
+          <h3 className="is-uppercase has-text-weight-bold">Partnerships</h3>
+          <ul className="is-size-6 is-uppercase">
             <li>
               <a href="#">RESEARCH PARTNERS</a>
             </li>
@@ -83,11 +81,9 @@ const Footer = () => (
             </li>
           </ul>
         </div>
-        <div className="column is-lowercase has-text-centered-mobile">
-          <h3 className="has-text-weight-bold is-uppercase has-text-centered-mobile is-size-6-mobile">
-            Support
-          </h3>
-          <ul className="is-size-6 is-uppercase has-text-centered-mobile is-size-7-mobile">
+        <div className="column is-lowercase">
+          <h3 className="has-text-weight-bold is-uppercase">Support</h3>
+          <ul className="is-size-6 is-uppercase">
             <li>
               <a href="#">Help center</a>
             </li>

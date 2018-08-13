@@ -84,9 +84,9 @@ const NavbarBurger = styled.a`
   cursor: pointer;
   text-decoration: none;
   @media screen and (max-width: 600px) {
-      margin-top: 0.875rem;
-      width: 26%;
-      height: 50%;
+    margin-top: 1.875rem;
+    width: 26%;
+    height: 44%;
     }
   }
 `;
@@ -147,13 +147,13 @@ export default class Header extends React.Component {
                 <MobileMenu className="is-hidden-desktop has-text-centered">
                   <aside className="menu">
                     <ul className="menu-list is-size-6">
-                      <Link to="/">
+                      <Link to="/sign-up/">
                         <li>Sign up for free</li>
                       </Link>
                       <Link to="/">
                         <li>Subscribe</li>
                       </Link>
-                      <Link to="/">
+                      <Link to="/login/">
                         {' '}
                         <li>Login</li>
                       </Link>

@@ -37,7 +37,7 @@ const Btn = styled.a`
     font-size: 1.8125rem !important;
     margin-top: 78px !important;
     margin-bottom: 2.875rem !important;
-    width: 194px !important;
+    width: 226px !important;
     height: 0.875rem !important;
     font-size: 0.75rem !important;
   }

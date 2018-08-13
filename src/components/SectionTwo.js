@@ -37,7 +37,7 @@ const Btn = styled.a`
     font-size: 29px !important;
     margin-top: 78px !important;
     margin-bottom: 46px !important;
-    width: 194px!important;
+    width: 226px !important;
     height: 3.5625rem!important;
     font-size: 12px!important;
     border: 4px solid #ffffff;
@@ -67,13 +67,18 @@ const SectionTwo = () => (
       <h1 className="title has-text-white is-size-5-mobile has-text-centered-mobile">
         Not enough time to plan?
       </h1>
-      <h2 className="subtitle is-size-3 has-text-white has-text-weight-bold is-size-4-mobile">
+      <h2 className="subtitle is-size-3 has-text-white has-text-weight-bold is-size-4-mobile is-hidden-mobile">
         Our resources are packed full of differentiating activities & explainer
         videos. <br />Download project worksheets & powerpoints instantly to
         your account.
       </h2>
+      <h2 className="subtitle is-size-3 has-text-white has-text-weight-bold is-size-4-mobile is-hidden-tablet">
+        Our resources are packed full of differentiating activities & explainer
+        videos. <br /> <br />Download project worksheets & powerpoints instantly
+        to your account.
+      </h2>
 
-      <Btn className="button is-rounded has-text-white is-white is-outlined is-large">
+      <Btn className="button is-rounded has-text-white is-white is-outlined">
         <span className="is-size-6 has-text-weight-bold">SIGN UP FOR FREE</span>
       </Btn>
     </div>
