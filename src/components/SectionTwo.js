@@ -9,6 +9,12 @@ const Container = styled.div`
   background-color: #7ebce6;
   height: auto;
   padding: 8%;
+  @media screen and (max-width: 600px) {
+    background-position-x: 248px !important;
+    background-position: -260%!important;
+  }
+}
+
 }
   h1 {
     line-height: 7rem;

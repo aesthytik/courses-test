@@ -10,8 +10,8 @@ const Container = styled.div`
   .logo {
     height: 2.25rem;
     width: auto;
-    @media only screen and (max-width: 1088px) {
-      padding-left: 4%;
+    @media only screen and (max-width: 1477px) {
+      padding-left: 4% !important;
     }
     @media only screen and (max-width: 400px) {
       height: 28px;
@@ -31,6 +31,7 @@ const Container = styled.div`
 const LinkStyle = styled.div`
   width: 655px;
   height: 2.375rem;
+  margin-left: 30%;
 `;
 
 const SignupBtn = styled.div`

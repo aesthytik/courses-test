@@ -16,7 +16,7 @@ const Container = styled.div`
     padding-bottom: 25%;
     padding-top: 25%;
   }
-  
+
   }
   .container {
     margin-top: -10%;
@@ -76,8 +76,8 @@ const BallonImage = styled.img`
     height: 85px;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    top: 48%;
-    right: 2%;
+    top: 50%;
+    right: 4%;
     height: 50%;
   }
 }

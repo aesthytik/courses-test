@@ -17,8 +17,22 @@ const Container = styled.div`
   .second-column {
     margin-top: 8%;
   }
+
+  .content {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      margin-left: 15%;
+    }
+  }
+  p {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      font-size: 2rem !important;
+    }
+  }
   .content li {
     margin-bottom: 1rem;
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      font-size: 1.75rem !important;
+    }
   }
   .content ul {
     list-style-position: outside;
@@ -26,7 +40,7 @@ const Container = styled.div`
     margin-left: 2em;
     margin-top: 1em;
     line-height: 1.9rem;
-    @media screen and (max-width: 600px) {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
     }
   }
 `;
