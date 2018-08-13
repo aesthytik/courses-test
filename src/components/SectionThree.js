@@ -19,7 +19,7 @@ const Container = styled.div`
   }
   .subtitle {
     @media screen and (max-width: 600px) {
-      margin-top: 55px !important;
+      margin-top: 77px !important;
       font-size: 1.5rem !important;
       width: 89%;
       margin-left: 7%;
