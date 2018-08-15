@@ -16,7 +16,7 @@ export default class IndexPage extends React.Component {
       <Layout>
         <Seo
           title="Learn Realm"
-          description="Welcome to Learn Realm"
+          description="Welcome to Learn Realm."
           url={`${config.siteUrl}`}
         />
         <HomeHero />
