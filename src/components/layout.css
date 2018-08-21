@@ -25,7 +25,10 @@ body {
 .secondary-color {
   background-color: #7ebce6;
 }
-
+.has-btn-transparent {
+  background-color: transparent;
+  padding: 2.5rem 3.5rem !important;
+}
 .navbar-item {
   margin-left: 4%;
 }
@@ -78,24 +81,6 @@ svg:not(:root).svg-inline--fa {
   border-top-color: #ffffff;
   border-right-color: #ffffff;
   border-left-color: #ffffff;
-}
-
-.slick-next {
-  top: -38.6rem;
-  left: 82.5rem;
-  position: relative;
-}
-
-.slick-prev {
-  top: -1.54rem;
-  left: 77rem;
-  position: relative;
-}
-
-.slick-next,
-.slick-prev {
-  width: 21px;
-  height: 41px;
 }
 
 .navbar-item img {

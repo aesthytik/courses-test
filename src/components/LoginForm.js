@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { darken } from 'polished';
 
+import Button from '../elements/Buttons';
+
 const Container = styled.div`
   background-color: #ededed;
   padding: 5%;
@@ -45,15 +47,6 @@ const Container = styled.div`
     :hover {
       background-color: ${darken(0.2, '#7ebce6')} !important;
     }
-  }
-`;
-
-const LoginBtn = styled.a`
-  width: 100%;
-  height: 4.9375rem;
-  border-radius: 1.25rem;
-  + div {
-    color: #5a6175;
   }
 `;
 
@@ -153,15 +146,24 @@ const LoginForm = () => (
               </label>
               <br />
               <br />
-              <LoginBtn className="button primary-color is-large has-text-centered login-btn">
+
+              <Button
+                className="primary-color has-text-weight-bold"
+                height="79px"
+                width="100%"
+              >
                 <span className="is-size-6 has-text-white">LOG IN</span>
-              </LoginBtn>
+              </Button>
               <Text className="has-text-centered">OR</Text>
-              <LoginBtn className="button secondary-color is-large has-text-centered fb-login-btn">
+              <Button
+                className="secondary-color has-text-weight-bold"
+                height="79px"
+                width="100%"
+              >
                 <span className="is-size-6 has-text-white">
                   LOG IN WITH FACEBOOK
                 </span>
-              </LoginBtn>
+              </Button>
             </form>
           </div>
         </div>
@@ -209,15 +211,23 @@ const LoginForm = () => (
               </label>
               <br />
               <br />
-              <LoginBtn className="button primary-color is-large has-text-centered login-btn">
+              <Button
+                className="primary-color has-text-weight-bold"
+                height="79px"
+                width="100%"
+              >
                 <span className="is-size-6 has-text-white">LOG IN</span>
-              </LoginBtn>
+              </Button>
               <Text className="has-text-centered">OR</Text>
-              <LoginBtn className="button secondary-color is-large has-text-centered fb-login-btn">
+              <Button
+                className="secondary-color has-text-weight-bold"
+                height="79px"
+                width="100%"
+              >
                 <span className="is-size-6 has-text-white">
                   LOG IN WITH FACEBOOK
                 </span>
-              </LoginBtn>
+              </Button>
             </form>
           </div>
         </div>

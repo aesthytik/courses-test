@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="187px" height="187px" viewBox="0 0 187 187" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>note-taking</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.8818 20.1179 0.8818 20.1179 20.9998 0 20.9998"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Individual-pack-page" transform="translate(-482.000000, -1119.000000)">
+            <g id="row2" transform="translate(-1.000000, 916.000000)">
+                <g id="note-taking" transform="translate(483.000000, 203.000000)">
+                    <circle id="Oval" stroke-opacity="0" stroke="#979797" fill="#343436" cx="93.5" cy="93.5" r="93.5"></circle>
+                    <g id="note-taking-icon" transform="translate(44.000000, 47.000000)">
+                        <path d="M10.0599,36.0889 C15.6159,36.0889 20.1189,40.5919 20.1189,46.1479 C20.1189,51.7029 15.6159,56.2069 10.0599,56.2069 C4.5049,56.2069 0.0009,51.7029 0.0009,46.1479 C0.0009,40.5919 4.5049,36.0889 10.0599,36.0889" id="Fill-1" fill="#FFFFFF"></path>
+                        <g id="Group-5" transform="translate(0.000000, 71.297000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-4"></g>
+                            <path d="M10.0589,0.8818 C15.6149,0.8818 20.1179,5.3858 20.1179,10.9418 C20.1179,16.4958 15.6149,20.9998 10.0589,20.9998 C4.5039,20.9998 -0.0001,16.4958 -0.0001,10.9418 C-0.0001,5.3858 4.5039,0.8818 10.0589,0.8818" id="Fill-3" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M10.0599,0 C15.6149,0 20.1179,4.503 20.1179,10.058 C20.1179,15.613 15.6149,20.116 10.0599,20.116 C4.5049,20.116 0.0019,15.613 0.0019,10.058 C0.0019,4.503 4.5049,0 10.0599,0" id="Fill-6" fill="#FFFFFF"></path>
+                        <path d="M33.8631,10.0582 L98.3631,10.0582" id="Stroke-8" stroke="#FFFFFF" stroke-width="14.334"></path>
+                        <path d="M33.8631,46.148 L98.3631,46.148" id="Stroke-10" stroke="#FFFFFF" stroke-width="14.334"></path>
+                        <path d="M33.8631,82.2383 L98.3631,82.2383" id="Stroke-12" stroke="#FFFFFF" stroke-width="14.334"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

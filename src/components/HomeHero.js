@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+import Button from '../elements/Buttons';
+
 const Container = styled.div`
   background-image: url('/images/hill-image.svg');
   background-repeat: no-repeat;
@@ -127,10 +129,7 @@ const CloudImageTwo = styled.img`
 }
 `;
 
-const HeroBtn = styled.a`
-  width: 17.75rem;
-  height: 4.9375rem;
-  border-radius: 1.25rem;
+const HeroBtn = styled(Button)`
   @media screen and (max-width: 600px) {
     width: 67%;
     height: 3.9375rem;
@@ -154,12 +153,16 @@ const HomeHero = () => (
         Brilliant things happen in engaged minds
       </h2>
       <div>
-        <HeroBtn className="button secondary-color is-large sign-btn">
+        <HeroBtn
+          className="secondary-color"
+          height="4.9375rem"
+          width="17.75rem"
+        >
           <span className="is-size-6 has-text-white">SIGN UP FOR FREE</span>
         </HeroBtn>
         <br />
         <br />
-        <HeroBtn className="button primary-color is-large subscribe-btn">
+        <HeroBtn className="primary-color" height="4.9375rem" width="17.75rem">
           <span className="is-size-6 has-text-white ">
             SUBSCRIBE FOR 40% OFF
           </span>

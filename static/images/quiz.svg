@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="187px" height="187px" viewBox="0 0 187 187" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>quiz</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Individual-pack-page" transform="translate(-195.000000, -1119.000000)">
+            <g id="row2" transform="translate(-1.000000, 916.000000)">
+                <g id="quiz" transform="translate(196.000000, 203.000000)">
+                    <circle id="Oval" stroke-opacity="0" stroke="#979797" fill="#343436" cx="93.5" cy="93.5" r="93.5"></circle>
+                    <g id="Group" transform="translate(56.000000, 49.000000)" fill="#FFFFFF" stroke="#979797" stroke-opacity="0">
+                        <rect id="Rectangle-8" x="27.5" y="0.5" width="73" height="26"></rect>
+                        <polygon id="Triangle" transform="translate(13.500000, 13.500000) rotate(-90.000000) translate(-13.500000, -13.500000) " points="13.5 0 27 27 0 27"></polygon>
+                    </g>
+                    <g id="Group" transform="translate(56.000000, 80.000000)" fill="#FFFFFF" stroke="#979797" stroke-opacity="0">
+                        <rect id="Rectangle-8" x="27.5" y="0.5" width="73" height="26"></rect>
+                        <polygon id="Triangle" transform="translate(13.500000, 13.500000) rotate(-90.000000) translate(-13.500000, -13.500000) " points="13.5 0 27 27 0 27"></polygon>
+                    </g>
+                    <g id="Group" transform="translate(56.000000, 111.000000)" fill="#FFFFFF" stroke="#979797" stroke-opacity="0">
+                        <rect id="Rectangle-8" x="27.5" y="0.5" width="73" height="26"></rect>
+                        <polygon id="Triangle" transform="translate(13.500000, 13.500000) rotate(-90.000000) translate(-13.500000, -13.500000) " points="13.5 0 27 27 0 27"></polygon>
+                    </g>
+                    <g transform="translate(0.000000, 49.000000)" font-family="Apercu-Bold, Apercu" font-weight="bold" id="question-mark">
+                        <text font-size="45" fill="#FFFFFF">
+                            <tspan x="27.15" y="62">?</tspan>
+                        </text>
+                        <text font-size="20" fill="#343436">
+                            <tspan x="87.86" y="19">A</tspan>
+                        </text>
+                        <text font-size="20" fill="#343436">
+                            <tspan x="87.76" y="50">B</tspan>
+                        </text>
+                        <text font-size="20" fill="#343436">
+                            <tspan x="87" y="81">C</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

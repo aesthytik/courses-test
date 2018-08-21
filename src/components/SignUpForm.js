@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+import Button from '../elements/Buttons';
+
 const Container = styled.div`
   background-color: #ededed;
   padding: 8%;
@@ -44,16 +46,6 @@ const Container = styled.div`
     :hover {
       background-color: ${darken(0.2, '#7ebce6')} !important;
     }
-  }
-`;
-
-const SignUpButton = styled.a`
-  width: 100%;
-  height: 4.9375rem;
-  border-radius: 1.25rem;
-}
-  + div {
-    color: #5a6175;
   }
 `;
 
@@ -193,15 +185,25 @@ const SignUpForm = () => (
                   />
                 </div>
               </div>
-              <SignUpButton className="button primary-color is-large has-text-centered get-started-button">
+              <Button
+                className="primary-color has-text-weight-bold"
+                height="79px"
+                width="100%"
+              >
                 <span className="is-size-6 has-text-white">GET STARTED</span>
-              </SignUpButton>
+              </Button>
+
               <Or className="has-text-centered">OR</Or>
-              <SignUpButton className="button secondary-color is-large has-text-centered sign-up-btn">
+              <Button
+                className="secondary-color has-text-weight-bold"
+                height="79px"
+                width="100%"
+              >
                 <span className="is-size-6 has-text-white">
                   SIGN UP WITH FACEBOOK
                 </span>
-              </SignUpButton>
+              </Button>
+
               <TextAlign className="content has-text-centered has-text-lightgrey">
                 BY CONTINUING, YOU AGREE TO LEARN REALM’S
                 <a href="#">
