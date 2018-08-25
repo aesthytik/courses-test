@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-import Button from '../elements/Button';
+import { HoverSecondaryButton, HoverPrimaryButton } from '../elements/Hover';
 
 const Container = styled.div`
   background-image: url('/images/hill-image.svg');
@@ -129,7 +129,15 @@ const CloudImageTwo = styled.img`
 }
 `;
 
-const HeroBtn = styled(Button)`
+const HeroSecondaryBtn = styled(HoverSecondaryButton)`
+  @media screen and (max-width: 600px) {
+    width: 67%;
+    height: 3.9375rem;
+    border-radius: 1rem;
+  }
+}
+`;
+const HeroPrimaryBtn = styled(HoverPrimaryButton)`
   @media screen and (max-width: 600px) {
     width: 67%;
     height: 3.9375rem;
@@ -140,7 +148,7 @@ const HeroBtn = styled(Button)`
 
 const HomeHero = () => (
   <Container className="section">
-    <div className="container has-text-centered is-fullhd">
+    <div className="container has-text-centered">
       <CloudImageTwo src="/images/cloud.svg" alt="cloud" />
       <BallonImage src="/images/air-baloon.svg" alt="air-balloon" />
       <SunImage src="/images/sun-cloud.svg" alt="sun-cloud" />
@@ -153,20 +161,24 @@ const HomeHero = () => (
         Brilliant things happen in engaged minds
       </h2>
       <div>
-        <HeroBtn
+        <HeroSecondaryBtn
           className="secondary-color"
           height="4.9375rem"
           width="17.75rem"
         >
           <span className="is-size-6 has-text-white">SIGN UP FOR FREE</span>
-        </HeroBtn>
+        </HeroSecondaryBtn>
         <br />
         <br />
-        <HeroBtn className="primary-color" height="4.9375rem" width="17.75rem">
+        <HeroPrimaryBtn
+          className="primary-color"
+          height="4.9375rem"
+          width="17.75rem"
+        >
           <span className="is-size-6 has-text-white ">
             SUBSCRIBE FOR 40% OFF
           </span>
-        </HeroBtn>
+        </HeroPrimaryBtn>
       </div>
     </div>
   </Container>

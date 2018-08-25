@@ -169,7 +169,7 @@ export default class Header extends React.Component {
 
               <LinkStyle className="navbar-menu">
                 <div className="navbar-end">
-                  {path !== '/teacher-dashboard/' ? (
+                  {path !== '/teacher-dashboard/' && '/individual-pack/' ? (
                     <React.Fragment>
                       <a className="navbar-item primary-font-color">Foreword</a>
                       <a className="navbar-item primary-font-color">Blog</a>

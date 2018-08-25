@@ -31,7 +31,7 @@ const Container = styled.div`
 
 const Footer = () => (
   <Container className="section">
-    <div className="container is-fullhd has-text-grey">
+    <div className="container has-text-grey">
       <div className="columns is-desktop is-size-5 footer-alignment">
         <div className="column">
           <h3 className="has-text-weight-bold">Access Learn Realm</h3>

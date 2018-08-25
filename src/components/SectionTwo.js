@@ -66,7 +66,7 @@ const Find = styled.div`
 
 const SectionTwo = () => (
   <Container className="section">
-    <div className="container has-text-centered is-fullhd">
+    <div className="container has-text-centered">
       <Find className="has-text-white">
         Find engaging resources that will save you hours of time
       </Find>

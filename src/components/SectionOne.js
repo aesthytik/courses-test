@@ -47,7 +47,7 @@ const Container = styled.div`
 
 const SectionOne = () => (
   <Container className="section">
-    <div className="container is-fullhd" id="margin-top">
+    <div className="container" id="margin-top">
       <div className="is-hidden-mobile">
         <div className="columns">
           <div className="column is-half">

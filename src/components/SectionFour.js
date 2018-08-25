@@ -56,7 +56,7 @@ const Teach = styled.div`
 
 const SectionFour = () => (
   <Container className="section">
-    <div className="container has-text-centered is-fullhd">
+    <div className="container has-text-centered">
       <Teach className="has-text-grey">
         Teach students in demand skills will the help and support of leading
         businesses

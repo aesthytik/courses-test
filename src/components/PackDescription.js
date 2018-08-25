@@ -6,6 +6,7 @@ import HighlightedText from '../elements/HighlightedText';
 const Container = styled.div`
   background-color: #ffffff;
   height: auto;
+  border-top: 2px solid #EDEDED;
   @media screen and (max-width: 600px) {
     font-size: 18px!important;
     text-align: center!important;
@@ -13,7 +14,8 @@ const Container = styled.div`
   }
   .content {
     padding: 2rem 0rem;
-    width: 70%;
+    width: 67%;
+    line-height: 1.67rem;
   }
 }
 `;

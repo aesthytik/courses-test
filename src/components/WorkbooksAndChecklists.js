@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Card from '../elements/Card';
 import HighlightedText from '../elements/HighlightedText';
+import WorkbookAndChecklistItem from './WorkbookAndChecklistItem';
 
 const Container = styled.div`
   background-color: #ededed;
@@ -10,24 +10,9 @@ const Container = styled.div`
   @media screen and (max-width: 600px) {
     font-size: 18px!important;
     text-align: center!important;
-    margin-top: 25px;
+    
   }
 }
-`;
-
-const Wrapper = styled(Card)`
-  position: relative;
-  background-image: url('/images/pattern-bg.svg');
-  background-size: cover;
-  div {
-    position: absolute;
-    background-color: #fff;
-    top: 39%;
-    left: 25%;
-    sup {
-      font-size: 0.5rem;
-    }
-  }
 `;
 
 const WorkbooksAndChecklists = () => (
@@ -50,54 +35,10 @@ const WorkbooksAndChecklists = () => (
       <br />
       <br />
       <div className="columns has-text-centered">
-        <div className="column has-text-centered">
-          <Wrapper width="260px" height="418px">
-            <div>
-              How have <br />
-              Apple products <br />
-              changed over time<br />
-              <HighlightedText>
-                Learn Realm<sup>TM</sup>
-              </HighlightedText>
-            </div>
-          </Wrapper>
-        </div>
-        <div className="column has-text-centered">
-          <Wrapper width="260px" height="418px">
-            <div>
-              How have <br />
-              Apple products <br />
-              changed over time<br />
-              <HighlightedText>
-                Learn Realm<sup>TM</sup>
-              </HighlightedText>
-            </div>
-          </Wrapper>
-        </div>
-        <div className="column has-text-centered">
-          <Wrapper width="260px" height="418px">
-            <div>
-              How have <br />
-              Apple products <br />
-              changed over time<br />
-              <HighlightedText>
-                Learn Realm<sup>TM</sup>
-              </HighlightedText>
-            </div>
-          </Wrapper>
-        </div>
-        <div className="column has-text-centered">
-          <Wrapper width="260px" height="418px">
-            <div>
-              How have <br />
-              Apple products <br />
-              changed over time<br />
-              <HighlightedText>
-                Learn Realm<sup>TM</sup>
-              </HighlightedText>
-            </div>
-          </Wrapper>
-        </div>
+        <WorkbookAndChecklistItem />
+        <WorkbookAndChecklistItem />
+        <WorkbookAndChecklistItem />
+        <WorkbookAndChecklistItem />
       </div>
     </div>
   </Container>

@@ -5,10 +5,13 @@ const Container = styled.div`
   background-color: #d5f3e5;
   height: auto;
   padding: 5%;
+  ul{
+    width: 71%;
+  }
   @media screen and (max-width: 600px) {
     font-size: 18px!important;
     text-align: center!important;
-    margin-top: 25px;
+    
   }
   li {
     padding-top: 2rem;

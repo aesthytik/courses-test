@@ -10,7 +10,7 @@ const Container = styled.div`
   @media screen and (max-width: 600px) {
     font-size: 18px!important;
     text-align: center!important;
-    margin-top: 25px;
+    
   }
 }
 `;

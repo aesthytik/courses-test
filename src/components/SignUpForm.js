@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-import Button from '../elements/Button';
+import { HoverPrimaryButton, HoverSecondaryButton } from '../elements/Hover';
 
 const Container = styled.div`
   background-color: #ededed;
@@ -109,13 +109,13 @@ const SunImage = styled.img`
 }
 `;
 
-const Or = styled.div`
+const TextStyled = styled.div`
   padding: 2%;
 `;
 
 const SignUpForm = () => (
   <Container className="section">
-    <div className="container is-fullhd has-text-grey">
+    <div className="container has-text-grey">
       <div className="columns is-tablet is-size-6">
         <div className="column is-half">
           <div className="columns">
@@ -185,16 +185,16 @@ const SignUpForm = () => (
                   />
                 </div>
               </div>
-              <Button
+              <HoverPrimaryButton
                 className="primary-color has-text-weight-bold"
                 height="79px"
                 width="100%"
               >
                 <span className="is-size-6 has-text-white">GET STARTED</span>
-              </Button>
+              </HoverPrimaryButton>
 
-              <Or className="has-text-centered">OR</Or>
-              <Button
+              <TextStyled className="has-text-centered">OR</TextStyled>
+              <HoverSecondaryButton
                 className="secondary-color has-text-weight-bold"
                 height="79px"
                 width="100%"
@@ -202,7 +202,7 @@ const SignUpForm = () => (
                 <span className="is-size-6 has-text-white">
                   SIGN UP WITH FACEBOOK
                 </span>
-              </Button>
+              </HoverSecondaryButton>
 
               <TextAlign className="content has-text-centered has-text-lightgrey">
                 BY CONTINUING, YOU AGREE TO LEARN REALM’S

@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import { darken } from 'polished';
 
 import Button from '../elements/Button';
+import { HoverPrimaryButton, HoverSecondaryButton } from '../elements/Hover';
 
 const Container = styled.div`
   background-color: #ededed;
@@ -85,7 +86,7 @@ const GreenOrangeBalloon = styled.img`
 
 const LoginForm = () => (
   <Container className="section">
-    <AlignContainer className="container is-fullhd has-text-grey is-hidden-mobile">
+    <AlignContainer className="container has-text-grey is-hidden-mobile">
       <div className="columns is-tablet is-size-6">
         <GreenBalloonBig
           src="/images/green-balloon-big.svg"
@@ -146,16 +147,15 @@ const LoginForm = () => (
               </label>
               <br />
               <br />
-
-              <Button
+              <HoverPrimaryButton
                 className="primary-color has-text-weight-bold"
                 height="79px"
                 width="100%"
               >
                 <span className="is-size-6 has-text-white">LOG IN</span>
-              </Button>
+              </HoverPrimaryButton>
               <Text className="has-text-centered">OR</Text>
-              <Button
+              <HoverSecondaryButton
                 className="secondary-color has-text-weight-bold"
                 height="79px"
                 width="100%"
@@ -163,13 +163,13 @@ const LoginForm = () => (
                 <span className="is-size-6 has-text-white">
                   LOG IN WITH FACEBOOK
                 </span>
-              </Button>
+              </HoverSecondaryButton>
             </form>
           </div>
         </div>
       </div>
     </AlignContainer>
-    <div className="container is-fullhd is-hidden-desktop">
+    <div className="container is-hidden-desktop">
       <div className="columns is-desktop is-size-6">
         <div className="column">
           <div className="box">

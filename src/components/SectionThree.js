@@ -56,7 +56,7 @@ const Find = styled.div`
 
 const SectionThree = () => (
   <Container className="section">
-    <div className="container has-text-centered is-fullhd">
+    <div className="container has-text-centered">
       <Find className="has-text-grey">
         Find starter & plenary activites to get your students instantly engaged
       </Find>

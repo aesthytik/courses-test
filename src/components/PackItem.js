@@ -21,6 +21,9 @@ const Container = styled.div`
   #box {
     width: 84%;
     position: relative;
+    @media screen and (max-width: 375px) {
+      padding-left: 12%;
+    }
   }
   #overlay {
     position: absolute;
@@ -32,9 +35,21 @@ const Container = styled.div`
     padding: 45px 0 66px 0;
     opacity: 0;
     -webkit-transition: opacity 0.25s ease;
+    @media screen and (max-width: 480px) {
+      width: 79%;
+    }
+    @media screen and (max-width: 375px) {
+      width: 86%;
+    }
   }
   #box:hover #overlay {
     opacity: 1;
+  }
+`;
+
+const ListStyled = styled.ul`
+  @media screen and (max-width: 375px) {
+    padding-left: 10%;
   }
 `;
 
@@ -48,7 +63,7 @@ const PackItem = ({ item }) => (
         </a>
       </div>
     </div>
-    <ul>
+    <ListStyled>
       <li className="has-text-weight-bold">
         <a href="#">{item.title}</a>
       </li>
@@ -58,7 +73,7 @@ const PackItem = ({ item }) => (
       <li>
         <a href="#">{item.specification}</a>
       </li>
-    </ul>
+    </ListStyled>
   </Container>
 );
 
