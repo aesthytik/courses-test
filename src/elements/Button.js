@@ -10,8 +10,16 @@ const Wrapper = styled.a`
   color: #fff;
 `;
 
-const Button = ({ title, type, className, children, ...restProps }) => {
+const Button = ({
+  title,
+  type,
+  className,
+  children,
+  isTransparent,
+  ...restProps
+}) => {
   const classFinal = classNames(type, className, 'button');
+
   if (children) {
     return (
       <Wrapper className={classFinal} {...restProps}>

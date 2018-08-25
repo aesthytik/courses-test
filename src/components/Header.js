@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { darken } from 'polished';
 import config from '../utils/config';
+import Button from '../elements/Button';
 
 const Container = styled.div`
   padding: 3.75rem 0;

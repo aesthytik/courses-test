@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../elements/Buttons';
+import Button from '../elements/Button';
 
 const Container = styled.div`
   background-color: #fff;

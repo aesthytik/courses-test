@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Heading from '../elements/Heading';
+import HighlightedText from '../elements/HighlightedText';
 
 const Container = styled.div`
   background-color: #ffffff;
@@ -10,6 +11,10 @@ const Container = styled.div`
     text-align: center!important;
     margin-top: 25px;
   }
+  .content {
+    padding: 2rem 0rem;
+    width: 70%;
+  }
 }
 `;
 
@@ -17,11 +22,15 @@ const PackDescription = () => (
   <Container className="section">
     <div className="container">
       <Heading className="has-text-grey">Steve Jobs</Heading>
-      <h2 className="subtitle">Design Technology > Famous Designers</h2>
+      <h2 className="subtitle has-text-weight-semibold">
+        Design Technology > Famous Designers
+      </h2>
       <div className="columns">
         <div className="column">
           <div className="content">
-            <h3>Project description</h3>
+            <h3>
+              <HighlightedText>Project description</HighlightedText>
+            </h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus
@@ -33,7 +42,9 @@ const PackDescription = () => (
               Dictum at tempor commodo ullamcorper a lacus vestibulum. In
               iaculis nunc sed augue lacus. Blandit libero volutpat sed cras.{' '}
             </p>
-            <h3>Project tags +</h3>
+            <h3>
+              <HighlightedText>Project tags +</HighlightedText>
+            </h3>
           </div>
         </div>
         <div className="column">

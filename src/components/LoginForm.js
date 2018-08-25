@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { darken } from 'polished';
 
-import Button from '../elements/Buttons';
+import Button from '../elements/Button';
 
 const Container = styled.div`
   background-color: #ededed;
