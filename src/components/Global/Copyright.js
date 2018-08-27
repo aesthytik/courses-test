@@ -12,7 +12,7 @@ const Container = styled.div`
     top: 25%;
     right: 0;
     @media screen and (max-width: 600px) {
-      margin-top: 203px;
+      margin-top: 145px;
       margin-right: 130px;
       width: 15%;
     }

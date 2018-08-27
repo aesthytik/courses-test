@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { darken } from 'polished';
-import config from '../utils/config';
-import Button from '../elements/Button';
+import config from '../../utils/config';
 
 const Container = styled.div`
   padding: 3.75rem 0;
@@ -112,6 +111,12 @@ export default class Header extends React.Component {
   render() {
     const { path } = this.props;
     const { isActive } = this.state;
+
+    let hasMemberIcon = false;
+    if (path === '/teacher-dashboard' || path === '/individual-pack') {
+      hasMemberIcon = true;
+    }
+
     return (
       <React.Fragment>
         <Container class="section">
@@ -169,7 +174,7 @@ export default class Header extends React.Component {
 
               <LinkStyle className="navbar-menu">
                 <div className="navbar-end">
-                  {path !== '/teacher-dashboard/' && '/individual-pack/' ? (
+                  {!hasMemberIcon ? (
                     <React.Fragment>
                       <a className="navbar-item primary-font-color">Foreword</a>
                       <a className="navbar-item primary-font-color">Blog</a>

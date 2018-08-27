@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { HoverPrimaryButton } from '../elements/Hover';
 
 const Container = styled.div`
@@ -9,8 +10,10 @@ const Container = styled.div`
   border-bottom: 2px solid #EDEDED;
   @media screen and (max-width: 600px) {
     font-size: 18px!important;
-    text-align: center!important;
-    
+    text-align: center!important;  
+  }
+  nav {
+    width: 100%;
   }
 }
 `;
@@ -25,9 +28,21 @@ const DownloadProjects = () => (
             height="79px"
             width="100%"
           >
-            <img src="/images/apple-logo.svg" alt="apple" />{' '}
-            &nbsp;&nbsp;&nbsp;DOWNLOAD PROJECT RESOURCES <br />
-            FOR MAC APPS
+            <nav className="level is-mobile">
+              <div className="level-left">
+                <div className="level-item has-text-centered">
+                  <div>
+                    <img src="/images/apple-logo.svg" alt="apple" />
+                  </div>
+                </div>
+              </div>
+              <div className="level-item has-text-centered">
+                <div>
+                  DOWNLOAD PROJECT RESOURCES <br />
+                  FOR MAC APPS
+                </div>
+              </div>
+            </nav>
           </HoverPrimaryButton>
         </div>
         <div className="column has-text-centered">
@@ -36,11 +51,21 @@ const DownloadProjects = () => (
             height="79px"
             width="100%"
           >
-            <img src="/images/windows-logo.svg" alt="windows" />&nbsp;&nbsp;&nbsp;
-            <div>
-              DOWNLOAD PROJECT RESOURCES
-              <br />FOR MICROSOFT OFFICE
-            </div>
+            <nav className="level is-mobile">
+              <div className="level-left">
+                <div className="level-item has-text-centered">
+                  <div>
+                    <img src="/images/windows-logo.svg" alt="windows" />
+                  </div>
+                </div>
+              </div>
+              <div className="level-item has-text-centered">
+                <div>
+                  DOWNLOAD PROJECT RESOURCES
+                  <br />FOR MICROSOFT OFFICE
+                </div>
+              </div>
+            </nav>
           </HoverPrimaryButton>
         </div>
       </div>

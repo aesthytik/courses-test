@@ -14,8 +14,14 @@ const Container = styled.div`
   }
   .content {
     padding: 2rem 0rem;
-    width: 67%;
+   
     line-height: 1.67rem;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+  .subtitle {
+    color: #5a6175 !important;
   }
 }
 `;

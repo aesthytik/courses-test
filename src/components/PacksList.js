@@ -17,22 +17,22 @@ const Container = styled.div`
     line-height: 2.5rem;
     padding-top: 4.8%;
   }
-  .slick-next,
   .slick-prev {
-    top: -14%;
-    width: 82rem;
+    left: -50px;
+    top: -15%;
+    width: 2%;
     height: 40px;
-    margin: 0rem -39rem 1rem 39rem;
-    @media screen and (max-width: 1470px) {
-      margin: 0rem -34rem 0rem 33rem;
-    }
-    @media screen and (max-width: 1280px) {
-      margin: 0rem -28rem 0rem 27rem;
-    }
-    @media screen and (min-width: 600px) and (max-width: 1023px) {
+    margin-left: 95%;
+    @media screen and (max-width: 600px) {
       visibility: hidden;
     }
-    @media screen and (max-width: 375px) {
+  }
+  .slick-next {
+    right: 7px;
+    top: -15%;
+    width: 2%;
+    height: 40px;
+    @media screen and (max-width: 600px) {
       visibility: hidden;
     }
   }
@@ -45,7 +45,7 @@ const HeadingStyled = styled(Heading)`
     padding-left: 1rem;
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       margin-left: 15%;
-      padding-top: 3.5rem;
+      padding-top: 4rem;
     }
   }
 `;

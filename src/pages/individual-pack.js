@@ -1,8 +1,8 @@
 import React from 'react';
 
 import config from '../utils/config';
-import Seo from '../components/Seo';
-import Layout from '../components/Layout';
+import Seo from '../components/Global/Seo';
+import Layout from '../components/Global/Layout';
 import PackDescription from '../components/PackDescription';
 import StudentActivities from '../components/StudentActivities';
 import LearningObjAndOutcomes from '../components/LearningObjAndOutcomes';
@@ -15,7 +15,7 @@ export default class IndividualPack extends React.Component {
     return (
       <Layout location={location}>
         <Seo
-          title="Learn Realm"
+          title="Individualpack"
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />

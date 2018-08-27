@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
-import config from '../utils/config';
+import config from '../../utils/config';
 import Header from './Header';
 import Footer from './Footer';
 import './layout.css';

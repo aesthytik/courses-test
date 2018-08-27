@@ -1,8 +1,8 @@
 import React from 'react';
 
 import config from '../utils/config';
-import Seo from '../components/Seo';
-import Layout from '../components/Layout';
+import Seo from '../components/Global/Seo';
+import Layout from '../components/Global/Layout';
 import PacksList from '../components/PacksList';
 
 const savedPacks = [
@@ -122,11 +122,10 @@ const industryPacks = [
 export default class TeacherDashboard extends React.Component {
   render() {
     const { location } = this.props;
-
     return (
       <Layout location={location}>
         <Seo
-          title="Learn Realm"
+          title="Dashboard"
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />

@@ -1,10 +1,10 @@
 module.exports = {
   DEBUG: process.env.NODE_ENV === 'development',
 
-  siteName: 'Kickoff GatsbyJs',
+  siteName: 'Learn-Realm',
   author: 'Parminder Klair',
-  description: 'A starting point using ReactJs, bundled with awesome GatsbyJs.',
-  siteUrl: 'http://kickoff-gatsbyjs.netlify.com',
+  description: 'A Learning platform, bundled with awesome GatsbyJs.',
+  siteUrl: 'http://learn-realm.netlify.com',
 
   twitter: '@NAME-HERE',
   fbUserId: '@NAME-HERE',

@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-import { HoverSecondaryButton, HoverPrimaryButton } from '../elements/Hover';
+import { HoverSecondaryButton, HoverPrimaryButton } from '../../elements/Hover';
 
 const Container = styled.div`
   background-image: url('/images/hill-image.svg');
+  @media screen and (max-width: 375px) {
+    background-image: url('/images/hill-image-mobile.svg');
+  }
   background-repeat: no-repeat;
   background-position: bottom;
   padding-top: 14%;
@@ -23,7 +26,7 @@ const Container = styled.div`
   .container {
     margin-top: -10%;
     @media screen and (max-width: 600px) {
-      padding-bottom: 60%;
+      padding-bottom: 10%;
     }
   }
 
@@ -73,7 +76,7 @@ const BallonImage = styled.img`
   right: 7%;
   @media screen and (max-width: 600px) {
     position: absolute;
-    top: 28%;
+    top: 43%;
     right: 1%;
     height: 85px;
   }
@@ -108,9 +111,9 @@ const CloudImageOne = styled.img`
   right: 83%;
   @media screen and (max-width: 600px) {
     position: absolute;
-    top: 14%;
-    right: 76%;
-    height: 17px;
+    top: 23%;
+    right: 85%;
+    height: 10px;
   }
 }
 `;
@@ -121,10 +124,9 @@ const CloudImageTwo = styled.img`
   right: 0%;
   @media screen and (max-width: 600px) {
     position: absolute;
-    top: 30%;
-    height: 1.3125rem;
-    right: 72%;
-
+    top: 60%;
+    height: 13px;
+    right: 85%;
   }
 }
 `;
@@ -154,7 +156,7 @@ const HomeHero = () => (
       <SunImage src="/images/sun-cloud.svg" alt="sun-cloud" />
       <CloudImageOne src="/images/cloud.svg" alt="cloud" />
 
-      <h1 className="title primary-font-color has-text-weight-light">
+      <h1 className="title primary-font-color has-text-weight-bold">
         Changing the landscape of education
       </h1>
       <h2 className="subtitle is-size-3 has-text-weight-light primary-font-color">

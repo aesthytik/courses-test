@@ -7,10 +7,14 @@ const Container = styled.div`
   padding: 5%;
   ul{
     width: 71%;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      
+    }
   }
   @media screen and (max-width: 600px) {
     font-size: 18px!important;
-    text-align: center!important;
+    
     
   }
   li {

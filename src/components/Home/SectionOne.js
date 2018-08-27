@@ -52,7 +52,7 @@ const SectionOne = () => (
         <div className="columns">
           <div className="column is-half">
             <div className="content">
-              <p className="is-size-3 has-text-weight-light">
+              <p className="is-size-3 has-text-weight-bold">
                 Engaging resources to empower<br />teaching and learning
               </p>
               <ul className="is-size-5">
@@ -82,7 +82,7 @@ const SectionOne = () => (
           </div>
           <div className="column last-content is-half">
             <div className="content">
-              <p className="is-size-3 has-text-weight-semibold">
+              <p className="is-size-3 has-text-weight-bold">
                 Your own personal teaching kit<br />at the tip of your fingers
               </p>
               <ul className="is-size-5">

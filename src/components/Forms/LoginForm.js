@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { darken } from 'polished';
 
-import Button from '../elements/Button';
-import { HoverPrimaryButton, HoverSecondaryButton } from '../elements/Hover';
+import Button from '../../elements/Button';
+import { HoverPrimaryButton, HoverSecondaryButton } from '../../elements/Hover';
 
 const Container = styled.div`
   background-color: #ededed;

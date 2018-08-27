@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
-import config from '../utils/config';
+import config from '../../utils/config';
 
 const getSchemaOrgJSONLD = ({ url, title }) => [
   {

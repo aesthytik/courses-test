@@ -1,16 +1,16 @@
 import React from 'react';
 
 import config from '../utils/config';
-import Seo from '../components/Seo';
-import Layout from '../components/Layout';
-import LoginForm from '../components/LoginForm';
+import Seo from '../components/Global/Seo';
+import Layout from '../components/Global/Layout';
+import LoginForm from '../components/Forms/LoginForm';
 
 export default class LoginPage extends React.Component {
   render() {
     return (
       <Layout>
         <Seo
-          title="Learn Realm"
+          title="Login"
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />

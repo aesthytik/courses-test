@@ -22,7 +22,7 @@ const Button = ({
 
   if (children) {
     return (
-      <Wrapper className={classFinal} {...restProps}>
+      <Wrapper className={`${classFinal} has-text-weight-bold`} {...restProps}>
         {children}
       </Wrapper>
     );
