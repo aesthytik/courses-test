@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { HoverPrimaryButton, HoverSecondaryButton } from '../../elements/Hover';
 
-const TextAlign = styled.div`
+const TextAlign = styled.section`
   width: 72%;
   margin-left: 15%;
   color: #5a6175;

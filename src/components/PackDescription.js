@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Heading from '../elements/Heading';
 import HighlightedText from '../elements/HighlightedText';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: #ffffff;
   height: auto;
   border-top: 2px solid #EDEDED;

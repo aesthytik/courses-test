@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component {
         <SectionTwo />
         <SectionThree />
         <SectionFour />
-        <Testimonial />s
+        <Testimonial />
       </Layout>
     );
   }

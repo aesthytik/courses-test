@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import PackItem from './PackItem';
 import Heading from '../elements/Heading';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: ${props => props.bgColor};
   height: auto;
   padding: 3%;

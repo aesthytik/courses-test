@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 import config from '../../utils/config';
 
-const Container = styled.div`
+const Container = styled.section`
   padding: 3.75rem 0;
   .logo {
     height: 2.25rem;

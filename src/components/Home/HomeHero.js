@@ -4,7 +4,7 @@ import { darken } from 'polished';
 
 import { HoverSecondaryButton, HoverPrimaryButton } from '../../elements/Hover';
 
-const Container = styled.div`
+const Container = styled.section`
   background-image: url('/images/hill-image.svg');
   @media screen and (max-width: 375px) {
     background-image: url('/images/hill-image-mobile.svg');

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SocialMediaIcons from '../SocialMediaIcons';
 import Copyright from './Copyright';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: #fffff;
   h3 {
     padding-bottom: 1rem;

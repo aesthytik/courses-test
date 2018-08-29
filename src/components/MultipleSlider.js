@@ -13,7 +13,7 @@ export default class MultipleSlider extends React.Component {
       slidesToScroll: 1,
     };
 
-    const Container = styled.div`
+    const Container = styled.section`
       background-color: #ffffff;
       height: auto;
       padding: 5%;

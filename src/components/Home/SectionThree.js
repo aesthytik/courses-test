@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: #69d1c5;
   height: auto;
   padding: 8%;

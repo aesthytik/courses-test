@@ -6,7 +6,7 @@ import { darken } from 'polished';
 import Button from '../../elements/Button';
 import { HoverPrimaryButton, HoverSecondaryButton } from '../../elements/Hover';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: #ededed;
   padding: 5%;
   .field:not(:last-child) {

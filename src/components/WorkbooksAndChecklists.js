@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import HighlightedText from '../elements/HighlightedText';
 import WorkbookAndChecklistItem from './WorkbookAndChecklistItem';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: #ededed;
   height: auto;
   padding: 5%;

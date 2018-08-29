@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { HoverPrimaryButton } from '../elements/Hover';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: #fff;
   height: auto;
   padding: 5%;
