@@ -183,9 +183,12 @@ export default class Header extends React.Component {
                           Foreword
                         </a>
                         <a className="navbar-item primary-font-color">Blog</a>
-                        <a className="navbar-item primary-font-color">
+                        <Link
+                          to="/teacher-dashboard/"
+                          className="navbar-item primary-font-color"
+                        >
                           Teachers
-                        </a>
+                        </Link>
                         <a className="navbar-item primary-font-color">
                           Freebies
                         </a>

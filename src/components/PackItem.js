@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'gatsby';
 
 const Container = styled.div`
   .text {
@@ -53,14 +54,14 @@ const ListStyled = styled.ul`
   }
 `;
 
-const PackItem = ({ item }) => (
+const PackItem = ({item}) => (
   <Container>
     <div id="box">
       <img src={item.image} alt="steve-jobs" />
       <div id="overlay">
-        <a href="#">
+        <Link to="/individual-pack/">
           <div className="text has-text-weight-bold">VIEW PACK</div>
-        </a>
+        </Link>
       </div>
     </div>
     <ListStyled>
