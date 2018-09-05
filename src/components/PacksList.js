@@ -23,8 +23,8 @@ const Container = styled.section`
     width: 2%;
     height: 40px;
     margin-left: 95%;
-    @media screen and (max-width: 600px) {
-      visibility: hidden;
+    @media screen and (max-width: 430px) {
+      top: -6%;
     }
   }
   .slick-next {
@@ -32,8 +32,8 @@ const Container = styled.section`
     top: -15%;
     width: 2%;
     height: 40px;
-    @media screen and (max-width: 600px) {
-      visibility: hidden;
+    @media screen and (max-width: 430px) {
+      top: -6%;
     }
   }
 `;
@@ -49,44 +49,79 @@ const HeadingStyled = styled(Heading)`
     }
   }
 `;
+
 export default class PacksList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { settings: {} };
+  }
+
+  componentDidMount() {
+    const self = this;
+    window.onresize = function() {
+      self.loadSliderSettings();
+    };
+
+    this.loadSliderSettings();
+  }
+
+  loadSliderSettings() {
+    let slidesToShow = 4;
+
+    if (window.innerWidth < 500) {
+      slidesToShow = 1;
+    } else if (window.innerWidth < 815) {
+      slidesToShow = 3;
+    } else {
+      slidesToShow = 4;
+    }
+    console.log('slidesToShow', window.innerWidth, slidesToShow);
+
+    this.setState({
+      settings: {
+        onReInit: () => {
+          console.log('onReInit');
+        },
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+        nextArrow: <img src="/images/next.svg" alt="next-arrow" />,
+        prevArrow: <img src="/images/prev.svg" alt="prev-arrow" />,
+      },
+    });
+  }
+
   render() {
     const { title, bgColor, packs } = this.props;
-    const settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      initialSlide: 0,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-      ],
-      nextArrow: <img src="/images/next.svg" alt="next-arrow" />,
-      prevArrow: <img src="/images/prev.svg" alt="prev-arrow" />,
-    };
+    const { settings } = this.state;
 
     return (
       <Container className="section" bgColor={bgColor}>
