@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'gatsby';
+import { Link } from 'gatsby';
 
 const Container = styled.div`
   .text {
@@ -54,7 +54,7 @@ const ListStyled = styled.ul`
   }
 `;
 
-const PackItem = ({item}) => (
+const PackItem = ({ item }) => (
   <Container>
     <div id="box">
       <img src={item.image} alt="steve-jobs" />
