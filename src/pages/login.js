@@ -3,10 +3,11 @@ import React from 'react';
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
-import LoginForm from '../components/Forms/LoginForm';
+import LoginForm from '../components/LoginForm';
 
 export default class LoginPage extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <Layout>
         <Seo

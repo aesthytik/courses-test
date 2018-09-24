@@ -5,7 +5,7 @@ import { darken } from 'polished';
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
-import SignUpForm from '../components/Forms/SignUpForm';
+import SignUpForm from '../components/SignUpForm';
 import SignupInfo from '../components/SignupInfo';
 
 const Container = styled.div`
