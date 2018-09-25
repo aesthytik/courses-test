@@ -42,13 +42,12 @@ const Form = ({
         <input
           className="input is-large"
           type="text"
+          name="firstName"
           placeholder="First name"
+          value={values.lastName}
+          onChange={handleChange}
+          onBlur={handleBlur}
         />
-      </div>
-    </div>
-    <div className="field">
-      <div className="control">
-        <input className="input is-large" type="text" placeholder="Last name" />
       </div>
     </div>
     <div className="field">
@@ -56,7 +55,24 @@ const Form = ({
         <input
           className="input is-large"
           type="text"
+          name="lastName"
+          placeholder="Last name"
+          value={values.lastName}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        />
+      </div>
+    </div>
+    <div className="field">
+      <div className="control">
+        <input
+          className="input is-large"
+          type="email"
+          name="email"
           placeholder="Email address"
+          value={values.email}
+          onChange={handleChange}
+          onBlur={handleBlur}
         />
       </div>
     </div>
@@ -65,7 +81,11 @@ const Form = ({
         <input
           className="input is-large"
           type="password"
+          name="password"
           placeholder="Password (8+ characters)"
+          value={values.password}
+          onChange={handleChange}
+          onBlur={handleBlur}
         />
       </div>
     </div>
@@ -73,6 +93,7 @@ const Form = ({
       className="primary-color has-text-weight-bold"
       height="79px"
       width="100%"
+      onClick={handleSubmit}
     >
       <span className="is-size-6 has-text-white">GET STARTED</span>
     </HoverPrimaryButton>
@@ -102,7 +123,12 @@ const Form = ({
 // Wrap our form with the using withFormik HoC
 export default withFormik({
   // Transform outer props into form values
-  mapPropsToValues: () => ({ email: '', password: '' }),
+  mapPropsToValues: () => ({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+  }),
   // Add a custom validation function (this can be async too!)
   validate: values => {
     const errors = {};
@@ -118,7 +144,7 @@ export default withFormik({
   // Submission handler
   handleSubmit: (values, { props, setSubmitting }) => {
     console.log('submit', values);
-    // props.submit(values);
+    props.submit(values);
     setSubmitting(false);
   },
 })(Form);
