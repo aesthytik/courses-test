@@ -13,7 +13,7 @@ const resourcesQuery = gql`
 `;
 
 const RightContainer = () => (
-  <div className="columns">
+  <div className="columns is-multiline">
     <Query query={resourcesQuery}>
       {({ loading, error, data }) => {
         if (loading) return 'Loading...';

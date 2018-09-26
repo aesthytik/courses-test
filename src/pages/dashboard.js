@@ -3,7 +3,7 @@ import React from 'react';
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
-import LeftContainer from '../components/Dashboard/LeftConatiner';
+import CreateResource from '../components/Dashboard/CreateResource';
 import RightContainer from '../components/Dashboard/RightContainer';
 
 export default class IndexPage extends React.Component {
@@ -18,7 +18,7 @@ export default class IndexPage extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <LeftContainer />
+              <CreateResource />
             </div>
             <div className="column is-three-quarters">
               <RightContainer />

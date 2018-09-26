@@ -1,8 +1,11 @@
 import React from 'react';
+import Button from '../../elements/Button';
 
-const AddResourceButton = () => {
+const AddResourceButton = ({ toggleModel }) => {
   console.log('addButton');
-  return <a className="button is-primary">Add Resource</a>;
+  return (
+    <Button className="is-primary" title="Add Resource" onClick={toggleModel} />
+  );
 };
 
 export default AddResourceButton;
