@@ -86,10 +86,28 @@ const GreenOrangeBalloon = styled.img`
   right: 120%;
 `;
 
+const currentUserQuery = gql`
+  {
+    user @client {
+      email
+      firstName
+      lastName
+    }
+  }
+`;
+
 const loginMutation = gql`
   mutation($email: String!, $password: String!) {
     login(input: { email: $email, password: $password }) {
       jwt
+      user {
+        id
+        email
+        profile {
+          firstName
+          lastName
+        }
+      }
     }
   }
 `;
@@ -98,6 +116,18 @@ const LoginForm = () => {
   const handleUpdate = (cache, { data: { login } }) => {
     // set token to local storage
     localStorage.setItem('token', login.jwt);
+
+    cache.writeData({
+      data: {
+        user: {
+          __typename: 'User',
+          id: login.user.id,
+          email: login.user.email,
+          firstName: login.user.profile.firstName,
+          lastName: login.user.profile.lastName,
+        },
+      },
+    });
   };
 
   const handleOnCompleted = () => {};

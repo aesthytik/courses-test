@@ -1,9 +1,32 @@
 import React from 'react';
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
 
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
 import PacksList from '../components/PacksList';
+
+const resourcesQuery = gql`
+  query {
+    resources {
+      id
+      title
+      slug
+    }
+  }
+`;
+
+const currentUserQuery = gql`
+  {
+    user @client {
+      id
+      email
+      firstName
+      lastName
+    }
+  }
+`;
 
 const savedPacks = [
   {
@@ -129,6 +152,16 @@ export default class TeacherDashboard extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
+        <Query query={currentUserQuery}>
+          {({ loading, error, data }) => {
+            if (loading) return 'Loading...';
+            if (error) return `Error! ${error.message}`;
+            // const { resources } = data;
+            console.log(data);
+
+            return <React.Fragment />;
+          }}
+        </Query>
         <PacksList
           title="My Saved Packs"
           bgColor="#ededed"

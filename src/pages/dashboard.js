@@ -4,7 +4,7 @@ import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
 import CreateResource from '../components/Dashboard/CreateResource';
-import RightContainer from '../components/Dashboard/RightContainer';
+import Resources from '../components/Dashboard/Resources';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -21,7 +21,7 @@ export default class IndexPage extends React.Component {
               <CreateResource />
             </div>
             <div className="column is-three-quarters">
-              <RightContainer />
+              <Resources />
             </div>
           </div>
         </div>
