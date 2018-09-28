@@ -11,14 +11,14 @@ const Text = styled.div`
 
 const Form = ({
   values,
-  // errors,
-  // touched,
+  errors,
+  touched,
   handleChange,
   handleBlur,
   handleSubmit,
   loading,
 }) => (
-  <form>
+  <React.Fragment>
     <div className="field">
       <div className="control">
         <input
@@ -30,6 +30,8 @@ const Form = ({
           onBlur={handleBlur}
           value={values.email}
         />
+        {errors.email &&
+          touched.email && <p className="help is-danger">{errors.email}</p>}
       </div>
     </div>
     <div className="field">
@@ -56,7 +58,8 @@ const Form = ({
     <br />
     <br />
     <HoverPrimaryButton
-      className="primary-color has-text-weight-bold"
+      className={`primary-color has-text-weight-bold ${loading &&
+        'is-loading'}`}
       height="79px"
       width="100%"
       onClick={handleSubmit}
@@ -72,7 +75,7 @@ const Form = ({
     >
       <span className="is-size-6 has-text-white">LOG IN WITH FACEBOOK</span>
     </HoverSecondaryButton>
-  </form>
+  </React.Fragment>
 );
 
 // Wrap our form with the using withFormik HoC
@@ -92,9 +95,8 @@ export default withFormik({
     return errors;
   },
   // Submission handler
-  handleSubmit: (values, { props, setSubmitting }) => {
-    console.log('submit', values);
-    props.submit(values);
+  handleSubmit: (values, { props: { submit }, setSubmitting }) => {
+    submit(values);
     setSubmitting(false);
   },
 })(Form);

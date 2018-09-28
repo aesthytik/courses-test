@@ -171,13 +171,10 @@ const LoginForm = () => {
                 onCompleted={handleOnCompleted}
               >
                 {(login, { loading, error }) => (
-                  <div>
-                    <Form
-                      submit={input => login({ variables: input })}
-                      loading={loading}
-                    />
-                    {error && <p>Error :( Please try again {error}</p>}
-                  </div>
+                  <Form
+                    submit={input => login({ variables: input })}
+                    loading={loading}
+                  />
                 )}
               </Mutation>
             </div>

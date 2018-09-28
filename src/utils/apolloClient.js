@@ -46,18 +46,5 @@ const client = new ApolloClient({
   cache,
 });
 
-// const client = new ApolloClient({
-//   link: ApolloLink.from([
-//     onError(({ graphQLErrors, networkError }) => {
-//       console.log('onError', graphQLErrors, networkError);
-//     }),
-//     withClientState({ resolvers, defaults, cache, typeDefs }),
-//     new HttpLink({
-//       uri: config.debug ? config.graphQlUriDev : config.graphQlUri,
-//       credentials: 'same-origin',
-//     }),
-//   ]),
-//   cache,
-// });
 
 export default client;

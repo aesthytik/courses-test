@@ -29,8 +29,8 @@ const TextAlign = styled.section`
 
 const Form = ({
   values,
-  // errors,
-  // touched,
+  errors,
+  touched,
   handleChange,
   handleBlur,
   handleSubmit,
@@ -74,6 +74,8 @@ const Form = ({
           onChange={handleChange}
           onBlur={handleBlur}
         />
+        {errors.email &&
+          touched.email && <p className="help is-danger">{errors.email}</p>}
       </div>
     </div>
     <div className="field">
@@ -90,7 +92,8 @@ const Form = ({
       </div>
     </div>
     <HoverPrimaryButton
-      className="primary-color has-text-weight-bold"
+      className={`primary-color has-text-weight-bold ${loading &&
+        'is-loading'}`}
       height="79px"
       width="100%"
       onClick={handleSubmit}
@@ -142,9 +145,9 @@ export default withFormik({
     return errors;
   },
   // Submission handler
-  handleSubmit: (values, { props, setSubmitting }) => {
+  handleSubmit: (values, { props: { submit }, setSubmitting }) => {
     console.log('submit', values);
-    props.submit(values);
+    submit(values);
     setSubmitting(false);
   },
 })(Form);
