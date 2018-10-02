@@ -112,7 +112,7 @@ const loginMutation = gql`
   }
 `;
 
-const LoginForm = () => {
+const LoginForm = ({ navigate }) => {
   const handleUpdate = (cache, { data: { login } }) => {
     // set token to local storage
     localStorage.setItem('token', login.jwt);
@@ -130,7 +130,10 @@ const LoginForm = () => {
     });
   };
 
-  const handleOnCompleted = () => {};
+  const handleOnCompleted = () => {
+    navigate('/dashboard');
+  };
+
   return (
     <Container className="section">
       <AlignContainer className="container has-text-grey is-hidden-mobile">

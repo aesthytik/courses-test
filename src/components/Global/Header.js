@@ -103,7 +103,7 @@ export default class Header extends React.Component {
 
   logout = () => {
     localStorage.clear();
-    // this.props.history.push('/login');
+    // this.props.navigate('/');
   };
 
   toggleMobileMenu() {

@@ -55,6 +55,7 @@ const Container = styled.div`
 
 export default class SignUpPage extends React.Component {
   render() {
+    const { navigate } = this.props;
     return (
       <Layout>
         <Seo
@@ -66,7 +67,7 @@ export default class SignUpPage extends React.Component {
           <div className="container has-text-grey">
             <div className="columns is-tablet is-size-6">
               <SignupInfo />
-              <SignUpForm />
+              <SignUpForm navigate={navigate} />
             </div>
           </div>
         </Container>

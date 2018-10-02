@@ -32,12 +32,38 @@ const registerMutation = gql`
       }
     ) {
       jwt
+      user {
+        id
+        email
+        profile {
+          firstName
+          lastName
+        }
+      }
     }
   }
 `;
 
-const SignUpForm = () => {
+const SignUpForm = ({ navigate }) => {
+  const handleUpdate = (cache, { data: { register } }) => {
+    // set token to local storage
+    localStorage.setItem('token', register.jwt);
+
+    cache.writeData({
+      data: {
+        user: {
+          __typename: 'User',
+          id: register.user.id,
+          email: register.user.email,
+          firstName: register.user.profile.firstName,
+          lastName: register.user.profile.lastName,
+        },
+      },
+    });
+  };
+
   const handleOnCompleted = () => {
+    navigate('/dashboard');
     console.log('registed sucessfully');
   };
 
@@ -48,7 +74,11 @@ const SignUpForm = () => {
           Sign up
         </div>
         <br />
-        <Mutation mutation={registerMutation} onCompleted={handleOnCompleted}>
+        <Mutation
+          mutation={registerMutation}
+          update={handleUpdate}
+          onCompleted={handleOnCompleted}
+        >
           {(login, { loading, error }) => (
             <div>
               <Form

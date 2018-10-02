@@ -7,6 +7,7 @@ import LoginForm from '../components/LoginForm';
 
 export default class LoginPage extends React.Component {
   render() {
+    const { navigate } = this.props;
     return (
       <Layout>
         <Seo
@@ -14,7 +15,7 @@ export default class LoginPage extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
-        <LoginForm />
+        <LoginForm navigate={navigate} />
       </Layout>
     );
   }
