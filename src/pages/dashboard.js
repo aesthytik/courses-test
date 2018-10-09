@@ -8,6 +8,12 @@ import Resources from '../components/Dashboard/Resources';
 
 export default class IndexPage extends React.Component {
   render() {
+    const { navigate } = this.props;
+
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login/');
+    }
     return (
       <Layout>
         <Seo

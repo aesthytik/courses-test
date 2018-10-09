@@ -8,24 +8,9 @@ import Login from './login';
 import Dashboard from './dashboard';
 import SignUp from './sign-up';
 import TeacherDashboard from './teacher-dashboard';
-// import Blog from '../templates/blog';
+import Blog from './blog';
 
 // For private routes
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  console.log('hello', localStorage.getItem('token'));
-  return (
-    <Router
-      {...rest}
-      render={props =>
-        localStorage.getItem('token') ? (
-          <Component {...props} />
-        ) : (
-          <Redirect from="/login" to={props.location} />
-        )
-      }
-    />
-  );
-};
 
 export default () => (
   <Location>
@@ -34,10 +19,10 @@ export default () => (
         <Home path="/" />
         <IndividualPack path="/individual-pack" />
         <Login path="/login" />
-        <PrivateRoute path="/dashboard" component={Dashboard} />
+        <Dashboard path="/dashboardb" />
         <SignUp path="/sign-up" />
         <TeacherDashboard path="/teacher-dashboard" />
-        {/* <Blog path="/blog" /> */}
+        <Blog path="/blog" />
         <NotFound default />
       </Router>
     )}

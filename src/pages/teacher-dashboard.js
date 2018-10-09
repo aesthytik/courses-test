@@ -144,9 +144,15 @@ const industryPacks = [
 
 export default class TeacherDashboard extends React.Component {
   render() {
-    const { location } = this.props;
+    const { location, navigate } = this.props;
+
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      navigate('/login/');
+    }
     return (
-      <Layout location={location}>
+      <Layout location={location} navigate={navigate}>
         <Seo
           title="Dashboard"
           description="Welcome to Learn Realm"

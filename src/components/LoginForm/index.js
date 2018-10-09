@@ -131,7 +131,7 @@ const LoginForm = ({ navigate }) => {
   };
 
   const handleOnCompleted = () => {
-    navigate('/dashboard');
+    navigate('/teacher-dashboard');
   };
 
   return (

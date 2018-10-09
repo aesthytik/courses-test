@@ -102,8 +102,9 @@ export default class Header extends React.Component {
   }
 
   logout = () => {
+    const { navigate } = this.props;
     localStorage.clear();
-    // this.props.navigate('/');
+    navigate('/');
   };
 
   toggleMobileMenu() {
