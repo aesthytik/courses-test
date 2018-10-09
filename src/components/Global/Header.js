@@ -182,7 +182,12 @@ export default class Header extends React.Component {
                   {!hasMemberIcon ? (
                     <React.Fragment>
                       <a className="navbar-item primary-font-color">Foreword</a>
-                      <a className="navbar-item primary-font-color">Blog</a>
+                      <Link
+                        to="/blog"
+                        className="navbar-item primary-font-color"
+                      >
+                        Blog
+                      </Link>
                       <Link
                         to="/teacher-dashboard/"
                         className="navbar-item primary-font-color"

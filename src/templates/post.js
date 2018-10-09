@@ -1,17 +1,15 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
-import PackDescription from '../components/PackDescription';
-import StudentActivities from '../components/StudentActivities';
-import LearningObjAndOutcomes from '../components/LearningObjAndOutcomes';
-import WorkbooksAndChecklists from '../components/WorkbooksAndChecklists';
-import DownloadProjects from '../components/DownloadProjects';
+import PostContainer from '../components/blog/PostContainer';
 
 export default class Post extends React.Component {
   render() {
-    const { location } = this.props;
+    const { location, data } = this.props;
+    const post = data.mongodbTestBlog;
     return (
       <Layout location={location}>
         <Seo
@@ -19,8 +17,19 @@ export default class Post extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
-        <PackDescription />
+        <PostContainer post={post} />
       </Layout>
     );
   }
 }
+
+export const query = graphql`
+  query PostByPath($slug: String!) {
+    mongodbTestBlog(slug: { eq: $slug }) {
+      title
+      slug
+      subTitle
+      description
+    }
+  }
+`;

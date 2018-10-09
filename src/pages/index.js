@@ -3,12 +3,12 @@ import { Router, Location, Redirect } from '@reach/router';
 
 import Home from './home';
 import NotFound from './404';
-import IndividualPack from '../templates/individualPack';
+import IndividualPack from '../templates/individual-pack';
 import Login from './login';
 import Dashboard from './dashboard';
 import SignUp from './sign-up';
 import TeacherDashboard from './teacher-dashboard';
-import Blog from '../templates/blog';
+// import Blog from '../templates/blog';
 
 // For private routes
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -37,7 +37,7 @@ export default () => (
         <PrivateRoute path="/dashboard" component={Dashboard} />
         <SignUp path="/sign-up" />
         <TeacherDashboard path="/teacher-dashboard" />
-        <Blog path="/blog" />
+        {/* <Blog path="/blog" /> */}
         <NotFound default />
       </Router>
     )}

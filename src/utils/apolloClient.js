@@ -5,11 +5,12 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloLink } from 'apollo-link';
 import { onError } from 'apollo-link-error';
 import { withClientState } from 'apollo-link-state';
+import config from './config';
 
 const cache = new InMemoryCache();
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql',
+  uri: config.apiUrl,
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -45,6 +46,5 @@ const client = new ApolloClient({
   link: authLink.concat(ApolloLink.from([error, stateLink, httpLink])),
   cache,
 });
-
 
 export default client;
