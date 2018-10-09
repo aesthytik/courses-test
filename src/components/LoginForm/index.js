@@ -172,8 +172,9 @@ const LoginForm = ({ navigate }) => {
                 mutation={loginMutation}
                 update={handleUpdate}
                 onCompleted={handleOnCompleted}
+                onError={err => console.log('err', err)}
               >
-                {(login, { loading, error }) => (
+                {(login, { loading }) => (
                   <Form
                     submit={input => login({ variables: input })}
                     loading={loading}
