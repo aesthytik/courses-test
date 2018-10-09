@@ -9,7 +9,7 @@ import LearningObjAndOutcomes from '../components/LearningObjAndOutcomes';
 import WorkbooksAndChecklists from '../components/WorkbooksAndChecklists';
 import DownloadProjects from '../components/DownloadProjects';
 
-export default class Blog extends React.Component {
+export default class Post extends React.Component {
   render() {
     const { location } = this.props;
     return (
