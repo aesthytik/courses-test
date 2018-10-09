@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import { darken } from 'polished';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
+import alertify from 'alertify.js';
 
 import Button from '../../elements/Button';
 import Form from './Form';
@@ -131,7 +132,8 @@ const LoginForm = ({ navigate }) => {
   };
 
   const handleOnCompleted = () => {
-    navigate('/teacher-dashboard');
+    navigate('/teacher-dashboard/');
+    alertify.success('you logged succesfully');
   };
 
   return (
@@ -172,7 +174,7 @@ const LoginForm = ({ navigate }) => {
                 mutation={loginMutation}
                 update={handleUpdate}
                 onCompleted={handleOnCompleted}
-                onError={err => console.log('err', err)}
+                onError={err => alertify.error(err)}
               >
                 {(login, { loading }) => (
                   <Form

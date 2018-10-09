@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { darken } from 'polished';
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+
 import config from '../../utils/config';
 
 const Container = styled.section`
@@ -91,6 +94,16 @@ const NavbarBurger = styled.a`
   }
 `;
 
+const UserQuery = gql`
+  {
+    user @client {
+      id
+      email
+      firstName
+      lastName
+    }
+  }
+`;
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -166,11 +179,9 @@ export default class Header extends React.Component {
                         <li>Subscribe</li>
                       </Link>
                       <Link to="/login/">
-                        {' '}
                         <li>Login</li>
                       </Link>
                       <Link to="/">
-                        {' '}
                         <li>Help</li>
                       </Link>
                     </ul>
@@ -214,23 +225,40 @@ export default class Header extends React.Component {
                       </Link>
                     </React.Fragment>
                   ) : (
-                    <React.Fragment>
-                      <a className="navbar-item primary-font-color">Home</a>
-                      <a className="navbar-item primary-font-color">Discover</a>
-                      <button
-                        className="navbar-item primary-font-color"
-                        type="button"
-                        onClick={this.logout}
-                      >
-                        logout
-                      </button>
-                      <Name className="navbar-item is-uppercase has-text-weight-bold">
-                        #FNAME
-                      </Name>
-                      <Link to="/sign-up/" className="navbar-item">
-                        <img src="/images/admin-icon.svg" alt="admin" />
-                      </Link>
-                    </React.Fragment>
+                    <Query query={UserQuery}>
+                      {({ loading, error, data }) => {
+                        if (loading) return 'Loading...';
+                        if (error) return `Error! ${error.message}`;
+                        const { user } = data;
+
+                        return (
+                          <React.Fragment>
+                            <Link
+                              to="/"
+                              className="navbar-item primary-font-color"
+                            >
+                              Home
+                            </Link>
+                            <a className="navbar-item primary-font-color">
+                              Discover
+                            </a>
+                            <a
+                              className="navbar-item primary-font-color"
+                              type="button"
+                              onClick={this.logout}
+                            >
+                              logout
+                            </a>
+                            <Name className="navbar-item  has-text-weight-bold">
+                              {user.email}
+                            </Name>
+                            <Link to="/sign-up/" className="navbar-item">
+                              <img src="/images/admin-icon.svg" alt="admin" />
+                            </Link>
+                          </React.Fragment>
+                        );
+                      }}
+                    </Query>
                   )}
                 </div>
               </LinkStyle>

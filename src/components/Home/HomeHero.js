@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { Link } from 'gatsby';
 
 import { HoverSecondaryButton, HoverPrimaryButton } from '../../elements/Hover';
 
@@ -163,24 +164,29 @@ const HomeHero = () => (
         Brilliant things happen in engaged minds
       </h2>
       <div>
-        <HeroSecondaryBtn
-          className="secondary-color"
-          height="4.9375rem"
-          width="17.75rem"
-        >
-          <span className="is-size-6 has-text-white">SIGN UP FOR FREE</span>
-        </HeroSecondaryBtn>
+        <Link to="/sign-up/">
+          <HeroSecondaryBtn
+            className="secondary-color"
+            height="4.9375rem"
+            width="17.75rem"
+          >
+            <span className="is-size-6 has-text-white">SIGN UP FOR FREE</span>
+          </HeroSecondaryBtn>
+        </Link>
+
         <br />
         <br />
-        <HeroPrimaryBtn
-          className="primary-color"
-          height="4.9375rem"
-          width="17.75rem"
-        >
-          <span className="is-size-6 has-text-white ">
-            SUBSCRIBE FOR 40% OFF
-          </span>
-        </HeroPrimaryBtn>
+        <Link to="/">
+          <HeroPrimaryBtn
+            className="primary-color"
+            height="4.9375rem"
+            width="17.75rem"
+          >
+            <span className="is-size-6 has-text-white ">
+              SUBSCRIBE FOR 40% OFF
+            </span>
+          </HeroPrimaryBtn>
+        </Link>
       </div>
     </div>
   </Container>

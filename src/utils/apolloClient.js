@@ -1,3 +1,5 @@
+/* global window:true */
+
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { setContext } from 'apollo-link-context';
@@ -5,9 +7,19 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloLink } from 'apollo-link';
 import { onError } from 'apollo-link-error';
 import { withClientState } from 'apollo-link-state';
+import { CachePersistor } from 'apollo-cache-persist';
+
 import config from './config';
 
 const cache = new InMemoryCache();
+
+if (process.browser) {
+  const persistor = new CachePersistor({
+    cache,
+    storage: global.window.localStorage,
+  });
+  persistor.restore();
+}
 
 const httpLink = createHttpLink({
   uri: config.apiUrl,

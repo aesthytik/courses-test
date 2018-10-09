@@ -22,7 +22,9 @@
   },
   "dependencies": {
     "@reach/router": "^1.1.1",
+    "alertify.js": "^1.0.12",
     "apollo-cache-inmemory": "^1.2.10",
+    "apollo-cache-persist": "^0.1.1",
     "apollo-client": "^2.4.2",
     "apollo-link": "^1.2.3",
     "apollo-link-context": "^1.0.9",

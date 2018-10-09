@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
+import alertify from 'alertify.js';
 
 import Form from './Form';
 
@@ -22,6 +23,7 @@ const registerMutation = gql`
     $lastName: String
     $email: String!
     $password: String!
+    $userType: String
   ) {
     register(
       input: {
@@ -29,6 +31,7 @@ const registerMutation = gql`
         lastName: $lastName
         email: $email
         password: $password
+        userType: $userType
       }
     ) {
       jwt
@@ -63,8 +66,8 @@ const SignUpForm = ({ navigate }) => {
   };
 
   const handleOnCompleted = () => {
-    navigate('/dashboard');
-    console.log('registed sucessfully');
+    alertify.success('account created successfully');
+    navigate('/teacher-dashboard');
   };
 
   return (
@@ -78,14 +81,16 @@ const SignUpForm = ({ navigate }) => {
           mutation={registerMutation}
           update={handleUpdate}
           onCompleted={handleOnCompleted}
+          onError={error => alertify.error(error)}
         >
-          {(login, { loading, error }) => (
+          {(register, { loading }) => (
             <div>
               <Form
-                submit={input => login({ variables: input })}
+                submit={input =>
+                  register({ variables: { input, userType: 'teacher' } })
+                }
                 loading={loading}
               />
-              {error && <p>Error :( Please try again {error}</p>}
             </div>
           )}
         </Mutation>

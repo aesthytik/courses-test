@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { Link } from 'gatsby';
 
 const Container = styled.section`
   background-image: url('images/pattern.svg');
@@ -83,10 +84,13 @@ const SectionTwo = () => (
         videos. <br /> <br />Download project worksheets & powerpoints instantly
         to your account.
       </h2>
-
-      <Btn className="button is-rounded has-text-white is-white is-outlined">
-        <span className="is-size-6 has-text-weight-bold">SIGN UP FOR FREE</span>
-      </Btn>
+      <Link to="/sign-up/">
+        <Btn className="button is-rounded has-text-white is-white is-outlined">
+          <span className="is-size-6 has-text-weight-bold">
+            SIGN UP FOR FREE
+          </span>
+        </Btn>
+      </Link>
     </div>
   </Container>
 );

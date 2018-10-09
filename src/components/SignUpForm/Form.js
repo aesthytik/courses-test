@@ -44,7 +44,7 @@ const Form = ({
           type="text"
           name="firstName"
           placeholder="First name"
-          value={values.lastName}
+          value={values.firstName}
           onChange={handleChange}
           onBlur={handleBlur}
         />

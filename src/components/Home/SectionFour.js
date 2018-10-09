@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { Link } from 'gatsby';
 
 const Container = styled.section`
   background-color: #fccc63;
@@ -68,9 +69,13 @@ const SectionFour = () => (
         We collaborate with industry leaders to create project packs focused<br />on
         teaching real world skills to equip students with industry knowledge.
       </h2>
-      <Btn className="button is-rounded has-text-grey is-grey is-outlined is-large is-medium-mobile">
-        <span className="is-size-6 has-text-weight-bold">SIGN UP FOR FREE</span>
-      </Btn>
+      <Link to="/sign-up/">
+        <Btn className="button is-rounded has-text-grey is-grey is-outlined is-large is-medium-mobile">
+          <span className="is-size-6 has-text-weight-bold">
+            SIGN UP FOR FREE
+          </span>
+        </Btn>
+      </Link>
     </div>
   </Container>
 );
