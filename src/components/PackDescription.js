@@ -26,10 +26,10 @@ const Container = styled.section`
 }
 `;
 
-const PackDescription = () => (
+const PackDescription = ({ course }) => (
   <Container className="section">
     <div className="container">
-      <Heading className="has-text-grey">Steve Jobs</Heading>
+      <Heading className="has-text-grey">{course.title}</Heading>
       <h2 className="subtitle has-text-weight-semibold">
         Design Technology > Famous Designers
       </h2>

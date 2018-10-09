@@ -29,7 +29,7 @@ module.exports = {
       resolve: `gatsby-source-mongodb`,
       options: {
         dbName: `test`,
-        collection: `blog`,
+        collection: [`blog`, `resources`],
         server: { address: '159.89.197.227', port: 27017 },
         auth: { user: 'test', password: 'test12' },
       },

@@ -9,9 +9,10 @@ import LearningObjAndOutcomes from '../components/LearningObjAndOutcomes';
 import WorkbooksAndChecklists from '../components/WorkbooksAndChecklists';
 import DownloadProjects from '../components/DownloadProjects';
 
-export default class IndividualPack extends React.Component {
+export default class Course extends React.Component {
   render() {
-    const { location } = this.props;
+    const { location, data } = this.props;
+    const course = data.mongodbTestResources;
     return (
       <Layout location={location}>
         <Seo
@@ -19,7 +20,7 @@ export default class IndividualPack extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
-        <PackDescription />
+        <PackDescription course={course} />
         <StudentActivities />
         <LearningObjAndOutcomes />
         <WorkbooksAndChecklists />
@@ -28,3 +29,14 @@ export default class IndividualPack extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query CourseByPath($slug: String!) {
+    mongodbTestResources(slug: { eq: $slug }) {
+      title
+      slug
+      isActive
+      createdAt
+    }
+  }
+`;

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Router, Location, Redirect } from '@reach/router';
+import { Router, Location } from '@reach/router';
 
 import Home from './home';
 import NotFound from './404';
-import IndividualPack from '../templates/individual-pack';
 import Login from './login';
 import Dashboard from './dashboard';
 import SignUp from './sign-up';
@@ -17,7 +16,6 @@ export default () => (
     {({ location }) => (
       <Router location={location}>
         <Home path="/" />
-        <IndividualPack path="/individual-pack" />
         <Login path="/login" />
         <Dashboard path="/dashboardb" />
         <SignUp path="/sign-up" />

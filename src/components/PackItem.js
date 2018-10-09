@@ -57,16 +57,16 @@ const ListStyled = styled.ul`
 const PackItem = ({ item }) => (
   <Container>
     <div id="box">
-      <img src={item.image} alt="steve-jobs" />
+      <img src="/images/saved-packs/steve-jobs.svg" alt="steve-jobs" />
       <div id="overlay">
-        <Link to="/individual-pack/">
+        <Link to={`/course/${item.node.slug}`}>
           <div className="text has-text-weight-bold">VIEW PACK</div>
         </Link>
       </div>
     </div>
     <ListStyled>
       <li className="has-text-weight-bold">
-        <a href="#">{item.title}</a>
+        <a href="#">{item.node.title}</a>
       </li>
       <li>
         <a href="#">{item.field}</a>

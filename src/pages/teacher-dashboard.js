@@ -1,32 +1,22 @@
 import React from 'react';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+// import gql from 'graphql-tag';
+// import { Query } from 'react-apollo';
+import { graphql } from 'gatsby';
 
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
 import PacksList from '../components/PacksList';
 
-const resourcesQuery = gql`
-  query {
-    resources {
-      id
-      title
-      slug
-    }
-  }
-`;
-
-const currentUserQuery = gql`
-  {
-    user @client {
-      id
-      email
-      firstName
-      lastName
-    }
-  }
-`;
+// const resourcesQuery = gql`
+//   query {
+//     resources {
+//       id
+//       title
+//       slug
+//     }
+//   }
+// `;
 
 const savedPacks = [
   {
@@ -144,13 +134,16 @@ const industryPacks = [
 
 export default class TeacherDashboard extends React.Component {
   render() {
-    const { location, navigate } = this.props;
+    const { location, navigate, data } = this.props;
 
     const token = localStorage.getItem('token');
 
     if (!token) {
       navigate('/login/');
     }
+
+    const resources = data.allMongodbTestResources.edges;
+
     return (
       <Layout location={location} navigate={navigate}>
         <Seo
@@ -158,28 +151,30 @@ export default class TeacherDashboard extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
-        <Query query={currentUserQuery}>
-          {({ loading, error, data }) => {
-            if (loading) return 'Loading...';
-            if (error) return `Error! ${error.message}`;
-            // const { resources } = data;
-            console.log(data);
-
-            return <React.Fragment />;
-          }}
-        </Query>
-        <PacksList
-          title="My Saved Packs"
-          bgColor="#ededed"
-          packs={savedPacks}
-        />
-        <PacksList title="Recent Packs" bgColor="#d0e6f5" packs={recentPacks} />
+        <PacksList title="Recent Packs" bgColor="#ededed" packs={resources} />
+        {/* <PacksList title="Recent Packs" bgColor="#d0e6f5" packs={recentPacks} />
         <PacksList
           title="Industry Packs"
           bgColor="#d5f3e5"
           packs={industryPacks}
-        />
+        /> */}
       </Layout>
     );
   }
 }
+
+export const query = graphql`
+  query {
+    allMongodbTestResources {
+      edges {
+        node {
+          id
+          title
+          slug
+          isActive
+          createdAt
+        }
+      }
+    }
+  }
+`;
