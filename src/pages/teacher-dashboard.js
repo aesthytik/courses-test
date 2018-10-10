@@ -142,7 +142,7 @@ export default class TeacherDashboard extends React.Component {
       navigate('/login/');
     }
 
-    const resources = data.allMongodbTestResources.edges;
+    const resources = data.allMongodbLearnrealmResource.edges;
 
     return (
       <Layout location={location} navigate={navigate}>
@@ -165,7 +165,7 @@ export default class TeacherDashboard extends React.Component {
 
 export const query = graphql`
   query {
-    allMongodbTestResources {
+    allMongodbLearnrealmResource {
       edges {
         node {
           id

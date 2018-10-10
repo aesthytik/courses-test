@@ -5,16 +5,17 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve(`src/templates/post.js`);
-    // Query for markdown nodes to use in creating pages.
+    // Query for mongodb nodes to use in creating pages.
     resolve(
       graphql(`
         {
-          allMongodbTestBlog {
+          mongodbLearnrealmBlog {
             edges {
               node {
+                id
                 title
                 slug
-                subTitle
+                subtitle
                 description
               }
             }
@@ -26,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create pages for each mongoDb entry.
-        result.data.allMongodbTestBlog.edges.forEach(({ node }) => {
+        result.data.allMongodbLearnrealmBlog.edges.forEach(({ node }) => {
           const { slug } = node;
           createPage({
             path: `/blog/${slug}`,
@@ -47,12 +48,12 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const resourceTemplate = path.resolve(`src/templates/course.js`);
+    const resourceTemplate = path.resolve(`src/templates/resource.js`);
     // Query for markdown nodes to use in creating pages.
     resolve(
       graphql(`
         {
-          allMongodbTestResources {
+          allMongodbLearnrealmResource {
             edges {
               node {
                 id
@@ -70,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create pages for each mongoDb entry.
-        result.data.allMongodbTestResources.edges.forEach(({ node }) => {
+        result.data.allMongodbLearnrealmResource.edges.forEach(({ node }) => {
           const { slug } = node;
           createPage({
             path: `/course/${slug}`,

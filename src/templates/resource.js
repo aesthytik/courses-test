@@ -9,10 +9,10 @@ import LearningObjAndOutcomes from '../components/LearningObjAndOutcomes';
 import WorkbooksAndChecklists from '../components/WorkbooksAndChecklists';
 import DownloadProjects from '../components/DownloadProjects';
 
-export default class Course extends React.Component {
+export default class Resource extends React.Component {
   render() {
     const { location, data } = this.props;
-    const course = data.mongodbTestResources;
+    const course = data.mongodbLearnrealmResource;
     return (
       <Layout location={location}>
         <Seo
@@ -32,7 +32,7 @@ export default class Course extends React.Component {
 
 export const query = graphql`
   query CourseByPath($slug: String!) {
-    mongodbTestResources(slug: { eq: $slug }) {
+    mongodbLearnrealmResource(slug: { eq: $slug }) {
       title
       slug
       isActive

@@ -9,7 +9,8 @@ import PostContainer from '../components/blog/PostContainer';
 export default class Post extends React.Component {
   render() {
     const { location, data } = this.props;
-    const post = data.mongodbTestBlog;
+    const post = data.mongodbLearnrealmBlog;
+    console.log(data);
     return (
       <Layout location={location}>
         <Seo
@@ -25,10 +26,11 @@ export default class Post extends React.Component {
 
 export const query = graphql`
   query PostByPath($slug: String!) {
-    mongodbTestBlog(slug: { eq: $slug }) {
+    mongodbLearnrealmBlog(slug: { eq: $slug }) {
+      id
       title
       slug
-      subTitle
+      subtitle
       description
     }
   }

@@ -23,7 +23,6 @@ const registerMutation = gql`
     $lastName: String
     $email: String!
     $password: String!
-    $userType: String
   ) {
     register(
       input: {
@@ -31,7 +30,6 @@ const registerMutation = gql`
         lastName: $lastName
         email: $email
         password: $password
-        userType: $userType
       }
     ) {
       jwt
@@ -67,7 +65,7 @@ const SignUpForm = ({ navigate }) => {
 
   const handleOnCompleted = () => {
     alertify.success('account created successfully');
-    navigate('/teacher-dashboard');
+    navigate('/teacher-dashboard/');
   };
 
   return (
@@ -86,9 +84,7 @@ const SignUpForm = ({ navigate }) => {
           {(register, { loading }) => (
             <div>
               <Form
-                submit={input =>
-                  register({ variables: { input, userType: 'teacher' } })
-                }
+                submit={input => register({ variables: input })}
                 loading={loading}
               />
             </div>

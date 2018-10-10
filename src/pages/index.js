@@ -16,11 +16,11 @@ export default () => (
     {({ location }) => (
       <Router location={location}>
         <Home path="/" />
-        <Login path="/login" />
-        <Dashboard path="/dashboardb" />
-        <SignUp path="/sign-up" />
+        <Login path="/login/" />
+        <Dashboard path="/dashboard/" />
+        <SignUp path="/sign-up/" />
         <TeacherDashboard path="/teacher-dashboard" />
-        <Blog path="/blog" />
+        <Blog path="/blog/" />
         <NotFound default />
       </Router>
     )}

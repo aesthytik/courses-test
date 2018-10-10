@@ -10,9 +10,9 @@ export default class Post extends React.Component {
   render() {
     const {
       location,
-      data: { allMongodbTestBlog },
+      data: { allMongodbLearnrealmBlog },
     } = this.props;
-    const blog = allMongodbTestBlog.edges;
+    const blog = allMongodbLearnrealmBlog.edges;
     return (
       <Layout location={location}>
         <Seo
@@ -32,13 +32,13 @@ export default class Post extends React.Component {
 
 export const query = graphql`
   query {
-    allMongodbTestBlog {
+    allMongodbLearnrealmBlog {
       edges {
         node {
           id
           title
           slug
-          subTitle
+          subtitle
           description
         }
       }
