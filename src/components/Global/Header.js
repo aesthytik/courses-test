@@ -190,7 +190,6 @@ export default class Header extends React.Component {
                           </aside>
                         </MobileMenu>
                       ) : null}
-
                       <LinkStyle className="navbar-menu">
                         <div className="navbar-end">
                           {!isLoggedIn ? (
@@ -213,9 +212,12 @@ export default class Header extends React.Component {
                               <a className="navbar-item primary-font-color">
                                 Freebies
                               </a>
-                              <a className="navbar-item primary-font-color">
+                              <Link
+                                to="/packages"
+                                className="navbar-item primary-font-color"
+                              >
                                 Member's club
-                              </a>
+                              </Link>
                               <LoginBtn
                                 to="/login/"
                                 className="navbar-item is-uppercase has-text-weight-bold"
@@ -233,14 +235,23 @@ export default class Header extends React.Component {
                           ) : (
                             <React.Fragment>
                               <Link
-                                to="/dashboard"
+                                to="/"
                                 className="navbar-item primary-font-color"
                               >
                                 Home
                               </Link>
-                              <a className="navbar-item primary-font-color">
-                                Discover
-                              </a>
+                              <Link
+                                to="/dashboard"
+                                className="navbar-item primary-font-color"
+                              >
+                                Dashboard
+                              </Link>
+                              <Link
+                                to="/blog"
+                                className="navbar-item primary-font-color"
+                              >
+                                Blog
+                              </Link>
                               <a
                                 className="navbar-item primary-font-color"
                                 type="button"

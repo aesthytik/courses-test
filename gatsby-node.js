@@ -1,15 +1,15 @@
 const path = require(`path`);
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  return new Promise((resolve, reject) => {
+  await new Promise((resolve, reject) => {
     const postTemplate = path.resolve(`src/templates/post.js`);
     // Query for mongodb nodes to use in creating pages.
     resolve(
       graphql(`
         {
-          mongodbLearnrealmBlog {
+          allMongodbLearnrealmBlog {
             edges {
               node {
                 id
@@ -42,12 +42,8 @@ exports.createPages = ({ graphql, actions }) => {
       }),
     );
   });
-};
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
-
-  return new Promise((resolve, reject) => {
+  await new Promise((resolve, reject) => {
     const resourceTemplate = path.resolve(`src/templates/resource.js`);
     // Query for markdown nodes to use in creating pages.
     resolve(
@@ -86,6 +82,8 @@ exports.createPages = ({ graphql, actions }) => {
       }),
     );
   });
+
+  return true;
 };
 
 exports.onCreatePage = ({ page, actions }) => {
