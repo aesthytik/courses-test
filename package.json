@@ -45,6 +45,8 @@
     "gatsby-transformer-sharp": "next",
     "graphql-tag": "^2.9.2",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
     "polished": "^2.1.1",
     "react": "^16.4.1",
     "react-apollo": "^2.1.11",

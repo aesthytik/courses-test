@@ -14,7 +14,6 @@ const Container = styled.section`
   }
   .content {
     padding: 2rem 0rem;
-   
     line-height: 1.67rem;
   }
   @media screen and (max-width: 600px) {
@@ -30,8 +29,8 @@ const PackDescription = ({ course }) => (
   <Container className="section">
     <div className="container">
       <Heading className="has-text-grey">{course.title}</Heading>
-      <h2 className="subtitle has-text-weight-semibold">
-        Design Technology > Famous Designers
+      <h2 className="subtitle has-text-weight-semibold is-capitalized">
+        {course.category}
       </h2>
       <div className="columns">
         <div className="column">
@@ -39,24 +38,29 @@ const PackDescription = ({ course }) => (
             <h3>
               <HighlightedText>Project description</HighlightedText>
             </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus
-              suspendisse faucibus interdum posuere lorem ipsum dolor sit amet.
-              Felis bibendum ut tristique et egesta.
-              <br />
-              <br /> Dictum at tempor commodo ullamcorper a lacus vestibulum. In
-              iaculis nunc sed augue lacus. Blandit libero volutpat sed cras.
-              Dictum at tempor commodo ullamcorper a lacus vestibulum. In
-              iaculis nunc sed augue lacus. Blandit libero volutpat sed cras.{' '}
-            </p>
+            <p>{course.description}</p>
             <h3>
               <HighlightedText>Project tags +</HighlightedText>
+              <br />
+              <br />
+              <div className="tags">
+                {course.tags.map(tag => (
+                  <span className="tag is-dark" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </h3>
           </div>
         </div>
         <div className="column">
-          <img src="/images/youtube-video-embed.png" alt="youtube-embed" />
+          <iframe
+            title={course.name}
+            width="100%"
+            height="100%"
+            src={course.videoEmbed}
+          />
+          {/* <img src="/images/youtube-video-embed.png" alt="youtube-embed" /> */}
         </div>
       </div>
     </div>

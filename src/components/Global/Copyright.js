@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Container = styled.section`
   background-color: #ffffff;
@@ -34,23 +35,23 @@ const Copyright = () => (
         </div>
         <div className="column">
           <h3 className="is-uppercase">
-            <a href="#" className="has-text-grey">
+            <Link to="/page/terms-and-conditions" className="has-text-grey">
               TERMS & CONDITIONS
-            </a>
+            </Link>
           </h3>
         </div>
         <div className="column">
           <h3 className="is-uppercase">
-            <a href="#" className="has-text-grey">
+            <Link to="/page/private-policy" className="has-text-grey">
               PRIVACY POLICY
-            </a>
+            </Link>
           </h3>
         </div>
         <div className="column">
           <h3 className="is-uppercase">
-            <a href="#" className="has-text-grey">
+            <Link to="/page/site-map" className="has-text-grey">
               SITE MAP
-            </a>
+            </Link>
           </h3>
         </div>
       </div>

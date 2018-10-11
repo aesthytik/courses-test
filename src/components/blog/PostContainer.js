@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import moment from 'moment';
+
 import Heading from '../../elements/Heading';
-import HighlightedText from '../../elements/HighlightedText';
 
 const Container = styled.section`
   background-color: #ffffff;
@@ -27,21 +28,21 @@ const Container = styled.section`
 `;
 
 const PostContainer = ({ post }) => (
-  <Container className="section">
+  <Container className="section has-text-centered">
     <div className="container">
-      <Heading className="has-text-grey">{post.title}</Heading>
-      <h2 className="subtitle has-text-weight-semibold">{post.subTitle}</h2>
+      <Heading className="has-text-grey is-uppercase">{post.title}</Heading>
+      <h2 className="subtitle has-text-weight-semibold">{post.subtitle}</h2>
+      <span>{moment(post.createdAt).calendar()}</span>
+      <br />
+      <br />
       <div className="columns">
         <div className="column">
-          <div className="content">
-            <h3>
-              <HighlightedText>description</HighlightedText>
-            </h3>
-            <p>{post.description}</p>
-          </div>
+          <img src={post.image} alt={post.title} />
         </div>
-        <div className="column">
-          <img src="/images/youtube-video-embed.png" alt="youtube-embed" />
+      </div>
+      <div className="column">
+        <div className="content">
+          <p>{post.description}</p>
         </div>
       </div>
     </div>
