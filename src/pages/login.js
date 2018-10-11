@@ -8,6 +8,7 @@ import LoginForm from '../components/LoginForm';
 export default class LoginPage extends React.Component {
   render() {
     const { navigate } = this.props;
+
     return (
       <Layout>
         <Seo

@@ -1,15 +1,18 @@
 /* global window:true */
 
-import { ApolloClient } from 'apollo-client';
+import ApolloClient from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
-import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloLink } from 'apollo-link';
-import { onError } from 'apollo-link-error';
-import { withClientState } from 'apollo-link-state';
 import { CachePersistor } from 'apollo-cache-persist';
+import { withClientState } from 'apollo-link-state';
+import { onError } from 'apollo-link-error';
+import { ApolloLink } from 'apollo-link';
+import { setContext } from 'apollo-link-context';
 
 import config from './config';
+import defaults from '../store/defaults';
+import typeDefs from '../store/schema';
+import resolvers from '../store/resolvers';
 
 const cache = new InMemoryCache();
 
@@ -17,13 +20,10 @@ if (process.browser) {
   const persistor = new CachePersistor({
     cache,
     storage: global.window.localStorage,
+    debug: config.debug,
   });
   persistor.restore();
 }
-
-const httpLink = createHttpLink({
-  uri: config.apiUrl,
-});
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
@@ -37,26 +37,29 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-const stateLink = withClientState({
-  cache,
-  defaults: {
-    user: {
-      __typename: 'User',
-      id: null,
-      email: null,
-      firstName: null,
-      lastName: null,
-    },
-  },
-});
-
-const error = onError(({ graphQLErrors, networkError }) => {
-  console.log('onError', graphQLErrors, networkError);
+const httpLink = createHttpLink({
+  uri: config.apiUrl,
 });
 
 const client = new ApolloClient({
-  link: authLink.concat(ApolloLink.from([error, stateLink, httpLink])),
+  link: ApolloLink.from([
+    onError(({ graphQLErrors, networkError }) => {
+      console.log('onError', graphQLErrors, networkError);
+      if (graphQLErrors) {
+        graphQLErrors.map(({ message }) => alert(message));
+      }
+
+      if (networkError) alert(`[Network error]: ${networkError}`);
+    }),
+    withClientState({ resolvers, defaults, cache, typeDefs }),
+    authLink.concat(httpLink),
+  ]),
   cache,
 });
+
+// Purge persistor when the store was reset.
+// client.onResetStore(() => persistor.purge());
+// persistor.purge(); // clear local storage
+// AsyncStorage.clear(); // clear local storage
 
 export default client;

@@ -10,7 +10,7 @@ import './layout.css';
 
 const Container = styled.div``;
 
-const IndexLayout = ({ children, location, navigate }) => (
+const IndexLayout = ({ children, navigate }) => (
   <div>
     <Helmet>
       <title>{config.siteName}</title>
@@ -18,20 +18,18 @@ const IndexLayout = ({ children, location, navigate }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta description={config.description} />
     </Helmet>
-    <Header path={location.pathname} navigate={navigate} />
+    <Header navigate={navigate} />
     <Container>{children}</Container>
     <Footer />
   </div>
 );
 
 IndexLayout.defaultProps = {
-  location: { pathname: '/' },
   navigate: () => console.log('nav'),
 };
 
 IndexLayout.propTypes = {
   children: PropTypes.array.isRequired,
-  location: PropTypes.object,
   navigate: PropTypes.func,
 };
 

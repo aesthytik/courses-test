@@ -52,6 +52,7 @@ const SignUpForm = ({ navigate }) => {
 
     cache.writeData({
       data: {
+        isLoggedIn: true,
         user: {
           __typename: 'User',
           id: register.user.id,
@@ -64,8 +65,8 @@ const SignUpForm = ({ navigate }) => {
   };
 
   const handleOnCompleted = () => {
-    alertify.success('account created successfully');
-    navigate('/teacher-dashboard/');
+    alertify.success('Account created successfully');
+    navigate('/dashboard');
   };
 
   return (

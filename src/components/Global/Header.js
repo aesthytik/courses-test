@@ -96,6 +96,7 @@ const NavbarBurger = styled.a`
 
 const UserQuery = gql`
   {
+    isLoggedIn @client
     user @client {
       id
       email
@@ -115,9 +116,8 @@ export default class Header extends React.Component {
   }
 
   logout = () => {
-    const { navigate } = this.props;
     localStorage.clear();
-    navigate('/');
+    window.location = '/';
   };
 
   toggleMobileMenu() {
@@ -128,13 +128,7 @@ export default class Header extends React.Component {
   }
 
   render() {
-    const { path } = this.props;
     const { isActive } = this.state;
-
-    let hasMemberIcon = false;
-    if (path === '/teacher-dashboard/' || path === '/individual-pack/') {
-      hasMemberIcon = true;
-    }
 
     return (
       <React.Fragment>
@@ -168,100 +162,109 @@ export default class Header extends React.Component {
                   <span aria-hidden="true" />
                 </NavbarBurger>
               </div>
-              {isActive ? (
-                <MobileMenu className="is-hidden-desktop has-text-centered">
-                  <aside className="menu">
-                    <ul className="menu-list is-size-6">
-                      <Link to="/sign-up/">
-                        <li>Sign up for free</li>
-                      </Link>
-                      <Link to="/">
-                        <li>Subscribe</li>
-                      </Link>
-                      <Link to="/login/">
-                        <li>Login</li>
-                      </Link>
-                      <Link to="/">
-                        <li>Help</li>
-                      </Link>
-                    </ul>
-                  </aside>
-                </MobileMenu>
-              ) : null}
+              <Query query={UserQuery}>
+                {({ loading, error, data }) => {
+                  if (loading) return 'Loading...';
+                  if (error) return `Error! ${error.message}`;
+                  const { user, isLoggedIn } = data;
 
-              <LinkStyle className="navbar-menu">
-                <div className="navbar-end">
-                  {!hasMemberIcon ? (
+                  return (
                     <React.Fragment>
-                      <a className="navbar-item primary-font-color">Foreword</a>
-                      <Link
-                        to="/blog"
-                        className="navbar-item primary-font-color"
-                      >
-                        Blog
-                      </Link>
-                      <Link
-                        to="/teacher-dashboard/"
-                        className="navbar-item primary-font-color"
-                      >
-                        Teachers
-                      </Link>
-                      <a className="navbar-item primary-font-color">Freebies</a>
-                      <a className="navbar-item primary-font-color">
-                        Member's club
-                      </a>
-                      <LoginBtn
-                        to="/login/"
-                        className="navbar-item is-uppercase has-text-weight-bold"
-                      >
-                        Log in
-                      </LoginBtn>
-                      <Link to="/sign-up/" className="navbar-item">
-                        <SignupBtn className="button is-rounded is-outlined is-large is-pulled-right is-hover">
-                          <span className="is-size-6 has-text-weight-bold">
-                            SIGN UP FOR FREE
-                          </span>
-                        </SignupBtn>
-                      </Link>
-                    </React.Fragment>
-                  ) : (
-                    <Query query={UserQuery}>
-                      {({ loading, error, data }) => {
-                        if (loading) return 'Loading...';
-                        if (error) return `Error! ${error.message}`;
-                        const { user } = data;
+                      {isActive ? (
+                        <MobileMenu className="is-hidden-desktop has-text-centered">
+                          <aside className="menu">
+                            <ul className="menu-list is-size-6">
+                              <Link to="/sign-up/">
+                                <li>Sign up for free</li>
+                              </Link>
+                              <Link to="/">
+                                <li>Subscribe</li>
+                              </Link>
+                              <Link to="/login/">
+                                <li>Login</li>
+                              </Link>
+                              <Link to="/">
+                                <li>Help</li>
+                              </Link>
+                            </ul>
+                          </aside>
+                        </MobileMenu>
+                      ) : null}
 
-                        return (
-                          <React.Fragment>
-                            <Link
-                              to="/"
-                              className="navbar-item primary-font-color"
-                            >
-                              Home
-                            </Link>
-                            <a className="navbar-item primary-font-color">
-                              Discover
-                            </a>
-                            <a
-                              className="navbar-item primary-font-color"
-                              type="button"
-                              onClick={this.logout}
-                            >
-                              logout
-                            </a>
-                            <Name className="navbar-item  has-text-weight-bold">
-                              {user.email}
-                            </Name>
-                            <Link to="/sign-up/" className="navbar-item">
-                              <img src="/images/admin-icon.svg" alt="admin" />
-                            </Link>
-                          </React.Fragment>
-                        );
-                      }}
-                    </Query>
-                  )}
-                </div>
-              </LinkStyle>
+                      <LinkStyle className="navbar-menu">
+                        <div className="navbar-end">
+                          {!isLoggedIn ? (
+                            <React.Fragment>
+                              <a className="navbar-item primary-font-color">
+                                Forward
+                              </a>
+                              <Link
+                                to="/blog"
+                                className="navbar-item primary-font-color"
+                              >
+                                Blog
+                              </Link>
+                              <Link
+                                to="/sign-up?teacher=true"
+                                className="navbar-item primary-font-color"
+                              >
+                                Teachers
+                              </Link>
+                              <a className="navbar-item primary-font-color">
+                                Freebies
+                              </a>
+                              <a className="navbar-item primary-font-color">
+                                Member's club
+                              </a>
+                              <LoginBtn
+                                to="/login/"
+                                className="navbar-item is-uppercase has-text-weight-bold"
+                              >
+                                Log in
+                              </LoginBtn>
+                              <Link to="/sign-up/" className="navbar-item">
+                                <SignupBtn className="button is-rounded is-outlined is-large is-pulled-right is-hover">
+                                  <span className="is-size-6 has-text-weight-bold">
+                                    SIGN UP FOR FREE
+                                  </span>
+                                </SignupBtn>
+                              </Link>
+                            </React.Fragment>
+                          ) : (
+                            <React.Fragment>
+                              <Link
+                                to="/dashboard"
+                                className="navbar-item primary-font-color"
+                              >
+                                Home
+                              </Link>
+                              <a className="navbar-item primary-font-color">
+                                Discover
+                              </a>
+                              <a
+                                className="navbar-item primary-font-color"
+                                type="button"
+                                onClick={this.logout}
+                              >
+                                logout
+                              </a>
+                              <Name className="navbar-item  has-text-weight-bold">
+                                {user.email}
+                              </Name>
+                              <Link
+                                to="/profile-update"
+                                className="navbar-item"
+                              >
+                                <img src="/images/admin-icon.svg" alt="admin" />
+                              </Link>
+                            </React.Fragment>
+                          )}
+                        </div>
+                      </LinkStyle>
+                    </React.Fragment>
+                  );
+                }}
+              </Query>
             </nav>
           </div>
         </Container>

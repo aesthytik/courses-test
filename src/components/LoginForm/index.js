@@ -87,16 +87,6 @@ const GreenOrangeBalloon = styled.img`
   right: 120%;
 `;
 
-const currentUserQuery = gql`
-  {
-    user @client {
-      email
-      firstName
-      lastName
-    }
-  }
-`;
-
 const loginMutation = gql`
   mutation($email: String!, $password: String!) {
     login(input: { email: $email, password: $password }) {
@@ -120,6 +110,7 @@ const LoginForm = ({ navigate }) => {
 
     cache.writeData({
       data: {
+        isLoggedIn: true,
         user: {
           __typename: 'User',
           id: login.user.id,
@@ -132,8 +123,8 @@ const LoginForm = ({ navigate }) => {
   };
 
   const handleOnCompleted = () => {
-    navigate('/teacher-dashboard/');
-    alertify.success('you logged succesfully');
+    navigate('/dashboard/');
+    alertify.success('Logged in succesfully');
   };
 
   return (

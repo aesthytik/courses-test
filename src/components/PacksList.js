@@ -102,7 +102,7 @@ export default class PacksList extends React.Component {
             <HeadingStyled>{title}</HeadingStyled>
           </h1>
           <Slider {...settings}>
-            {packs.map(pack => <PackItem key={pack.id} item={pack} />)}
+            {packs.map(pack => <PackItem key={pack.node.id} item={pack} />)}
           </Slider>
         </div>
       </Container>

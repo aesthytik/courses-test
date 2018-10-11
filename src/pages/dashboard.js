@@ -1,37 +1,51 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
-import CreateResource from '../components/Dashboard/CreateResource';
-import Resources from '../components/Dashboard/Resources';
+import PacksList from '../components/PacksList';
 
-export default class IndexPage extends React.Component {
+export default class Dashboard extends React.Component {
   render() {
-    const { navigate } = this.props;
+    const { location, navigate, data } = this.props;
 
     const token = localStorage.getItem('token');
+
     if (!token) {
       navigate('/login/');
     }
+
+    const resources = data.allMongodbLearnrealmResource.edges;
+
     return (
-      <Layout>
+      <Layout location={location} navigate={navigate}>
         <Seo
-          title="Home"
-          description="Welcome to Learn Realm."
+          title="Dashboard"
+          description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
-        <div className="container">
-          <div className="columns">
-            <div className="column">
-              <CreateResource />
-            </div>
-            <div className="column is-three-quarters">
-              <Resources />
-            </div>
-          </div>
-        </div>
+        <PacksList title="Recent Packs" bgColor="#ededed" packs={resources} />
       </Layout>
     );
   }
 }
+
+export const query = graphql`
+  query {
+    allMongodbLearnrealmResource(
+      limit: 20
+      sort: { fields: [createdAt], order: ASC }
+    ) {
+      edges {
+        node {
+          id
+          title
+          slug
+          isActive
+          createdAt
+        }
+      }
+    }
+  }
+`;

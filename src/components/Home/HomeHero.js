@@ -17,8 +17,8 @@ const Container = styled.section`
   @media screen and (max-width: 600px) {
     padding-top:6%!important;
     margin-top: 5%;
-   }
-   @media screen and (min-width: 768px) and (max-width: 1024px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     padding-bottom: 25%;
     padding-top: 25%;
   }
