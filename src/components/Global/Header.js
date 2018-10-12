@@ -174,18 +174,62 @@ export default class Header extends React.Component {
                         <MobileMenu className="is-hidden-desktop has-text-centered">
                           <aside className="menu">
                             <ul className="menu-list is-size-6">
-                              <Link to="/sign-up/">
-                                <li>Sign up for free</li>
-                              </Link>
-                              <Link to="/">
-                                <li>Subscribe</li>
-                              </Link>
-                              <Link to="/login/">
-                                <li>Login</li>
-                              </Link>
-                              <Link to="/">
-                                <li>Help</li>
-                              </Link>
+                              {isLoggedIn ? (
+                                <React.Fragment>
+                                  <Link
+                                    to="/"
+                                    className="navbar-item primary-font-color"
+                                  >
+                                    Home
+                                  </Link>
+                                  <Link
+                                    to="/dashboard"
+                                    className="navbar-item primary-font-color"
+                                  >
+                                    Dashboard
+                                  </Link>
+                                  <Link
+                                    to="/blog"
+                                    className="navbar-item primary-font-color"
+                                  >
+                                    Blog
+                                  </Link>
+                                  <a
+                                    className="navbar-item primary-font-color"
+                                    type="button"
+                                    onClick={this.logout}
+                                  >
+                                    logout
+                                  </a>
+                                  <Name className="navbar-item  has-text-weight-bold">
+                                    {user.email}
+                                  </Name>
+                                  <Link
+                                    to="/profile-update"
+                                    className="navbar-item"
+                                  >
+                                    <img
+                                      src="/images/admin-icon.svg"
+                                      alt="admin"
+                                    />
+                                  </Link>
+                                </React.Fragment>
+                              ) : (
+                                <React.Fragment>
+                                  <Link to="/sign-up/">
+                                    <li>Sign up for free</li>
+                                  </Link>
+                                  <Link to="/">
+                                    <li>Subscribe</li>
+                                  </Link>
+                                  <Link to="/login/">
+                                    <li>Login</li>
+                                  </Link>
+                                  <Link to="/">
+                                    <li>Help</li>
+                                  </Link>
+                                </React.Fragment>
+                              )}
                             </ul>
                           </aside>
                         </MobileMenu>

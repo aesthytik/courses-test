@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
+
 import SocialMediaIcons from '../SocialMediaIcons';
 import Copyright from './Copyright';
 
@@ -40,19 +42,19 @@ const Footer = () => (
           <h3 className="has-text-weight-bold">Access Learn Realm</h3>
           <ul className="is-size-6 is-uppercase">
             <li>
-              <a href="#">SUBSCRIBE</a>
+              <Link to="/subscription">SUBSCRIBE</Link>
             </li>
             <li>
-              <a href="#">ACCESS FOR TEACHERS</a>
+              <Link to="/page/access-for-teachers">ACCESS FOR TEACHERS</Link>
             </li>
             <li>
-              <a href="#">ACCESS FOR STUDENTS</a>
+              <Link to="/page/access-for-students">ACCESS FOR STUDENTS</Link>
             </li>
             <li>
-              <a href="#">ACCESS FOR PARENTS</a>
+              <Link to="/page/access-for-parents">ACCESS FOR PARENTS</Link>
             </li>
             <li>
-              <a href="#">ACCESS FOR SCHOOLS</a>
+              <Link to="/page/access-for-schools">ACCESS FOR SCHOOLS</Link>
             </li>
           </ul>
         </div>
@@ -60,10 +62,10 @@ const Footer = () => (
           <h3 className="is-uppercase has-text-weight-bold">Partnerships</h3>
           <ul className="is-size-6 is-uppercase">
             <li>
-              <a href="#">RESEARCH PARTNERS</a>
+              <Link to="/page/research-partners">RESEARCH PARTNERS</Link>
             </li>
             <li>
-              <a href="#">BRAND PARTNERS</a>
+              <Link to="/page/brand-partners">BRAND PARTNERS</Link>
             </li>
           </ul>
         </div>
@@ -71,16 +73,16 @@ const Footer = () => (
           <h3 className="is-uppercase has-text-weight-bold">About us</h3>
           <ul className="is-size-6">
             <li>
-              <a href="#">ABOUT LEARN REALM</a>
+              <Link to="/page/about-learn-realm">ABOUT LEARN REALM</Link>
             </li>
             <li>
-              <a href="#">PRESS</a>
+              <Link to="/page/press/">PRESS</Link>
             </li>
             <li>
-              <a href="#">CAREERS</a>
+              <Link to="/page/careers/">CAREERS</Link>
             </li>
             <li>
-              <a href="#">BLOG</a>
+              <Link to="/blog/">BLOG</Link>
             </li>
           </ul>
         </div>
@@ -88,10 +90,10 @@ const Footer = () => (
           <h3 className="has-text-weight-bold is-uppercase">Support</h3>
           <ul className="is-size-6 is-uppercase">
             <li>
-              <a href="#">Help center</a>
+              <Link to="/page/help-centre/">Help center</Link>
             </li>
             <li>
-              <a href="#">Contact us</a>
+              <Link to="/page/contact/">Contact us</Link>
             </li>
           </ul>
         </div>

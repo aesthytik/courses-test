@@ -26,7 +26,7 @@ const Container = styled.section`
 }
 `;
 
-const LearningObjAndOutcomes = () => (
+const LearningObjAndOutcomes = ({ outcomes, objectives }) => (
   <Container className="section">
     <div className="container">
       <div className="columns">
@@ -35,18 +35,7 @@ const LearningObjAndOutcomes = () => (
             Learning Objectives
           </div>
           <ul className="is-size-5">
-            <li>
-              To <span>understand</span> what technological push and market pull
-              are.
-            </li>
-            <li>
-              To <span>analyse</span> how technology and consumers have impacted
-              apple products.
-            </li>
-            <li>
-              To <span>evaluate</span> how apple products have had an influence
-              society
-            </li>
+            {outcomes.map(outcome => <li key={outcome}>{outcome}</li>)}
           </ul>
         </div>
         <div className="column">
@@ -54,18 +43,7 @@ const LearningObjAndOutcomes = () => (
             Learning Outcomes
           </div>
           <ul className="is-size-5">
-            <li>
-              To <span>understand</span> what technological push and market pull
-              are.
-            </li>
-            <li>
-              To <span>analyse</span> how technology and consumers have impacted
-              apple products.
-            </li>
-            <li>
-              To <span>evaluate</span> how apple products have had an influence
-              society
-            </li>
+            {objectives.map(objective => <li key={objective}>{objective}</li>)}
           </ul>
         </div>
       </div>

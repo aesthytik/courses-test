@@ -17,6 +17,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug
                 subtitle
                 description
+                image
+                createdAt
               }
             }
           }
@@ -55,6 +57,16 @@ exports.createPages = async ({ graphql, actions }) => {
                 id
                 title
                 slug
+                description
+                videoEmbed
+                category
+                tags
+                outcomes
+                objectives
+                activities {
+                  name
+                  image
+                }
                 isActive
                 createdAt
               }
@@ -72,6 +84,87 @@ exports.createPages = async ({ graphql, actions }) => {
           createPage({
             path: `/course/${slug}`,
             component: resourceTemplate,
+            // In your blog post template's graphql query, you can use path
+            // as a GraphQL variable to query for data from the markdown file.
+            context: {
+              slug,
+            },
+          });
+        });
+      }),
+    );
+  });
+
+  await new Promise((resolve, reject) => {
+    const chapterTemplate = path.resolve(`src/templates/chapter.js`);
+    // Query for markdown nodes to use in creating pages.
+    resolve(
+      graphql(`
+        {
+          allMongodbLearnrealmChapters {
+            edges {
+              node {
+                id
+                title
+                slug
+                description
+                videoEmbed
+                isActive
+                createdAt
+              }
+            }
+          }
+        }
+      `).then(result => {
+        if (result.errors) {
+          reject(result.errors);
+        }
+
+        // Create pages for each mongoDb entry.
+        result.data.allMongodbLearnrealmChapters.edges.forEach(({ node }) => {
+          const { slug } = node;
+          createPage({
+            path: `/chapter/${slug}`,
+            component: chapterTemplate,
+            // In your blog post template's graphql query, you can use path
+            // as a GraphQL variable to query for data from the markdown file.
+            context: {
+              slug,
+            },
+          });
+        });
+      }),
+    );
+  });
+
+  await new Promise((resolve, reject) => {
+    const pageTemplate = path.resolve(`src/templates/page.js`);
+    // Query for markdown nodes to use in creating pages.
+    resolve(
+      graphql(`
+        {
+          allMongodbLearnrealmPages {
+            edges {
+              node {
+                id
+                name
+                slug
+                description
+              }
+            }
+          }
+        }
+      `).then(result => {
+        if (result.errors) {
+          reject(result.errors);
+        }
+
+        // Create pages for each mongoDb entry.
+        result.data.allMongodbLearnrealmPages.edges.forEach(({ node }) => {
+          const { slug } = node;
+          createPage({
+            path: `/page/${slug}`,
+            component: pageTemplate,
             // In your blog post template's graphql query, you can use path
             // as a GraphQL variable to query for data from the markdown file.
             context: {

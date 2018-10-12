@@ -22,8 +22,11 @@ export default class Resource extends React.Component {
           url={`${config.siteUrl}`}
         />
         <PackDescription course={course} />
-        <StudentActivities />
-        <LearningObjAndOutcomes />
+        <StudentActivities activities={course.activities} />
+        <LearningObjAndOutcomes
+          outcomes={course.outcomes}
+          objectives={course.objectives}
+        />
         <WorkbooksAndChecklists />
         <DownloadProjects />
       </Layout>
@@ -34,10 +37,34 @@ export default class Resource extends React.Component {
 export const query = graphql`
   query CourseByPath($slug: String!) {
     mongodbLearnrealmResource(slug: { eq: $slug }) {
+      id
       title
       slug
+      description
+      videoEmbed
+      category
+      tags
+      outcomes
+      objectives
+      activities {
+        name
+        image
+      }
       isActive
       createdAt
+    }
+    allMongodbLearnrealmChapters {
+      edges {
+        node {
+          id
+          title
+          slug
+          description
+          videoEmbed
+          isActive
+          createdAt
+        }
+      }
     }
   }
 `;

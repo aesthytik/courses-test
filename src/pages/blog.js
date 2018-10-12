@@ -41,6 +41,8 @@ export const query = graphql`
           slug
           subtitle
           description
+          image
+          createdAt
         }
       }
     }

@@ -29,7 +29,7 @@ module.exports = {
       resolve: `gatsby-source-mongodb`,
       options: {
         dbName: `learnrealm`,
-        collection: [`blog`, `resource`],
+        collection: [`blog`, `resource`, `chapters`, `pages`],
         server: { address: '159.89.197.227', port: 27017 },
         auth: { user: 'learnrealm', password: 'i4UdHWomrq44' },
       },

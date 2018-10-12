@@ -4,12 +4,12 @@ import { graphql } from 'gatsby';
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
 import Layout from '../components/Global/Layout';
-import PostContainer from '../components/blog/PostContainer';
+import Heading from '../elements/Heading';
 
-export default class Post extends React.Component {
+export default class Page extends React.Component {
   render() {
     const { data } = this.props;
-    const post = data.mongodbLearnrealmBlog;
+    const page = data.mongodbLearnrealmPages;
 
     return (
       <Layout>
@@ -18,22 +18,22 @@ export default class Post extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
-        <PostContainer post={post} />
+        <div className="container">
+          <Heading>{page.name}</Heading>
+          <h3>{page.description}</h3>
+        </div>
       </Layout>
     );
   }
 }
 
 export const query = graphql`
-  query PostByPath($slug: String!) {
-    mongodbLearnrealmBlog(slug: { eq: $slug }) {
+  query PageByPath($slug: String!) {
+    mongodbLearnrealmPages(slug: { eq: $slug }) {
       id
-      title
+      name
       slug
-      subtitle
       description
-      image
-      createdAt
     }
   }
 `;
