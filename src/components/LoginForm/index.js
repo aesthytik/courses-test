@@ -4,10 +4,14 @@ import { Link } from 'gatsby';
 import { darken } from 'polished';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
-import alertify from 'alertify.js';
 
 import Button from '../../elements/Button';
 import Form from './Form';
+
+let alertify;
+if (process.browser) {
+  alertify = require('alertify.js'); // eslint-disable-line
+}
 
 const Container = styled.section`
   background-color: #ededed;

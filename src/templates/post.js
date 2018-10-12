@@ -8,11 +8,11 @@ import PostContainer from '../components/blog/PostContainer';
 
 export default class Post extends React.Component {
   render() {
-    const { location, data } = this.props;
+    const { data } = this.props;
     const post = data.mongodbLearnrealmBlog;
-    console.log(data);
+
     return (
-      <Layout location={location}>
+      <Layout>
         <Seo
           title="Individualpack"
           description="Welcome to Learn Realm"

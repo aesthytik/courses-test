@@ -2,9 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
-import alertify from 'alertify.js';
 
 import Form from './Form';
+
+let alertify;
+if (process.browser) {
+  alertify = require('alertify.js'); // eslint-disable-line
+}
 
 const SignupForm = styled.div`
   padding-left: 8%;

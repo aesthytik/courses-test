@@ -13,8 +13,9 @@ export default class Post extends React.Component {
       data: { allMongodbLearnrealmBlog },
     } = this.props;
     const blog = allMongodbLearnrealmBlog.edges;
+
     return (
-      <Layout location={location}>
+      <Layout>
         <Seo
           title="Individualpack"
           description="Welcome to Learn Realm"

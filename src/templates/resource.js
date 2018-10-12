@@ -11,10 +11,11 @@ import DownloadProjects from '../components/DownloadProjects';
 
 export default class Resource extends React.Component {
   render() {
-    const { location, data } = this.props;
+    const { data } = this.props;
     const course = data.mongodbLearnrealmResource;
+
     return (
-      <Layout location={location}>
+      <Layout>
         <Seo
           title="Individualpack"
           description="Welcome to Learn Realm"
