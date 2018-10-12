@@ -10,7 +10,7 @@ module.exports = {
 
   apiUrl: debug
     ? 'http://localhost:4000/graphql'
-    : 'https://www.learnrealm.com/graphql',
+    : 'https://api.learnrealm.com/graphql',
 
   twitter: '@NAME-HERE',
   fbUserId: '@NAME-HERE',
