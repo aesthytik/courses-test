@@ -141,11 +141,7 @@ export default class Header extends React.Component {
             >
               <div className="navbar-brand">
                 <Link to="/">
-                  <img
-                    src="/images/logo.png"
-                    className="logo"
-                    alt="learn realm logo"
-                  />
+                  EDU-LEARN
                 </Link>
 
                 <NavbarBurger
@@ -236,86 +232,20 @@ export default class Header extends React.Component {
                       ) : null}
                       <LinkStyle className="navbar-menu">
                         <div className="navbar-end">
-                          {!isLoggedIn ? (
-                            <React.Fragment>
-                              <a className="navbar-item primary-font-color">
-                                Forward
-                              </a>
-                              <Link
-                                to="/blog"
-                                className="navbar-item primary-font-color"
-                              >
-                                Blog
-                              </Link>
-                              <Link
-                                to="/sign-up?teacher=true"
-                                className="navbar-item primary-font-color"
-                              >
-                                Teachers
-                              </Link>
-                              <a className="navbar-item primary-font-color">
-                                Freebies
-                              </a>
-                              <Link
-                                to="/packages"
-                                className="navbar-item primary-font-color"
-                              >
-                                Member's club
-                              </Link>
-                              <LoginBtn
-                                to="/login/"
-                                className="navbar-item is-uppercase has-text-weight-bold"
-                              >
-                                Log in
-                              </LoginBtn>
-                              <Link to="/sign-up/" className="navbar-item">
-                                <SignupBtn className="button is-rounded is-outlined is-large is-pulled-right is-hover">
-                                  <span className="is-size-6 has-text-weight-bold">
-                                    SIGN UP FOR FREE
-                                  </span>
-                                </SignupBtn>
-                              </Link>
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              <Link
-                                to="/"
-                                className="navbar-item primary-font-color"
-                              >
-                                Home
-                              </Link>
-                              <Link
-                                to="/dashboard"
-                                className="navbar-item primary-font-color"
-                              >
-                                Dashboard
-                              </Link>
-                              <Link
-                                to="/blog"
-                                className="navbar-item primary-font-color"
-                              >
-                                Blog
-                              </Link>
-                              <a
-                                className="navbar-item primary-font-color"
-                                type="button"
-                                onClick={this.logout}
-                              >
-                                logout
-                              </a>
-                              <Name className="navbar-item  has-text-weight-bold">
-                                {user.email}
-                              </Name>
-                              <Link
-                                to="/profile-update"
-                                className="navbar-item"
-                              >
-                                <img src="/images/admin-icon.svg" alt="admin" />
-                              </Link>
-                            </React.Fragment>
-                          )}
+                          <div className="navbar-item">
+                          Home
+                          </div>
+                          <div className="navbar-item">
+                          Courses
+                          </div>
+                          <div className="navbar-item">
+                          Login
+                          </div>
+                          <div className="navbar-item">
+                          Register
+                          </div>
                         </div>
-                      </LinkStyle>
+                      </LinkStyle >
                     </React.Fragment>
                   );
                 }}

@@ -22,13 +22,13 @@ export default class Resource extends React.Component {
           url={`${config.siteUrl}`}
         />
         <PackDescription course={course} />
-        <StudentActivities activities={course.activities} />
+        {/* <StudentActivities activities={course.activities} />
         <LearningObjAndOutcomes
           outcomes={course.outcomes}
           objectives={course.objectives}
-        />
+        /> */}
         <WorkbooksAndChecklists />
-        <DownloadProjects />
+        {/* <DownloadProjects /> */}
       </Layout>
     );
   }

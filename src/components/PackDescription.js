@@ -28,19 +28,23 @@ const Container = styled.section`
 const PackDescription = ({ course }) => (
   <Container className="section">
     <div className="container">
-      <Heading className="has-text-grey">{course.title}</Heading>
+      <Heading className="has-text-grey">JAVASCRIPT</Heading>
       <h2 className="subtitle has-text-weight-semibold is-capitalized">
-        {course.category}
+       Programming Language
       </h2>
       <div className="columns">
         <div className="column">
           <div className="content">
             <h3>
-              <HighlightedText>Project description</HighlightedText>
+              <HighlightedText>Course description</HighlightedText>
             </h3>
-            <p>{course.description}</p>
+            <p>Web pages are not the only place where JavaScript is used.
+               Many desktop and server programs use JavaScript. Node.js is 
+               the best known. Some databases, like MongoDB and CouchDB,
+                also use JavaScript as their programming language.
+            </p>
             <h3>
-              <HighlightedText>Project tags +</HighlightedText>
+              <HighlightedText>Course tags +</HighlightedText>
               <br />
               <br />
               <div className="tags">
@@ -54,13 +58,8 @@ const PackDescription = ({ course }) => (
           </div>
         </div>
         <div className="column">
-          <iframe
-            title={course.name}
-            width="100%"
-            height="100%"
-            src={course.videoEmbed}
-          />
-          {/* <img src="/images/youtube-video-embed.png" alt="youtube-embed" /> */}
+        
+          <img src="/images/youtube-video-embed.png" alt="youtube-embed" />
         </div>
       </div>
     </div>

@@ -60,7 +60,7 @@ const PackItem = ({ item }) => (
       <img src="/images/saved-packs/steve-jobs.svg" alt="steve-jobs" />
       <div id="overlay">
         <Link to={`/course/${item.node.slug}`}>
-          <div className="text has-text-weight-bold">VIEW PACK</div>
+          <div className="text has-text-weight-bold">VIEW COURSE</div>
         </Link>
       </div>
     </div>

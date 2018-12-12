@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import Card from '../elements/Card';
 import HighlightedText from '../elements/HighlightedText';
 
+
 const Wrapper = styled(Card)`
   position: relative;
   background-image: url('/images/pattern-bg.svg');
   background-size: cover;
   @media screen and (max-width: 375px) {
     margin-left: 11%;
+  }
+  .description {
+    width: 55%;
   }
 
   div {
@@ -22,19 +26,20 @@ const Wrapper = styled(Card)`
   }
 `;
 
-const WorkbookAndChecklistItem = () => (
+const WorkbookAndChecklistItem = ({title , url}) => (
   <div className="column has-text-centered">
     <Wrapper width="260px" height="418px">
-      <div>
-        How have <br />
-        Apple products <br />
-        changed over time<br />
+    <a href="">
+      <div className="description">
+        {title}
+        <br />
         <a href="">
           <HighlightedText>
             Learn Realm<sup>TM</sup>
           </HighlightedText>
         </a>
       </div>
+      </a>
     </Wrapper>
   </div>
 );

@@ -27,7 +27,7 @@ export default class Dashboard extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
-        <PacksList title="Recent Packs" bgColor="#ededed" packs={resources} />
+        <PacksList title="Courses" bgColor="#ededed" packs={resources} />
       </Layout>
     );
   }
