@@ -29,13 +29,15 @@ const Wrapper = styled(Card)`
 const WorkbookAndChecklistItem = ({title , url}) => (
   <div className="column has-text-centered">
     <Wrapper width="260px" height="418px">
-    <a href="">
+    <a href={url} target="_blank">
       <div className="description">
+      <span className="has-text-black">
         {title}
+      </span> 
         <br />
-        <a href="">
+        <a>
           <HighlightedText>
-            Learn Realm<sup>TM</sup>
+            <span className="has-text-white">Learn Realm<sup>TM</sup></span>
           </HighlightedText>
         </a>
       </div>

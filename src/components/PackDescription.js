@@ -7,6 +7,12 @@ const Container = styled.section`
   background-color: #ffffff;
   height: auto;
   border-top: 2px solid #EDEDED;
+  .progress-wrapper {
+    display: flex;
+    .progress {
+      margin-right: 10px;
+    }
+  } 
   @media screen and (max-width: 600px) {
     font-size: 18px!important;
     text-align: center!important;
@@ -28,6 +34,11 @@ const Container = styled.section`
 const PackDescription = ({ course }) => (
   <Container className="section">
     <div className="container">
+    <div className="progress-wrapper">
+    <progress className="progress is-success" value="60" max="100">60%</progress>
+    <span>60%</span>
+    </div>
+    
       <Heading className="has-text-grey">JAVASCRIPT</Heading>
       <h2 className="subtitle has-text-weight-semibold is-capitalized">
        Programming Language
@@ -38,7 +49,9 @@ const PackDescription = ({ course }) => (
             <h3>
               <HighlightedText>Course description</HighlightedText>
             </h3>
-            <p>Web pages are not the only place where JavaScript is used.
+            <p>
+            Learn the JavaScript fundamentals you'll need for front-end or back-end development.
+            Web pages are not the only place where JavaScript is used.
                Many desktop and server programs use JavaScript. Node.js is 
                the best known. Some databases, like MongoDB and CouchDB,
                 also use JavaScript as their programming language.

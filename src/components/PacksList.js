@@ -102,7 +102,11 @@ export default class PacksList extends React.Component {
             <HeadingStyled>{title}</HeadingStyled>
           </h1>
           <Slider {...settings}>
-            {packs.map(pack => <PackItem key={pack.node.id} item={pack} />)}
+            <PackItem  name="Javascript"/>
+            <PackItem  name="React JS"/>
+            <PackItem  name="Wordpress"/>
+            <PackItem  name="Excel" />
+
           </Slider>
         </div>
       </Container>

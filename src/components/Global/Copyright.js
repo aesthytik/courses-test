@@ -31,7 +31,7 @@ const Copyright = () => (
     <div className="container has-text-grey has-text-centered">
       <div className="columns is-desktop is-size-6">
         <div className="column">
-          <h3 className="is-uppercase">© 2018 LEARN REALM INC.</h3>
+          <h3 className="is-uppercase">© 2018 Edu Learn.</h3>
         </div>
         <div className="column">
           <h3 className="is-uppercase">

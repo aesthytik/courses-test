@@ -10,13 +10,13 @@ export default class Dashboard extends React.Component {
   render() {
     const { location, navigate, data } = this.props;
 
-    let token = null;
-    if (process.browser) {
-      token = localStorage.getItem('token');
-      if (!token || token === null) {
-        navigate('/login/');
-      }
-    }
+    // let token = null;
+    // if (process.browser) {
+    //   token = localStorage.getItem('token');
+    //   if (!token || token === null) {
+    //     navigate('/login/');
+    //   }
+    // }
 
     const resources = data.allMongodbLearnrealmResource.edges;
 

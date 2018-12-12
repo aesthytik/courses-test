@@ -54,26 +54,26 @@ const ListStyled = styled.ul`
   }
 `;
 
-const PackItem = ({ item }) => (
+const PackItem = ({ name }) => (
   <Container>
     <div id="box">
       <img src="/images/saved-packs/steve-jobs.svg" alt="steve-jobs" />
       <div id="overlay">
-        <Link to={`/course/${item.node.slug}`}>
+        <Link to={`/course/javascript`}>
           <div className="text has-text-weight-bold">VIEW COURSE</div>
         </Link>
       </div>
     </div>
     <ListStyled>
       <li className="has-text-weight-bold">
-        <a href="#">{item.node.title}</a>
+        <a href="#">{name}</a>
       </li>
-      <li>
+      {/* <li>
         <a href="#">{item.field}</a>
       </li>
       <li>
         <a href="#">{item.specification}</a>
-      </li>
+      </li> */}
     </ListStyled>
   </Container>
 );

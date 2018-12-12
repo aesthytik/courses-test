@@ -140,7 +140,7 @@ export default class Header extends React.Component {
               aria-label="main navigation"
             >
               <div className="navbar-brand">
-                <Link to="/">
+                <Link to="/dashboard/" className="is-size-3 has-text-success has-text-weight-bold">
                   EDU-LEARN
                 </Link>
 

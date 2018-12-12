@@ -39,7 +39,7 @@ const Footer = () => (
     <div className="container has-text-grey">
       <div className="columns is-desktop is-size-5 footer-alignment">
         <div className="column">
-          <h3 className="has-text-weight-bold">Access Learn Realm</h3>
+          <h3 className="has-text-weight-bold">Edu Learn</h3>
           <ul className="is-size-6 is-uppercase">
             <li>
               <Link to="/subscription">SUBSCRIBE</Link>
@@ -73,7 +73,7 @@ const Footer = () => (
           <h3 className="is-uppercase has-text-weight-bold">About us</h3>
           <ul className="is-size-6">
             <li>
-              <Link to="/page/about-learn-realm">ABOUT LEARN REALM</Link>
+              <Link to="/page/about-learn-realm">ABOUT Edu Learn</Link>
             </li>
             <li>
               <Link to="/page/press/">PRESS</Link>

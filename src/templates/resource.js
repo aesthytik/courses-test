@@ -21,6 +21,7 @@ export default class Resource extends React.Component {
           description="Welcome to Learn Realm"
           url={`${config.siteUrl}`}
         />
+       
         <PackDescription course={course} />
         {/* <StudentActivities activities={course.activities} />
         <LearningObjAndOutcomes
