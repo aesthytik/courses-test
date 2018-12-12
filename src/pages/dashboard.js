@@ -18,7 +18,7 @@ export default class Dashboard extends React.Component {
     //   }
     // }
 
-    const resources = data.allMongodbLearnrealmResource.edges;
+    const resources = data.allMongodbLearnrealmResource.edges || null;
 
     return (
       <Layout>
