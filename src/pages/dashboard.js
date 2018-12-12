@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import {isUndefined} from 'lodash';
 
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
@@ -19,7 +20,7 @@ export default class Dashboard extends React.Component {
     // }
 
     const resources = data.allMongodbLearnrealmResource.edges || null;
-if(allMongodbLearnrealmResource === undefined) {
+if(isUndefined(data.allMongodbLearnrealmResource)) {
   return <div>Loading......</div>
 }
     return (
