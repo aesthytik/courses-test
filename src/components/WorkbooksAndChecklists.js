@@ -10,7 +10,12 @@ const Container = styled.section`
   @media screen and (max-width: 600px) {
     font-size: 18px!important;
     text-align: center!important;
-    
+}
+.progress-wrapper {
+  display: flex;
+  margin-bottom: 2rem;
+  .progress {
+    margin-right: 10px;
   }
 }
 `;
@@ -24,7 +29,10 @@ const WorkbooksAndChecklists = () => (
       <p className="is-size-5">
       </p>
       <br />
-    
+      <div className="progress-wrapper">
+    <progress className="progress is-success" value="60" max="100">60%</progress>
+    <span>60%</span>
+    </div>
       <div className="columns has-text-centered is-multiline">
         <WorkbookAndChecklistItem title="1. Learn JavaScript: Introduction" url="https://www.youtube.com/watch?v=W6NZfCO5SIk" />
         <WorkbookAndChecklistItem title="2. Learn JavaScript: Conditionals" url="https://www.youtube.com/watch?v=ZPpXJ3dk9gE" />

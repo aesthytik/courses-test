@@ -35,11 +35,11 @@ const WorkbookAndChecklistItem = ({title , url}) => (
         {title}
       </span> 
         <br />
-        <a>
+       
           <HighlightedText>
             <span className="has-text-white">Learn Realm<sup>TM</sup></span>
           </HighlightedText>
-        </a>
+        
       </div>
       </a>
     </Wrapper>
