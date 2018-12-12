@@ -26,7 +26,6 @@ export default class Resource extends React.Component {
           objectives={course.objectives}
         /> */}
         <WorkbooksAndChecklists />
-        {/* <DownloadProjects /> */}
       </Layout>
     );
   }
