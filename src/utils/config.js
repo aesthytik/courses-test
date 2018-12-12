@@ -3,15 +3,10 @@ const debug = process.env.NODE_ENV === 'development';
 module.exports = {
   debug,
 
-  siteName: 'Learn Realm',
+  siteName: 'Learn',
   author: 'Parminder Klair',
   description: 'A Learning platform.',
-  siteUrl: 'https://www.learnrealm.com',
-
-  apiUrl: debug
-    ? 'http://localhost:4000/graphql'
-    : 'https://api.learnrealm.com/graphql',
-
+  siteUrl: '',
   twitter: '@NAME-HERE',
   fbUserId: '@NAME-HERE',
   fbAppID: '@NAME-HERE',
