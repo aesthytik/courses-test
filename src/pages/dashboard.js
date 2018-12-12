@@ -19,12 +19,14 @@ export default class Dashboard extends React.Component {
     // }
 
     const resources = data.allMongodbLearnrealmResource.edges || null;
-
+if(allMongodbLearnrealmResource === undefined) {
+  return <div>Loading......</div>
+}
     return (
       <Layout>
         <Seo
           title="Dashboard"
-          description="Welcome to Learn Realm"
+          description=""
           url={`${config.siteUrl}`}
         />
         <PacksList title="Courses" bgColor="#ededed" packs={resources} />
