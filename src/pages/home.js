@@ -21,7 +21,7 @@ export default class IndexPage extends React.Component {
             try an exercise or two, and join our community of 45 million learners. 
         </div>
         <Wrapper className="has-text-centered">
-         <Link to="/dashboard/" className="button is-success is-large">Browse Available courses</Link>
+         <Link to="/dashboard/" className="button is-success is-large">Browse Available courses here</Link>
         </Wrapper>
        
       </Layout>
