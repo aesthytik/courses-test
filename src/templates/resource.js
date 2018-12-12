@@ -17,9 +17,6 @@ export default class Resource extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Individualpack"
-          description="Welcome to Learn Realm"
-          url={`${config.siteUrl}`}
         />
        
         <PackDescription course={course} />
