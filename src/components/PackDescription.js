@@ -6,10 +6,10 @@ import HighlightedText from '../elements/HighlightedText';
 const Container = styled.section`
   background-color: #ffffff;
   height: auto;
-  border-top: 2px solid #EDEDED; 
+  border-top: 2px solid #ededed;
   @media screen and (max-width: 600px) {
-    font-size: 18px!important;
-    text-align: center!important;
+    font-size: 18px !important;
+    text-align: center !important;
     margin-top: 25px;
   }
   .content {
@@ -22,15 +22,14 @@ const Container = styled.section`
   .subtitle {
     color: #5a6175 !important;
   }
-}
 `;
 
 const PackDescription = ({ course }) => (
   <Container className="section">
     <div className="container">
-   <Heading className="has-text-grey">JAVASCRIPT</Heading>
+      <Heading className="has-text-grey">MS Excel</Heading>
       <h2 className="subtitle has-text-weight-semibold is-capitalized">
-       Programming Language
+        Spreadsheet
       </h2>
       <div className="columns">
         <div className="column">
@@ -39,11 +38,10 @@ const PackDescription = ({ course }) => (
               <HighlightedText>Course description</HighlightedText>
             </h3>
             <p>
-            Learn the JavaScript fundamentals you'll need for front-end or back-end development.
-            Web pages are not the only place where JavaScript is used.
-               Many desktop and server programs use JavaScript. Node.js is 
-               the best known. Some databases, like MongoDB and CouchDB,
-                also use JavaScript as their programming language.
+              Excel is the most powerful tool to manage and analyze various
+              types of Data. This tutorial covers in-depth lessons on how to use
+              various Excel formulas, Tables and Charts for managing small to
+              large scale business process.
             </p>
             <h3>
               <HighlightedText>Course tags +</HighlightedText>
@@ -60,7 +58,6 @@ const PackDescription = ({ course }) => (
           </div>
         </div>
         <div className="column">
-        
           <img src="/images/youtube-video-embed.png" alt="youtube-embed" />
         </div>
       </div>

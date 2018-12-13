@@ -15,7 +15,6 @@ const BallonImage = styled.img`
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     visibility: hidden;
   }
-}
 `;
 
 const SunImage = styled.img`

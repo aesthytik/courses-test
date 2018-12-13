@@ -8,14 +8,13 @@ const Container = styled.section`
   height: auto;
   padding: 5%;
   @media screen and (max-width: 600px) {
-    font-size: 18px!important;
-    text-align: center!important;   
+    font-size: 18px !important;
+    text-align: center !important;
   }
   .subtitle {
     color: #5a6175 !important;
     font-size: 25px;
   }
-}
 `;
 
 const Wrapper = styled(Heading)`

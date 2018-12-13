@@ -102,11 +102,10 @@ export default class PacksList extends React.Component {
             <HeadingStyled>{title}</HeadingStyled>
           </h1>
           <Slider {...settings}>
-            <PackItem  name="Javascript"/>
-            <PackItem  name="React JS"/>
-            <PackItem  name="Wordpress"/>
-            <PackItem  name="Excel" />
-
+            <PackItem name="MS Excel" />
+            <PackItem name="MS Word" />
+            <PackItem name="Wordpress" />
+            <PackItem name="MS Powerpoint" />
           </Slider>
         </div>
       </Container>

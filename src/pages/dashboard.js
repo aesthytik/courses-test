@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import {isUndefined} from 'lodash';
+import { isUndefined } from 'lodash';
 
 import config from '../utils/config';
 import Seo from '../components/Global/Seo';
@@ -11,25 +11,13 @@ export default class Dashboard extends React.Component {
   render() {
     const { location, navigate, data } = this.props;
 
-    // let token = null;
-    // if (process.browser) {
-    //   token = localStorage.getItem('token');
-    //   if (!token || token === null) {
-    //     navigate('/login/');
-    //   }
-    // }
-
     const resources = data.allMongodbLearnrealmResource.edges || null;
-if(isUndefined(data.allMongodbLearnrealmResource)) {
-  return <div>Loading......</div>
-}
+    if (isUndefined(data.allMongodbLearnrealmResource)) {
+      return <div>Loading......</div>;
+    }
     return (
       <Layout>
-        <Seo
-          title="Dashboard"
-          description=""
-          url={`${config.siteUrl}`}
-        />
+        <Seo title="Dashboard" description="" url={`${config.siteUrl}`} />
         <PacksList title="Courses" bgColor="#ededed" packs={resources} />
       </Layout>
     );
